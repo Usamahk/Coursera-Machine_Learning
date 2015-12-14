@@ -7,9 +7,9 @@ All material belongs to Prof. Andrew Ng and the Coursera organization. I am exci
 #### Progress ([X] = complete, [I] = in progress):
 
 [X] - Week 1  
-[X] - Week 2 
-&nbsp;&nbsp;&nbsp;[X] - Quiz 5
-&nbsp;&nbsp;&nbsp;[X] - Assignment 1
+[X] - Week 2  
+&nbsp;&nbsp;&nbsp;[X] - Quiz 5  
+&nbsp;&nbsp;&nbsp;[X] - Assignment 1  
 [ ] - Week 3  
 [ ] - Week 4  
 [ ] - Week 5  
