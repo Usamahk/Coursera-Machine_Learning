@@ -1,0 +1,2244 @@
+Last login: Thu Dec 10 18:03:35 on console
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> 5+6
+ans =  11
+octave:2> 2^6
+ans =  64
+octave:3> 1/2
+ans =  0.50000
+octave:4> 34*2
+ans =  68
+octave:5> 1 == 2 % false
+ans = 0
+octave:6> 1~= 2
+ans =  1
+octave:7> PS1('>> ');
+>> a = 3
+a =  3
+>> a = 3;
+>> a
+a =  3
+>> c = (3>=1);
+>> c
+c =  1
+>> a = pi;
+>> a
+a =  3.1416
+>> pi
+ans =  3.1416
+>> disp(sprintf('2 decimals: %0.2f', a))
+2 decimals: 3.14
+>> disp(sprintf('2 decimals: %0.5f', pi))
+2 decimals: 3.14159
+>> disp(sprintf('2 decimals: %0.4f', pi))
+2 decimals: 3.1416
+>> format long
+>> a
+a =  3.14159265358979
+>> format short
+>> a
+a =  3.1416
+>> 
+>> 
+>> 
+>> A = [1 2; 3 4; 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A = [1 2; 3 4; 5 6];
+>> A = [1 2;
+> 3 4;
+> 5 6;]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> v = [1 2 3]
+v =
+
+   1   2   3
+
+>> V = [1; 2; 3]
+V =
+
+   1
+   2
+   3
+
+>> 
+>> V = 1:0.1:2
+V =
+
+ Columns 1 through 8:
+
+    1.0000    1.1000    1.2000    1.3000    1.4000    1.5000    1.6000    1.7000
+
+ Columns 9 through 11:
+
+    1.8000    1.9000    2.0000
+
+>> ones(2,3)
+ans =
+
+   1   1   1
+   1   1   1
+
+>> C = 2*ones(2,3)
+C =
+
+   2   2   2
+   2   2   2
+
+>> w = ones(1,3)
+w =
+
+   1   1   1
+
+>> W = rand(3,3)
+W =
+
+   0.44869   0.26598   0.22035
+   0.81011   0.33246   0.41176
+   0.92877   0.33601   0.67037
+
+>> W = rand(3,3)
+W =
+
+   0.44913   0.57589   0.12953
+   0.51272   0.67191   0.97967
+   0.94448   0.30817   0.63111
+
+>> W = rand(3,3)
+W =
+
+   0.25124   0.35865   0.49913
+   0.59398   0.88818   0.51965
+   0.72849   0.99944   0.12155
+
+>> W = rand(3,3)
+W =
+
+   0.070584   0.517917   0.609963
+   0.414549   0.154581   0.658720
+   0.615936   0.325050   0.284121
+
+>> W = randn(1,3)
+W =
+
+  -3.40398  -1.37021   0.12703
+
+>> w = -6 + sqrt(10)*randn(1,10000)
+w =
+
+ Columns 1 through 7:
+
+  -7.3371e+00  -1.5639e+00  -5.7467e+00  -2.0110e+00  -7.5140e+00  -6.0883e+00  -1.4648e+01
+
+ Columns 8 through 14:
+
+  -4.1807e+00  -9.3773e+00  -3.7249e+00  -1.3138e+00  -4.1113e+00  -8.0594e+00  -4.1733e+00
+
+ Columns 15 through 21:
+
+  -3.2482e+00  -2.1762e+00  -4.1145e+00  -5.0704e+00  -5.9447e+00  -3.4555e+00  -1.0842e+01
+
+ Columns 22 through 28:
+
+  -7.5793e+00  -2.4574e+00  -6.8039e+00  -4.9254e+00  -2.9375e+00  -3.5987e-01  -8.0490e+00
+
+ Columns 29 through 35:
+
+  -7.3018e+00  -5.0260e+00  -1.8648e+00  -1.0933e+01  -5.6578e+00  -9.0094e-01  -7.2505e+00
+
+ Columns 36 through 42:
+
+  -4.0630e+00  -6.6200e+00  -7.2542e+00  -8.5911e+00  -4.7990e+00  -7.9083e+00  -4.1658e+00
+
+ Columns 43 through 49:
+
+  -5.4034e+00  -5.9678e+00  -2.3858e+00  -2.9176e+00  -6.8043e+00  -5.2684e+00  -2.8318e+00
+
+ Columns 50 through 56:
+
+warning: broken pipe
+>> hist(w,50)
+>> eye(4)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0
+   0   1   0   0
+   0   0   1   0
+   0   0   0   1
+
+>> 
+>> 
+>> 
+>> 
+>> 
+>> help(eye)
+error: help: invalid input
+>> help eye
+'eye' is a built-in function from the file libinterp/corefcn/data.cc
+
+ -- Built-in Function: eye (N)
+'eye' is a built-in function from the file libinterp/corefcn/data.cc
+
+'eye' is a built-in function from the file libinterp/corefcn/data.cc
+
+ -- Built-in Function: eye (N)
+ -- Built-in Function: eye (M, N)
+ -- Built-in Function: eye ([M N])
+ -- Built-in Function: eye (..., CLASS)
+     Return an identity matrix.  If invoked with a single scalar
+     argument N, return a square NxN identity matrix.  If supplied two
+     scalar arguments (M, N), 'eye' takes them to be the number of rows
+     and columns.  If given a vector with two elements, 'eye' uses the
+     values of the elements as the number of rows and columns,
+     respectively.  For example:
+
+          eye (3)
+           =>  1  0  0
+               0  1  0
+               0  0  1
+
+     The following expressions all produce the same result:
+
+          eye (2)
+          ==
+          eye (2, 2)
+          ==
+          eye (size ([1, 2; 3, 4])
+
+     The optional argument CLASS, allows 'eye' to return an array of the
+     specified type, like
+
+          val = zeros (n,m, "uint8")
+
+     Calling 'eye' with no arguments is equivalent to calling it with an
+>> help help
+'help' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/help/help.m
+
+ -- Command: help NAME
+ -- Command: help '--list'
+ -- Command: help '.'
+     Display the help text for NAME.  For example, the command 'help
+     help' prints a short message describing the 'help' command.
+
+     Given the single argument '--list', list all operators, keywords,
+     built-in functions, and loadable functions available in the current
+     session of Octave.
+
+     Given the single argument '.', list all operators available in the
+     current session of Octave.
+
+     If invoked without any arguments, 'help' display instructions on
+     how to access help from the command line.
+
+     The help command can give you information about operators, but not
+     the comma and semicolons that are used as command separators.  To
+     get help for those, you must type 'help comma' or 'help semicolon'.
+
+     See also: doc, lookfor, which.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> 
+>> 
+>> A 
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> size(A)
+ans =
+
+   3   2
+
+>> sz = size(A)
+sz =
+
+   3   2
+
+>> size(sz)
+ans =
+
+   1   2
+
+>> size(A,1)
+ans =  3
+>> size(A,2)
+ans =  2
+>> size(A,3)
+ans =  1
+>> v = [1, 2, 3, 4]
+v =
+
+   1   2   3   4
+
+>> length(v)
+ans =  4
+>> b = [1;2;3;4;5]
+b =
+
+   1
+   2
+   3
+   4
+   5
+
+>> length(b)
+ans =  5
+>> pwd
+ans = /Users/Usamahk
+>> cd '~/Documents
+error: unterminated character string constant
+parse error:
+
+  syntax error
+
+>>> cd '~/Documents
+                  ^
+
+>> cd '~/Documents'
+>> pwd
+ans = /Users/Usamahk/Documents
+>> ls
+Courses and Books	Python			Strategy Guides
+Microsoft User Data	R			UNITAID
+>> ls
+Courses and Books	Octave			R			UNITAID
+Microsoft User Data	Python			Strategy Guides
+>> who
+Variables in the current scope:
+
+A    C    V    W    a    ans  b    c    sz   v    w
+
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x2                         48  double
+        C           2x3                         48  double
+        V           1x11                        24  double
+        W           1x3                         24  double
+        a           1x1                          8  double
+        ans         1x24                        24  char
+        b           5x1                         40  double
+        c           1x1                          1  logical
+        sz          1x2                         16  double
+        v           1x4                         32  double
+        w           1x10000                  80000  double
+
+Total is 10063 elements using 80265 bytes
+
+>> ans
+ans = /Users/Usamahk/Documents
+>> w
+w =
+
+ Columns 1 through 7:
+
+  -7.3371e+00  -1.5639e+00  -5.7467e+00  -2.0110e+00  -7.5140e+00  -6.0883e+00  -1.4648e+01
+
+ Columns 8 through 14:
+
+  -4.1807e+00  -9.3773e+00  -3.7249e+00  -1.3138e+00  -4.1113e+00  -8.0594e+00  -4.1733e+00
+
+ Columns 15 through 21:
+
+  -3.2482e+00  -2.1762e+00  -4.1145e+00  -5.0704e+00  -5.9447e+00  -3.4555e+00  -1.0842e+01
+
+ Columns 22 through 28:
+
+  -7.5793e+00  -2.4574e+00  -6.8039e+00  -4.9254e+00  -2.9375e+00  -3.5987e-01  -8.0490e+00
+
+ Columns 29 through 35:
+
+  -7.3018e+00  -5.0260e+00  -1.8648e+00  -1.0933e+01  -5.6578e+00  -9.0094e-01  -7.2505e+00
+
+ Columns 36 through 42:
+
+  -4.0630e+00  -6.6200e+00  -7.2542e+00  -8.5911e+00  -4.7990e+00  -7.9083e+00  -4.1658e+00
+
+ Columns 43 through 49:
+
+  -5.4034e+00  -5.9678e+00  -2.3858e+00  -2.9176e+00  -6.8043e+00  -5.2684e+00  -2.8318e+00
+
+ Columns 50 through 56:
+
+ ESCOD
+w =
+
+ Columns 1 through 7:
+
+  -7.3371e+00  -1.5639e+00  -5.7467e+00  -2.0110e+00  -7.5140e+00  -6.0883e+00  -1.4648e+01
+
+ Columns 8 through 14:
+
+  -4.1807e+00  -9.3773e+00  -3.7249e+00  -1.3138e+00  -4.1113e+00  -8.0594e+00  -4.1733e+00
+
+ Columns 15 through 21:
+
+  -3.2482e+00  -2.1762e+00  -4.1145e+00  -5.0704e+00  -5.9447e+00  -3.4555e+00  -1.0842e+01
+
+ Columns 22 through 28:
+
+  -7.5793e+00  -2.4574e+00  -6.8039e+00  -4.9254e+00  -2.9375e+00  -3.5987e-01  -8.0490e+00
+
+ Columns 29 through 35:
+
+  -7.3018e+00  -5.0260e+00  -1.8648e+00  -1.0933e+01  -5.6578e+00  -9.0094e-01  -7.2505e+00
+
+ Columns 36 through 42:
+
+  -4.0630e+00  -6.6200e+00  -7.2542e+00  -8.5911e+00  -4.7990e+00  -7.9083e+00  -4.1658e+00
+
+ Columns 43 through 49:
+
+  -5.4034e+00  -5.9678e+00  -2.3858e+00  -2.9176e+00  -6.8043e+00  -5.2684e+00  -2.8318e+00
+
+ Columns 50 through 56:
+
+warning: broken pipe
+>> 
+>> w
+w =
+
+ Columns 1 through 7:
+
+  -7.3371e+00  -1.5639e+00  -5.7467e+00  -2.0110e+00  -7.5140e+00  -6.0883e+00  -1.4648e+01
+
+ Columns 8 through 14:
+
+  -4.1807e+00  -9.3773e+00  -3.7249e+00  -1.3138e+00  -4.1113e+00  -8.0594e+00  -4.1733e+00
+
+ Columns 15 through 21:
+
+  -3.2482e+00  -2.1762e+00  -4.1145e+00  -5.0704e+00  -5.9447e+00  -3.4555e+00  -1.0842e+01
+
+ Columns 22 through 28:
+
+  -7.5793e+00  -2.4574e+00  -6.8039e+00  -4.9254e+00  -2.9375e+00  -3.5987e-01  -8.0490e+00
+
+ Columns 29 through 35:
+
+  -7.3018e+00  -5.0260e+00  -1.8648e+00  -1.0933e+01  -5.6578e+00  -9.0094e-01  -7.2505e+00
+
+ Columns 36 through 42:
+
+  -4.0630e+00  -6.6200e+00  -7.2542e+00  -8.5911e+00  -4.7990e+00  -7.9083e+00  -4.1658e+00
+
+ Columns 43 through 49:
+
+  -5.4034e+00  -5.9678e+00  -2.3858e+00  -2.9176e+00  -6.8043e+00  -5.2684e+00  -2.8318e+00
+
+ Columns 50 through 56:
+
+warning: broken pipe
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A([1 2], :)
+ans =
+
+   1   2
+   3   4
+
+>> A([1 3], :)
+ans =
+
+   1   2
+   5   6
+
+>> A(:,2) = [10; 11; 12]
+A =
+
+    1   10
+    3   11
+    5   12
+
+>> A = [A, [100;101;102]];
+>> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+>> B
+error: 'B' undefined near line 1 column 1
+>> B = [11 12; 13 14; 15 16]
+B =
+
+   11   12
+   13   14
+   15   16
+
+>> c = [A;B]
+error: vertical dimensions mismatch (3x3 vs 3x2)
+>> c = [A B]
+c =
+
+     1    10   100    11    12
+     3    11   101    13    14
+     5    12   102    15    16
+
+>> c = [A; B]
+error: vertical dimensions mismatch (3x3 vs 3x2)
+>> c = [B;A]
+error: vertical dimensions mismatch (3x2 vs 3x3)
+>> size(B)
+ans =
+
+   3   2
+
+>> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+>> A = [ 1 2; 3 4; 5 6];
+>> B = [11 12; 13 14; 15 16];
+>> C = [1 1; 2 2];
+>> A*C
+ans =
+
+    5    5
+   11   11
+   17   17
+
+>> C*A
+error: operator *: nonconformant arguments (op1 is 2x2, op2 is 3x2)
+>> A .* B
+ans =
+
+   11   24
+   39   56
+   75   96
+
+>> A .^ 2
+ans =
+
+    1    4
+    9   16
+   25   36
+
+>> A .^ B
+ans =
+
+   1.0000e+00   4.0960e+03
+   1.5943e+06   2.6844e+08
+   3.0518e+10   2.8211e+12
+
+>> 1 ./ A
+ans =
+
+   1.00000   0.50000
+   0.33333   0.25000
+   0.20000   0.16667
+
+>> log(v_
+> log(v)
+parse error:
+
+  syntax error
+
+>>> log(v)
+      ^
+
+>> v = [1 ; 2; 3]
+v =
+
+   1
+   2
+   3
+
+>> log(v)
+ans =
+
+   0.00000
+   0.69315
+   1.09861
+
+>> V
+V =
+
+ Columns 1 through 10:
+
+    1.0000    1.1000    1.2000    1.3000    1.4000    1.5000    1.6000    1.7000    1.8000    1.9000
+
+ Column 11:
+
+    2.0000
+
+>> v
+v =
+
+   1
+   2
+   3
+
+>> v +1
+ans =
+
+   2
+   3
+   4
+
+>> v
+v =
+
+   1
+   2
+   3
+
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A'
+ans =
+
+   1   3   5
+   2   4   6
+
+>> val = max(A)
+val =
+
+   5   6
+
+>> [val, ind] = max(A)
+val =
+
+   5   6
+
+ind =
+
+   3   3
+
+>> a = [1 12 2 0.5]
+a =
+
+    1.00000   12.00000    2.00000    0.50000
+
+>> a < 3
+ans =
+
+   1   0   1   1
+
+>> find(a<3)
+ans =
+
+   1   3   4
+
+>> A = magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> A = magic(4)
+A =
+
+   16    2    3   13
+    5   11   10    8
+    9    7    6   12
+    4   14   15    1
+
+>> A = magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> [r,c] = find(A>=7)
+r =
+
+   1
+   3
+   2
+
+c =
+
+   1
+   2
+   3
+
+>> [r,c] = find(A>=6)
+r =
+
+   1
+   3
+   1
+   2
+
+c =
+
+   1
+   2
+   3
+   3
+
+>> [r,c] = find(A>=1)
+r =
+
+   1
+   2
+   3
+   1
+   2
+   3
+   1
+   2
+   3
+
+c =
+
+   1
+   1
+   1
+   2
+   2
+   2
+   3
+   3
+   3
+
+>> 
+>> a
+a =
+
+    1.00000   12.00000    2.00000    0.50000
+
+>> sum(a)
+ans =  15.500
+>> floor(a)
+ans =
+
+    1   12    2    0
+
+>> ceil(a)
+ans =
+
+    1   12    2    1
+
+>> max(rand(3), rand(3))
+ans =
+
+   0.68971   0.81499   0.95358
+   0.74351   0.83751   0.82543
+   0.89952   0.99912   0.75737
+
+>> rand(3)
+ans =
+
+   0.677393   0.967863   0.735893
+   0.132020   0.320328   0.064031
+   0.121239   0.647581   0.462060
+
+>> A
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> max(A,[],1)
+ans =
+
+   8   9   7
+
+>> who
+Variables in the current scope:
+
+A    B    C    V    W    a    ans  b    c    ind  r    sz   v    val  w
+
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A           3x3                         72  double
+        B           3x2                         48  double
+        C           2x2                         32  double
+        V           1x11                        24  double
+        W           1x3                         24  double
+        a           1x4                         32  double
+        ans         1x3                         24  double
+        b           5x1                         40  double
+        c           9x1                         36  double
+        ind         1x2                         16  double
+        r           9x1                         36  double
+        sz          1x2                         16  double
+        v           3x1                         24  double
+        val         1x2                         16  double
+        w           1x10000                  80000  double
+
+Total is 10072 elements using 80440 bytes
+
+>> t = [0;0.1;0.98]
+t =
+
+   0.00000
+   0.10000
+   0.98000
+
+>> t
+t =
+
+   0.00000
+   0.10000
+   0.98000
+
+>> y1 = sin(2*pi*4*t);
+>> plot(t, y1);
+>> t = [0;0.01;0.98]
+t =
+
+   0.00000
+   0.01000
+   0.98000
+
+>> plot(t, y1);
+>> t = [0:0.01:0.98]
+t =
+
+ Columns 1 through 10:
+
+   0.00000   0.01000   0.02000   0.03000   0.04000   0.05000   0.06000   0.07000   0.08000   0.09000
+
+ Columns 11 through 20:
+
+   0.10000   0.11000   0.12000   0.13000   0.14000   0.15000   0.16000   0.17000   0.18000   0.19000
+
+ Columns 21 through 30:
+
+   0.20000   0.21000   0.22000   0.23000   0.24000   0.25000   0.26000   0.27000   0.28000   0.29000
+
+ Columns 31 through 40:
+
+   0.30000   0.31000   0.32000   0.33000   0.34000   0.35000   0.36000   0.37000   0.38000   0.39000
+
+ Columns 41 through 50:
+
+   0.40000   0.41000   0.42000   0.43000   0.44000   0.45000   0.46000   0.47000   0.48000   0.49000
+
+ Columns 51 through 60:
+
+   0.50000   0.51000   0.52000   0.53000   0.54000   0.55000   0.56000   0.57000   0.58000   0.59000
+
+ Columns 61 through 70:
+
+   0.60000   0.61000   0.62000   0.63000   0.64000   0.65000   0.66000   0.67000   0.68000   0.69000
+
+ Columns 71 through 80:
+
+   0.70000   0.71000   0.72000   0.73000   0.74000   0.75000   0.76000   0.77000   0.78000   0.79000
+>> plot(t, y1);
+error: __plt2vv__: vector lengths must match
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__plt__.m at line 484, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__plt__.m at line 243, column 14
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__plt__.m at line 113, column 17
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/plot.m at line 220, column 10
+>> t=[0:0.01:0.98];
+>> y1 = sin(2*pi*4*t);
+>> plot(t, y1)
+>> y2 = cos(2*pi*4*t)
+y2 =
+
+ Columns 1 through 9:
+
+   1.000000   0.968583   0.876307   0.728969   0.535827   0.309017   0.062791  -0.187381  -0.425779
+
+ Columns 10 through 18:
+
+  -0.637424  -0.809017  -0.929776  -0.992115  -0.992115  -0.929776  -0.809017  -0.637424  -0.425779
+
+ Columns 19 through 27:
+
+  -0.187381   0.062791   0.309017   0.535827   0.728969   0.876307   0.968583   1.000000   0.968583
+
+ Columns 28 through 36:
+
+   0.876307   0.728969   0.535827   0.309017   0.062791  -0.187381  -0.425779  -0.637424  -0.809017
+
+ Columns 37 through 45:
+
+  -0.929776  -0.992115  -0.992115  -0.929776  -0.809017  -0.637424  -0.425779  -0.187381   0.062791
+
+ Columns 46 through 54:
+
+   0.309017   0.535827   0.728969   0.876307   0.968583   1.000000   0.968583   0.876307   0.728969
+
+ Columns 55 through 63:
+
+   0.535827   0.309017   0.062791  -0.187381  -0.425779  -0.637424  -0.809017  -0.929776  -0.992115
+
+ Columns 64 through 72:
+
+>> 
+>> plot(t, y2)
+>> plot(t, y1)
+>> 
+>> plot(t, y1)
+>> plot(t, y1);
+>> hold on;
+>> plot(t, y2, 'r')
+>> xlabel('time')
+>> ylabel('value')
+>> title('my plot')
+>> pwe
+error: 'pwe' undefined near line 1 column 1
+>> pwd
+ans = /Users/Usamahk/Documents
+>> cd '~/Octave'
+error: ~/Octave: No such file or directory
+>> cd '~/Documents/Octave'
+>> pwd
+ans = /Users/Usamahk/Documents/Octave
+>> ls
+>> print -dpng 'myPlot.png'
+warning: print.m: fig2dev binary is not available.
+Some output formats are not available.
+
+>> 
+>> help ploy
+error: help: 'ploy' not found
+>> help plot
+'plot' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/plot.m
+
+ -- Function File: plot (Y)
+ -- Function File: plot (X, Y)
+ -- Function File: plot (X, Y, FMT)
+ -- Function File: plot (..., PROPERTY, VALUE, ...)
+ -- Function File: plot (X1, Y1, ..., XN, YN)
+ -- Function File: plot (HAX, ...)
+ -- Function File: H = plot (...)
+     Produce 2-D plots.
+
+     Many different combinations of arguments are possible.  The
+     simplest form is
+
+          plot (Y)
+
+     where the argument is taken as the set of Y coordinates and the X
+     coordinates are taken to be the range '1:numel (Y)'.
+
+     If more than one argument is given, they are interpreted as
+
+          plot (Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, FMT, ...)
+
+     and so on.  Any number of argument sets may appear.  The X and Y
+     values are interpreted as follows:
+>> close
+>> figure(1); plot(t,y1)
+>> figure(2); plot(t,y2)
+>> close
+>> subplot(1,2,1);
+>> plot(t,y1)
+>> subplot(1,2,2);
+>> plot(t,y2)
+>> plot(t,y2,'r')
+>> axis([0.5 1 -1 1])
+>> A = magic(5)
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+>> imagesc(A)
+>> close
+>> clf;
+>> imagesc(A)
+Event not swallowed ! 1037 
+############### WRONG readEvent  29369344 272 
+Qt terminal communication error: select() error 9 Bad file descriptor
+>> A = magic(5)
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+>> imagesc(A)
+Could not connect gnuplot_qt "" . Starting a new one 
+>> imagesc(A), colorbar, colormap gray;
+>> A(1,2)
+ans =  24
+>> A = magic(15)
+A =
+
+   122   139   156   173   190   207   224     1    18    35    52    69    86   103   120
+   138   155   172   189   206   223    15    17    34    51    68    85   102   119   121
+   154   171   188   205   222    14    16    33    50    67    84   101   118   135   137
+   170   187   204   221    13    30    32    49    66    83   100   117   134   136   153
+   186   203   220    12    29    31    48    65    82    99   116   133   150   152   169
+   202   219    11    28    45    47    64    81    98   115   132   149   151   168   185
+   218    10    27    44    46    63    80    97   114   131   148   165   167   184   201
+     9    26    43    60    62    79    96   113   130   147   164   166   183   200   217
+    25    42    59    61    78    95   112   129   146   163   180   182   199   216     8
+    41    58    75    77    94   111   128   145   162   179   181   198   215     7    24
+    57    74    76    93   110   127   144   161   178   195   197   214     6    23    40
+    73    90    92   109   126   143   160   177   194   196   213     5    22    39    56
+    89    91   108   125   142   159   176   193   210   212     4    21    38    55    72
+   105   107   124   141   158   175   192   209   211     3    20    37    54    71    88
+   106   123   140   157   174   191   208   225     2    19    36    53    70    87   104
+
+>> imagesc(A)
+>> imagesc(A), colorbar;
+>> clf
+>> imagesc(A), colorbar;
+>> clf
+>> imagesc(A)
+>> help imagesc
+'imagesc' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/image/imagesc.m
+
+ -- Function File: imagesc (IMG)
+ -- Function File: imagesc (X, Y, IMG)
+ -- Function File: imagesc (..., CLIMITS)
+ -- Function File: imagesc (..., "PROP", VAL, ...)
+ -- Function File: imagesc ("PROP1", VAL1, ...)
+ -- Function File: imagesc (HAX, ...)
+ -- Function File: H = imagesc (...)
+     Display a scaled version of the matrix IMG as a color image.  The
+     colormap is scaled so that the entries of the matrix occupy the
+     entire colormap.  If 'CLIMITS = [LO, HI]' is given, then that range
+     is set to the "clim" of the current axes.
+
+     The axis values corresponding to the matrix elements are specified
+     in X and Y, either as pairs giving the minimum and maximum values
+     for the respective axes, or as values for each row and column of
+     the matrix IMG.
+
+     The optional return value H is a graphics handle to the image.
+
+     Calling Forms: The 'imagesc' function can be called in two forms:
+     High-Level and Low-Level.  When invoked with normal options, the
+     High-Level form is used which first calls 'newplot' to prepare the
+     graphic figure and axes.  When the only inputs to 'image' are
+     property/value pairs the Low-Level form is used which creates a new
+     instance of an image object and inserts it in the current axes.
+
+     See also: image, imshow, caxis.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> ls
+myPlot.png
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        A          15x15                      1800  double
+        B           3x2                         48  double
+        C           2x2                         32  double
+        V           1x11                        24  double
+        W           1x3                         24  double
+        a           1x4                         32  double
+        ans         1x1                          8  double
+        b           5x1                         40  double
+        c           9x1                         36  double
+        ind         1x2                         16  double
+        r           9x1                         36  double
+        sz          1x2                         16  double
+        t           1x99                       792  double
+        v           3x1                         24  double
+        val         1x2                         16  double
+        w           1x10000                  80000  double
+        y1          1x99                       792  double
+        y2          1x99                       792  double
+
+Total is 10583 elements using 84528 bytes
+
+>> v = zeros(10,1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> for i=1:10,
+>    v(i) = 2^i;
+> end;
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+>> indices=1:10;
+>> indices
+indices =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+>> i
+i =  10
+>> i = 1;
+>> while i <=5,
+>    v(i) = 100;
+>    i = i +1;
+> end;
+>> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+>> i = 1;
+>> while true,
+>    v(i) = 999;
+>    i = i + 1;
+>    if i == 6,
+>      break;
+>    end;
+> end;
+>> v
+v =
+
+    999
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+
+>> v(2)
+ans =  999
+>> v(1) = 2;
+>> if v(1) == 1
+>    disp('The value is one');
+> elseif v(1) == 2,
+>    disp('The value is two');
+> else
+>    disp('The value is not one or two');
+> end;
+The value is two
+>> pwd
+ans = /Users/Usamahk/Documents/Octave
+>> ls
+myPlot.png		squareThisNumber.m
+>> squareThisNumber(5)
+ans =  25
+>> [a,b] = squareAndCubeThisNumber(5);
+>> a
+a =  25
+>> b
+b =  125
+>> v = squareAndCubeThisNumber(5);
+>> v
+v =  25
+>> X = 1 1; 2 2; 3 3]
+parse error:
+
+  syntax error
+
+>>> X = 1 1; 2 2; 3 3]
+          ^
+
+>> X = [1 1; 2 2; 3 3]
+X =
+
+   1   1
+   2   2
+   3   3
+
+>> y = [ 1; 2; 3]
+y =
+
+   1
+   2
+   3
+
+>> plot(X,y)
+>> plot(X,y,point)
+error: 'point' undefined near line 1 column 10
+error: evaluating argument list element number 3
+>> help plot
+'plot' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/plot.m
+
+ -- Function File: plot (Y)
+ -- Function File: plot (X, Y)
+ -- Function File: plot (X, Y, FMT)
+ -- Function File: plot (..., PROPERTY, VALUE, ...)
+ -- Function File: plot (X1, Y1, ..., XN, YN)
+ -- Function File: plot (HAX, ...)
+ -- Function File: H = plot (...)
+     Produce 2-D plots.
+
+     Many different combinations of arguments are possible.  The
+     simplest form is
+
+          plot (Y)
+
+     where the argument is taken as the set of Y coordinates and the X
+     coordinates are taken to be the range '1:numel (Y)'.
+
+     If more than one argument is given, they are interpreted as
+
+          plot (Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, PROPERTY, VALUE, ...)
+
+     or
+
+          plot (X, Y, FMT, ...)
+
+     and so on.  Any number of argument sets may appear.  The X and Y
+     values are interpreted as follows:
+
+        * If a single data argument is supplied, it is taken as the set
+          of Y coordinates and the X coordinates are taken to be the
+          indices of the elements, starting with 1.
+
+        * If X and Y are scalars, a single point is plotted.
+
+        * 'squeeze()' is applied to arguments with more than two
+          dimensions, but no more than two singleton dimensions.
+
+        * If both arguments are vectors, the elements of Y are plotted
+          versus the elements of X.
+
+        * If X is a vector and Y is a matrix, then the columns (or rows)
+          of Y are plotted versus X.  (using whichever combination
+          matches, with columns tried first.)
+
+        * If the X is a matrix and Y is a vector, Y is plotted versus
+          the columns (or rows) of X.  (using whichever combination
+          matches, with columns tried first.)
+
+        * If both arguments are matrices, the columns of Y are plotted
+          versus the columns of X.  In this case, both matrices must
+          have the same number of rows and columns and no attempt is
+          made to transpose the arguments to make the number of rows
+          match.
+
+     Multiple property-value pairs may be specified, but they must
+     appear in pairs.  These arguments are applied to the line objects
+     drawn by 'plot'.  Useful properties to modify are "linestyle",
+     "linewidth", "color", "marker", "markersize", "markeredgecolor",
+     "markerfacecolor".
+
+     The FMT format argument can also be used to control the plot style.
+     The format is composed of three parts: linestyle, markerstyle,
+     color.  When a markerstyle is specified, but no linestyle, only the
+     markers are plotted.  Similarly, if a linestyle is specified, but
+     no markerstyle, then only lines are drawn.  If both are specified
+     then lines and markers will be plotted.  If no FMT and no
+     PROPERTY/VALUE pairs are given, then the default plot style is
+     solid lines with no markers and the color determined by the
+     "colororder" property of the current axes.
+
+     Format arguments:
+
+     linestyle
+
+          '-'  Use solid lines (default).
+          '--' Use dashed lines.
+          ':'  Use dotted lines.
+          '-.' Use dash-dotted lines.
+
+     markerstyle
+
+          '+'  crosshair
+          'o'  circle
+          '*'  star
+          '.'  point
+          'x'  cross
+>> plot(X,y,'+')
+>> plot(X,y)
+>> X
+X =
+
+   1   1
+   2   2
+   3   3
+
+>> X = [ 1 1; 1 2; 1 3]
+X =
+
+   1   1
+   1   2
+   1   3
+
+>> plot(X,y)
+>> plot(X,y,'+')
+>> plot(X(:,2),y,'+')
+>> axis([0:5,1])
+error: axis: expecting vector with 2, 4, or 6 elements
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/axis.m at line 284, column 7
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/axis.m at line 149, column 7
+>> axis([0:5])
+>> axis([0:5,1,1])
+error: axis: expecting vector with 2, 4, or 6 elements
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/axis.m at line 284, column 7
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/axis.m at line 149, column 7
+>> help axis
+'axis' is a function from the file /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/axis.m
+
+ -- Function File: axis ()
+ -- Function File: axis ([X_lo X_hi])
+ -- Function File: axis ([X_lo X_hi Y_lo Y_hi])
+ -- Function File: axis ([X_lo X_hi Y_lo Y_hi Z_lo Z_hi])
+ -- Function File: axis (OPTION)
+ -- Function File: axis (..., OPTION)
+ -- Function File: axis (HAX, ...)
+ -- Function File: LIMITS = axis ()
+     Set axis limits and appearance.
+
+     The argument LIMITS should be a 2-, 4-, or 6-element vector.  The
+     first and second elements specify the lower and upper limits for
+     the x-axis.  The third and fourth specify the limits for the
+     y-axis, and the fifth and sixth specify the limits for the z-axis.
+
+     Without any arguments, 'axis' turns autoscaling on.
+
+     With one output argument, 'LIMITS = axis' returns the current axis
+     limits.
+
+     The vector argument specifying limits is optional, and additional
+     string arguments may be used to specify various axis properties.
+     For example,
+
+          axis ([1, 2, 3, 4], "square");
+
+     forces a square aspect ratio, and
+
+          axis ("tic", "labely");
+>> axis([0 5])
+>> axis([0 5 0 5])
+>> j = costFunctionJ(X,y,theta)
+error: 'theta' undefined near line 1 column 23
+error: evaluating argument list element number 3
+>> theta
+error: 'theta' undefined near line 1 column 1
+>> theta = [0;1];
+>> theta
+theta =
+
+   0
+   1
+
+>> j = costFunctionJ(X,y,theta)
+j = 0
+>> theta = [0;0];
+>> j = costFunctionJ(X,y,theta)
+j =  2.3333
+>> (1^2 + 2^2 + 3^2)/2m
+parse error:
+
+  syntax error
+
+>>> (1^2 + 2^2 + 3^2)/2m
+                       ^
+
+>> (1^2 + 2^2 + 3^2)/(2*3)
+ans =  2.3333
+>> prediction = 0.0;
+>> for j = 1:n+1,
+>    prediction = prediction = theta(j) * x(j)
+> end;
+error: 'n' undefined near line 1 column 11
+error: invalid limit value in colon expression
+>> close
+>> A = [1 2; 3 4; 5 6];
+>> B = [1 2 3; 4 5 6];
+>> C = A' + B
+C =
+
+    2    5    8
+    6    9   12
+
+>> C = B* A
+C =
+
+   22   28
+   49   64
+
+>> C =A +B
+error: operator +: nonconformant arguments (op1 is 3x2, op2 is 2x3)
+>> C =A + B
+error: operator +: nonconformant arguments (op1 is 3x2, op2 is 2x3)
+>> C = B' * A
+error: operator *: nonconformant arguments (op1 is 3x2, op2 is 3x2)
+>> A = magic(4)
+A =
+
+   16    2    3   13
+    5   11   10    8
+    9    7    6   12
+    4   14   15    1
+
+>> B = A(:,1:2)
+B =
+
+   16    2
+    5   11
+    9    7
+    4   14
+
+>> B = A(1:4,1:2)
+B =
+
+   16    2
+    5   11
+    9    7
+    4   14
+
+>> B = A(:,0:2)
+error: subscript indices must be either positive integers less than 2^31 or logicals
+>> B = A(0:4,0:2)
+error: subscript indices must be either positive integers less than 2^31 or logicals
+>> x=magic(7)
+x =
+
+   30   39   48    1   10   19   28
+   38   47    7    9   18   27   29
+   46    6    8   17   26   35   37
+    5   14   16   25   34   36   45
+   13   15   24   33   42   44    4
+   21   23   32   41   43    3   12
+   22   31   40   49    2   11   20
+
+>> for i = 1:7
+>   for j = 1:7
+>     A(i, j) = log(X(i, j));
+>     B(i, j) = X(i, j) ^ 2;
+>     C(i, j) = X(i, j) + 1;
+>     D(i, j) = X(i, j) / 4;
+>   end
+> end
+error: A(I,J): column index out of bounds; value 3 out of bound 2
+>> A = []
+A = [](0x0)
+>> for i = 1:7
+>   for j = 1:7
+>     A(i, j) = log(X(i, j));
+>     B(i, j) = X(i, j) ^ 2;
+>     C(i, j) = X(i, j) + 1;
+>     D(i, j) = X(i, j) / 4;
+>   end
+> end
+error: A(I,J): column index out of bounds; value 3 out of bound 2
+>> X = magic(7)
+X =
+
+   30   39   48    1   10   19   28
+   38   47    7    9   18   27   29
+   46    6    8   17   26   35   37
+    5   14   16   25   34   36   45
+   13   15   24   33   42   44    4
+   21   23   32   41   43    3   12
+   22   31   40   49    2   11   20
+
+>> for i = 1:7
+>   for j = 1:7
+>     A(i, j) = log(X(i, j));
+>     B(i, j) = X(i, j) ^ 2;
+>     C(i, j) = X(i, j) + 1;
+>     D(i, j) = X(i, j) / 4;
+>   end
+> end
+>> X
+X =
+
+   30   39   48    1   10   19   28
+   38   47    7    9   18   27   29
+   46    6    8   17   26   35   37
+    5   14   16   25   34   36   45
+   13   15   24   33   42   44    4
+   21   23   32   41   43    3   12
+   22   31   40   49    2   11   20
+
+>> D = x/4
+D =
+
+    7.50000    9.75000   12.00000    0.25000    2.50000    4.75000    7.00000
+    9.50000   11.75000    1.75000    2.25000    4.50000    6.75000    7.25000
+   11.50000    1.50000    2.00000    4.25000    6.50000    8.75000    9.25000
+    1.25000    3.50000    4.00000    6.25000    8.50000    9.00000   11.25000
+    3.25000    3.75000    6.00000    8.25000   10.50000   11.00000    1.00000
+    5.25000    5.75000    8.00000   10.25000   10.75000    0.75000    3.00000
+    5.50000    7.75000   10.00000   12.25000    0.50000    2.75000    5.00000
+
+>> B= X.^2
+B =
+
+    900   1521   2304      1    100    361    784
+   1444   2209     49     81    324    729    841
+   2116     36     64    289    676   1225   1369
+     25    196    256    625   1156   1296   2025
+    169    225    576   1089   1764   1936     16
+    441    529   1024   1681   1849      9    144
+    484    961   1600   2401      4    121    400
+
+>> B=X^2
+B =
+
+   5740   4760   4081   3703   3577   4144   4620
+   4732   5649   4809   3927   3689   3752   4067
+   3948   4704   5810   4767   4025   3584   3787
+   3731   4032   4634   5831   4634   4032   3731
+   3787   3584   4025   4767   5810   4704   3948
+   4067   3752   3689   3927   4809   5649   4732
+   4620   4144   3577   3703   4081   4760   5740
+
+>> C=X+1
+C =
+
+   31   40   49    2   11   20   29
+   39   48    8   10   19   28   30
+   47    7    9   18   27   36   38
+    6   15   17   26   35   37   46
+   14   16   25   34   43   45    5
+   22   24   33   42   44    4   13
+   23   32   41   50    3   12   21
+
+>> x
+x =
+
+   30   39   48    1   10   19   28
+   38   47    7    9   18   27   29
+   46    6    8   17   26   35   37
+    5   14   16   25   34   36   45
+   13   15   24   33   42   44    4
+   21   23   32   41   43    3   12
+   22   31   40   49    2   11   20
+
+>> A=log(X)
+A =
+
+   3.40120   3.66356   3.87120   0.00000   2.30259   2.94444   3.33220
+   3.63759   3.85015   1.94591   2.19722   2.89037   3.29584   3.36730
+   3.82864   1.79176   2.07944   2.83321   3.25810   3.55535   3.61092
+   1.60944   2.63906   2.77259   3.21888   3.52636   3.58352   3.80666
+   2.56495   2.70805   3.17805   3.49651   3.73767   3.78419   1.38629
+   3.04452   3.13549   3.46574   3.71357   3.76120   1.09861   2.48491
+   3.09104   3.43399   3.68888   3.89182   0.69315   2.39790   2.99573
+
+>> pwd
+ans = /Users/Usamahk/Documents/Octave
+>> cd('~/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1') 
+>> pwd
+ans = /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1
+>> ls
+computeCost.m		ex1data1.txt		gradientDescentMulti.m	submit.m
+computeCostMulti.m	ex1data2.txt		lib			warmUpExercise.m
+ex1.m			featureNormalize.m	normalEqn.m
+ex1_multi.m		gradientDescent.m	plotData.m
+>> warmUpExcercise()
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> warmUpExcercise
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> ls
+computeCost.m		ex1data1.txt		gradientDescentMulti.m	submit.m
+computeCostMulti.m	ex1data2.txt		lib			warmUpExercise.m
+ex1.m			featureNormalize.m	normalEqn.m
+ex1_multi.m		gradientDescent.m	plotData.m
+>> warmUpExcercise()
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> warmUpExcercise()
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> warmUpExcercise()
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> pwd
+ans = /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1
+>> clear
+>> ls
+computeCost.m		ex1data1.txt		gradientDescentMulti.m	submit.m
+computeCostMulti.m	ex1data2.txt		lib			warmUpExercise.m
+ex1.m			featureNormalize.m	normalEqn.m
+ex1_multi.m		gradientDescent.m	plotData.m
+>> whos
+>> warmUpExcercise()
+error: 'warmUpExcercise' undefined near line 1 column 1
+>> warmUpExercise()
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Login (email address): usamah.khan@gmail.com
+Token: q2bCAYCloHsSs7fm
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |   0 /  40 | 
+==         Gradient Descent (for One Variable) |   0 /  50 | 
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             |  10 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |   0 /  50 | 
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | 
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> data = load('exdata.txt');
+error: load: unable to find file exdata.txt
+>> data = load('exdata1.txt');
+error: load: unable to find file exdata1.txt
+>> data = load('ex1data1.txt');
+>> X = data(:,1); y = data(:,2);
+>> m = length(y)
+m =  97
+>> plot(X, y, 'rx', 'MarkerSize', 10);
+>> plot(X, y, 'rx', 'MarkerSize', 5);
+>> plot(x, y, 'rx', 'MarkerSize', 10); % Plot the data ylabel('Profit in $10,000s'); % Set the y−axis label xlabel('Population of City in 10,000s');
+error: 'x' undefined near line 1 column 6
+error: evaluating argument list element number 1
+>> ylabel('Profit in 10,000s');
+>> xlabel('Population of City in 10,000s')
+>> plot(X, y, 'rx', 'MarkerSize', 5);
+>> ex1()
+error: invalid use of script /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/ex1.m in index expression
+>> ex1
+
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+Running Gradient Descent ...
+ans =  32.073
+Theta found by gradient descent: -3.630291 1.166362 
+warning: legend: ignoring extra labels
+Event not swallowed ! 1037 
+############### WRONG readEvent  29369344 204 
+Qt terminal communication error: select() error 9 Bad file descriptor
+For population = 35,000, we predict a profit of 4519.767868
+For population = 70,000, we predict a profit of 45342.450129
+Program paused. Press enter to continue.
+
+
+Visualizing J(theta_0, theta_1) ...
+>> 
+>> 
+>> cleawr
+error: 'cleawr' undefined near line 1 column 1
+>> close
+>> close
+>> ex1
+
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+error: 'X' undefined near line 20 column 6
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/plotData.m at line 20, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/ex1.m at line 47, column 1
+>> ex1
+
+
+
+
+
+
+
+
+
+
+
+Running warmUpExercise ... 
+5x5 Identity Matrix: 
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+Program paused. Press enter to continue.
+Plotting Data ...
+Program paused. Press enter to continue.
+Running Gradient Descent ...
+ans =  32.073
+Theta found by gradient descent: -3.630291 1.166362 
+For population = 35,000, we predict a profit of 4519.767868
+For population = 70,000, we predict a profit of 45342.450129
+Program paused. Press enter to continue.
+
+Visualizing J(theta_0, theta_1) ...
+>> 
+>> 
+>> X
+X =
+
+    1.0000    6.1101
+    1.0000    5.5277
+    1.0000    8.5186
+    1.0000    7.0032
+    1.0000    5.8598
+    1.0000    8.3829
+    1.0000    7.4764
+    1.0000    8.5781
+    1.0000    6.4862
+    1.0000    5.0546
+    1.0000    5.7107
+    1.0000   14.1640
+    1.0000    5.7340
+    1.0000    8.4084
+    1.0000    5.6407
+    1.0000    5.3794
+    1.0000    6.3654
+    1.0000    5.1301
+    1.0000    6.4296
+    1.0000    7.0708
+    1.0000    6.1891
+    1.0000   20.2700
+    1.0000    5.4901
+    1.0000    6.3261
+    1.0000    5.5649
+    1.0000   18.9450
+    1.0000   12.8280
+    1.0000   10.9570
+    1.0000   13.1760
+    1.0000   22.2030
+>> X[:1]
+parse error:
+
+  syntax error
+
+>>> X[:1]
+     ^
+
+>> X(:1)
+parse error:
+
+  syntax error
+
+>>> X(:1)
+       ^
+
+>> X(:,1)
+ans =
+
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+>> X(:,2)
+ans =
+
+    6.1101
+    5.5277
+    8.5186
+    7.0032
+    5.8598
+    8.3829
+    7.4764
+    8.5781
+    6.4862
+    5.0546
+    5.7107
+   14.1640
+    5.7340
+    8.4084
+    5.6407
+    5.3794
+    6.3654
+    5.1301
+    6.4296
+    7.0708
+    6.1891
+   20.2700
+    5.4901
+    6.3261
+    5.5649
+   18.9450
+   12.8280
+   10.9570
+   13.1760
+   22.2030
+>> meanv = mean(X(:,2))
+meanv =  8.1598
+>> mu = zeros(1, size(X, 2));
+>> mu
+mu =
+
+   0   0
+
+>> X-meanv
+ans =
+
+   -7.159800   -2.049700
+   -7.159800   -2.632100
+   -7.159800    0.358800
+   -7.159800   -1.156600
+   -7.159800   -2.300000
+   -7.159800    0.223100
+   -7.159800   -0.683400
+   -7.159800    0.418300
+   -7.159800   -1.673600
+   -7.159800   -3.105200
+   -7.159800   -2.449100
+   -7.159800    6.004200
+   -7.159800   -2.425800
+   -7.159800    0.248600
+   -7.159800   -2.519100
+   -7.159800   -2.780400
+   -7.159800   -1.794400
+   -7.159800   -3.029700
+   -7.159800   -1.730200
+   -7.159800   -1.089000
+   -7.159800   -1.970700
+   -7.159800   12.110200
+   -7.159800   -2.669700
+   -7.159800   -1.833700
+   -7.159800   -2.594900
+   -7.159800   10.785200
+   -7.159800    4.668200
+   -7.159800    2.797200
+   -7.159800    5.016200
+   -7.159800   14.043200
+>> (X(:,2)-meanv)/std(X(:,2))
+ans =
+
+  -0.529654
+  -0.680150
+   0.092716
+  -0.298872
+  -0.594333
+   0.057650
+  -0.176594
+   0.108091
+  -0.432468
+  -0.802401
+  -0.632861
+   1.551520
+  -0.626841
+   0.064240
+  -0.650950
+  -0.718471
+  -0.463683
+  -0.782892
+  -0.447094
+  -0.281404
+  -0.509240
+   3.129345
+  -0.689866
+  -0.473839
+  -0.670537
+   2.786957
+   1.206290
+   0.722812
+   1.296215
+   3.628843
+>> X_norm = (X(:,2)-meanv)/std(X(:,2));
+>> X_norm
+X_norm =
+
+  -0.529654
+  -0.680150
+   0.092716
+  -0.298872
+  -0.594333
+   0.057650
+  -0.176594
+   0.108091
+  -0.432468
+  -0.802401
+  -0.632861
+   1.551520
+  -0.626841
+   0.064240
+  -0.650950
+  -0.718471
+  -0.463683
+  -0.782892
+  -0.447094
+  -0.281404
+  -0.509240
+   3.129345
+  -0.689866
+  -0.473839
+  -0.670537
+   2.786957
+   1.206290
+   0.722812
+   1.296215
+   3.628843
+>> X_norm = X;
+>> X_norm(:,2) = (X(:,2)-meanv)/std(X(:,2));
+>> X_norm
+X_norm =
+
+   1.000000  -0.529654
+   1.000000  -0.680150
+   1.000000   0.092716
+   1.000000  -0.298872
+   1.000000  -0.594333
+   1.000000   0.057650
+   1.000000  -0.176594
+   1.000000   0.108091
+   1.000000  -0.432468
+   1.000000  -0.802401
+   1.000000  -0.632861
+   1.000000   1.551520
+   1.000000  -0.626841
+   1.000000   0.064240
+   1.000000  -0.650950
+   1.000000  -0.718471
+   1.000000  -0.463683
+   1.000000  -0.782892
+   1.000000  -0.447094
+   1.000000  -0.281404
+   1.000000  -0.509240
+   1.000000   3.129345
+   1.000000  -0.689866
+   1.000000  -0.473839
+   1.000000  -0.670537
+   1.000000   2.786957
+   1.000000   1.206290
+   1.000000   0.722812
+   1.000000   1.296215
+   1.000000   3.628843
+>> featureNormalize
+error: 'X' undefined near line 9 column 10
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/featureNormalize.m at line 9, column 8
+>> featureNormalize()
+error: 'X' undefined near line 9 column 10
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/featureNormalize.m at line 9, column 8
+>> featureNormalize(X)
+m =  2
+warning: division by zero
+ans =
+
+        NaN  -0.529654
+        NaN  -0.680150
+        NaN   0.092716
+        NaN  -0.298872
+        NaN  -0.594333
+        NaN   0.057650
+        NaN  -0.176594
+        NaN   0.108091
+        NaN  -0.432468
+        NaN  -0.802401
+        NaN  -0.632861
+        NaN   1.551520
+        NaN  -0.626841
+        NaN   0.064240
+        NaN  -0.650950
+        NaN  -0.718471
+        NaN  -0.463683
+        NaN  -0.782892
+        NaN  -0.447094
+        NaN  -0.281404
+        NaN  -0.509240
+        NaN   3.129345
+        NaN  -0.689866
+        NaN  -0.473839
+        NaN  -0.670537
+        NaN   2.786957
+        NaN   1.206290
+        NaN   0.722812
+        NaN   1.296215
+        NaN   3.628843
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | 
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | 
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> close
+>> close
+>> close
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> theta = zeros(size(X, 2), 1);
+>> theta
+theta =
+
+   0
+   0
+
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+!! Submission failed: unexpected error: parse error near line 16 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning - Stanford/machine-learning-ex1/ex1/normalEqn.m
+
+  syntax error
+
+>>> 	theta(:,i)= pinv(X'*X)*X'y;
+                            ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | 
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Linear Regression with Multiple Variables...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+m =  3
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Warm-up Exercise |  10 /  10 | Nice work!
+==           Computing Cost (for One Variable) |  40 /  40 | Nice work!
+==         Gradient Descent (for One Variable) |  50 /  50 | Nice work!
+==                       Feature Normalization |   0 /   0 | Nice work!
+==     Computing Cost (for Multiple Variables) |   0 /   0 | Nice work!
+==   Gradient Descent (for Multiple Variables) |   0 /   0 | Nice work!
+==                            Normal Equations |   0 /   0 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
