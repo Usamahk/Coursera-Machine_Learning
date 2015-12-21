@@ -1,0 +1,573 @@
+Last login: Fri Dec 18 17:14:47 on ttys001
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 ('>> ')
+>> pwd
+ans = /Users/Usamahk
+>> cd ~/Documents/Courses and Books
+error: ~/Documents/Courses: No such file or directory
+>> cd '~/Documents/Courses and Books'
+>> cd '~/Machine Learning'
+error: ~/Machine Learning: No such file or directory
+>> cd '~/Documents/Courses and Books/Machine Learning/ml-ex2/ex2'
+error: ~/Documents/Courses and Books/Machine Learning/ml-ex2/ex2: No such file or directory
+>> cd '~/Documents/Courses and Books/Machine Learning/ml-ex2/'
+error: ~/Documents/Courses and Books/Machine Learning/ml-ex2/: No such file or directory
+>> cd '~/Documents/Courses and Books/Machine Learning/ml-ex2'
+error: ~/Documents/Courses and Books/Machine Learning/ml-ex2: No such file or directory
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2'
+>> ls
+costFunction.m		ex2data2.txt		predict.m
+costFunctionReg.m	lib			sigmoid.m
+ex2.m			mapFeature.m		submit.m
+ex2_reg.m		plotData.m
+ex2data1.txt		plotDecisionBoundary.m
+>> ex2()
+error: invalid use of script /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/ex2.m in index expression
+>> ex2
+
+Plotting data with + indicating (y = 1) examples and o indicating (y = 0) examples.
+warning: legend: plot data is empty; setting key labels has no effect
+error: legend: subscript indices must be either positive integers less than 2^31 or logicals
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/appearance/legend.m at line 418, column 15
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/ex2.m at line 45, column 1
+>> close
+>> plotData
+error: 'y' undefined near line 15 column 12
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/plotData.m at line 15, column 5
+>> data = load('ex2data1.txt');
+>> X = data(:, [1, 2]); y = data(:, 3);
+>> plotData
+error: 'y' undefined near line 15 column 12
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/plotData.m at line 15, column 5
+>> close
+>> close
+>> plotData(X, y)
+>> e^1
+ans =  2.7183
+>> e^0
+ans =  1
+>> sigmoid(10)
+ans =
+
+ Columns 1 through 8:
+
+   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995
+
+ Columns 9 and 10:
+
+   0.99995   0.99995
+
+>> sigmoid(0)
+ans = 0
+>> sigmoid(0)
+g = 0
+ans = 0
+>> g = zeros(size(0))
+g = 0
+>> sigmoid(0)
+g = 0
+ans = 0
+>> sigmoid(0)
+error: sigmoid: subscript indices must be either positive integers less than 2^31 or logicals
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/sigmoid.m at line 13, column 7
+>> sigmoid(0)
+ans =  0.50000
+>> sigmoid(10)
+ans =
+
+ Columns 1 through 8:
+
+   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995   0.99995
+
+ Columns 9 through 11:
+
+   0.99995   0.99995   0.99995
+
+>> sigmoid(1)
+ans =
+
+   0.73106   0.73106
+
+>> submit()
+== Submitting solutions | Logistic Regression...
+Login (email address): usamah.khan@gmail.com
+Token: x7nRYBQUCnsEz9RK
+!! Submission failed: unexpected error: for x^A, A must be a square matrix. Use .^ for elementwise power.
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Login (email address): usamah.khan@gmail.com
+Token: x7nRYBQUCnsEz9RK
+!! Submission failed: unexpected error: for x^A, A must be a square matrix. Use .^ for elementwise power.
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Login (email address): usamah.khan@gmail.com
+Token: 4fp5kNkDWwt1uH3d
+!! Submission failed: unexpected error: for x^A, A must be a square matrix. Use .^ for elementwise power.
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Login (email address): usamah.khan@gmail.com
+Token: 4fp5kNkDWwt1uH3d
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |   0 /  30 | 
+==                Logistic Regression Gradient |   0 /  30 | 
+==                                     Predict |   0 /   5 | 
+==        Regularized Logistic Regression Cost |   0 /  15 | 
+==    Regularized Logistic Regression Gradient |   0 /  15 | 
+==                                   --------------------------------
+==                                             |   5 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+!! Submission failed: unexpected error: parse error near line 23 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/costFunction.m
+
+  syntax error
+
+>>> J = (1 / m) * sum(-y * log(sigmoid(X*theta)) - (1 - y)*log(1 - sigmoid(X*theta))));
+                                                                                     ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: operator *: nonconformant arguments (op1 is 20x1, op2 is 20x1)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+!! Submission failed: unexpected error: operator *: nonconformant arguments (op1 is 20x1, op2 is 20x1)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |  30 /  30 | Nice work!
+==                Logistic Regression Gradient |  30 /  30 | Nice work!
+==                                     Predict |   0 /   5 | 
+==        Regularized Logistic Regression Cost |   0 /  15 | 
+==    Regularized Logistic Regression Gradient |   0 /  15 | 
+==                                   --------------------------------
+==                                             |  65 / 100 | 
+== 
+>> plotData
+error: 'y' undefined near line 15 column 12
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/plotData.m at line 15, column 5
+>> plotData(X,y)
+>> plotDecisionBoundary(theta, X, y)
+error: 'theta' undefined near line 1 column 22
+error: evaluating argument list element number 1
+>> theta
+error: 'theta' undefined near line 1 column 1
+>> initial_theta = zeros(n + 1, 1);
+error: 'n' undefined near line 1 column 23
+error: evaluating argument list element number 1
+>> 
+>> % Compute and display initial cost and gradient
+>> [cost, grad] = costFunction(initial_theta, X, y);
+error: 'initial_theta' undefined near line 2 column 27
+error: evaluating argument list element number 1
+>> % Put some labels 
+>> hold on;
+>> % Labels and Legend
+>> xlabel('Exam 1 score')
+>> ylabel('Exam 2 score')
+>> 
+>> % Specified in plot order
+>> legend('Admitted', 'Not admitted')
+>> hold off;
+>> %  Setup the data matrix appropriately, and add ones for the intercept term
+>> [m, n] = size(X);
+>> 
+>> % Add intercept term to x and X_test
+>> X = [ones(m, 1) X];
+>> 
+>> % Initialize fitting parameters
+>> initial_theta = zeros(n + 1, 1);
+>> 
+>> % Compute and display initial cost and gradient
+>> [cost, grad] = costFunction(initial_theta, X, y);
+>> 
+>> fprintf('Cost at initial theta (zeros): %f\n', cost);
+Cost at initial theta (zeros): 0.693147
+>> fprintf('Gradient at initial theta (zeros): \n');
+Gradient at initial theta (zeros): 
+>> fprintf(' %f \n', grad);
+ -0.100000 
+ -12.009217 
+ -11.262842 
+>> 
+>> %  Set options for fminunc
+>> options = optimset('GradObj', 'on', 'MaxIter', 400);
+>> 
+>> %  Run fminunc to obtain the optimal theta
+>> %  This function will return theta and the cost 
+>> [theta, cost] = ...
+> fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
+>> 
+>> % Print theta to screen
+>> fprintf('Cost at theta found by fminunc: %f\n', cost);
+Cost at theta found by fminunc: 0.203498
+>> fprintf('theta: \n');
+theta: 
+>> fprintf(' %f \n', theta);
+ -25.161272 
+ 0.206233 
+ 0.201470 
+>> 
+>> % Plot Boundary
+>> plotDecisionBoundary(theta, X, y);
+>> 
+>> % Put some labels 
+>> hold on;
+>> % Labels and Legend
+>> xlabel('Exam 1 score')
+>> ylabel('Exam 2 score')
+>> close
+>> close
+>> close
+>> close
+>> 
+>> %  Set options for fminunc
+>> options = optimset('GradObj', 'on', 'MaxIter', 400);
+>> 
+>> %  Run fminunc to obtain the optimal theta
+>> %  This function will return theta and the cost 
+>> [theta, cost] = ...
+> fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
+>> 
+>> % Print theta to screen
+>> fprintf('Cost at theta found by fminunc: %f\n', cost);
+Cost at theta found by fminunc: 0.203498
+>> fprintf('theta: \n');
+theta: 
+>> fprintf(' %f \n', theta);
+ -25.161272 
+ 0.206233 
+ 0.201470 
+>> 
+>> % Plot Boundary
+>> plotDecisionBoundary(theta, X, y);
+>> 
+>> % Put some labels 
+>> hold on;
+>> % Labels and Legend
+>> xlabel('Exam 1 score')
+>> ylabel('Exam 2 score')
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+!! Submission failed: unexpected error: parse error near line 21 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/predict.m
+
+  syntax error
+
+>>>  	p=0;
+      ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: parse error near line 21 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/predict.m
+
+  syntax error
+
+>>>  	p=0;
+         ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: parse error near line 21 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/predict.m
+
+  syntax error
+
+>>>  	p(i)=0;
+      ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: parse error near line 21 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/predict.m
+
+  syntax error
+
+>>>  	p(i)=0;
+            ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): yy
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |  30 /  30 | Nice work!
+==                Logistic Regression Gradient |  30 /  30 | Nice work!
+==                                     Predict |   5 /   5 | Nice work!
+==        Regularized Logistic Regression Cost |   0 /  15 | 
+==    Regularized Logistic Regression Gradient |   0 /  15 | 
+==                                   --------------------------------
+==                                             |  70 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |  30 /  30 | Nice work!
+==                Logistic Regression Gradient |  30 /  30 | Nice work!
+==                                     Predict |   5 /   5 | Nice work!
+==        Regularized Logistic Regression Cost |   0 /  15 | 
+==    Regularized Logistic Regression Gradient |   0 /  15 | 
+==                                   --------------------------------
+==                                             |  70 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+!! Submission failed: unexpected error: subscript indices must be either positive integers less than 2^31 or logicals
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+!! Submission failed: unexpected error: parse error near line 22 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex2/ex2/costFunctionReg.m
+
+  syntax error
+
+>>> J = ( (1 / m) * sum(-y'*log(sigmoid(X*theta)) - (1-y)'*log( 1 - sigmoid(X*theta))) ) + 
+                                                                                           ^
+
+!! Please try again later.
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |  30 /  30 | Nice work!
+==                Logistic Regression Gradient |  30 /  30 | Nice work!
+==                                     Predict |   5 /   5 | Nice work!
+==        Regularized Logistic Regression Cost |  15 /  15 | Nice work!
+==    Regularized Logistic Regression Gradient |   0 /  15 | 
+==                                   --------------------------------
+==                                             |  85 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Logistic Regression...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+p =
+
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   1
+   1
+   1
+   1
+   0
+   0
+   0
+   1
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                            Sigmoid Function |   5 /   5 | Nice work!
+==                    Logistic Regression Cost |  30 /  30 | Nice work!
+==                Logistic Regression Gradient |  30 /  30 | Nice work!
+==                                     Predict |   5 /   5 | Nice work!
+==        Regularized Logistic Regression Cost |  15 /  15 | Nice work!
+==    Regularized Logistic Regression Gradient |  15 /  15 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
