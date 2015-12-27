@@ -1,0 +1,1346 @@
+Last login: Sun Dec 20 20:55:51 on ttys001
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 ('>> ')
+>> pwd
+ans = /Users/Usamahk
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3'
+>> ls
+ex3	ex3.pdf
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3'
+>> ls
+displayData.m		fmincg.m		predictOneVsAll.m
+ex3.m			lib			sigmoid.m
+ex3_nn.m		lrCostFunction.m	submit.m
+ex3data1.mat		oneVsAll.m
+ex3weights.mat		predict.m
+>> load('ex3data1.m')
+error: load: unable to find file ex3data1.m
+>> load('ex3data1.mat')
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        X        5000x400                 16000000  double
+        ans         1x14                        14  char
+        y        5000x1                      40000  double
+
+Total is 2005014 elements using 16040014 bytes
+
+>> m = size(X, 1);
+>> rand_indices = randperm(m);
+>> sel = X(rand_indices(1:100), :);
+>> displayData(sel);
+>> sel = X((1:10), :);
+>> displayData(sel);
+>> help displayData
+'displayData' is a function from the file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/displayData.m
+
+DISPLAYDATA Display 2D data in a nice grid
+   [h, display_array] = DISPLAYDATA(X, example_width) displays 2D data
+   stored in X in a nice grid. It returns the figure handle h and the 
+   displayed array if requested.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> sel = X(rand_indices(1:100), :);
+>> displayData(sel);
+>> lambda = 0.1;
+>> m = size(X, 1);
+>> n = size(X, 2);
+>> all_theta = zeros(num_labels, n + 1);
+error: 'num_labels' undefined near line 1 column 19
+error: evaluating argument list element number 1
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Login (email address): usamah.khan@gmail.com
+Token: luTHIRL9VEaB3qOx
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |   0 /  30 | 
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> whos
+Variables in the current scope:
+
+   Attr Name              Size                     Bytes  Class
+   ==== ====              ====                     =====  ===== 
+        X              5000x400                 16000000  double
+        ans               1x1                          8  double
+        lambda            1x1                          8  double
+        m                 1x1                          8  double
+        n                 1x1                          8  double
+        rand_indices      1x5000                   40000  double
+        sel             100x400                   320000  double
+        y              5000x1                      40000  double
+
+Total is 2050004 elements using 16400032 bytes
+
+>> displayData(X(1,:));
+>> close
+>> displayData(sel);
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+!! Submission failed: unexpected error: product: nonconformant arguments (op1 is 20x3, op2 is 3x1)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): Y
+!! Submission failed: unexpected error: product: nonconformant arguments (op1 is 20x3, op2 is 3x1)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: product: nonconformant arguments (op1 is 20x3, op2 is 3x1)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |   0 /  30 | 
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> size(X)
+ans =
+
+   5000    400
+
+>> size(theta)
+error: 'theta' undefined near line 1 column 6
+error: evaluating argument list element number 1
+>> Q = zeros(5,3)      % create a test matrix of all-zeros
+Q =
+
+   0   0   0
+   0   0   0
+   0   0   0
+   0   0   0
+   0   0   0
+
+>> v = [1 2 3]'        % create a column vector
+v =
+
+   1
+   2
+   3
+
+>> Q(2,:) = v          % copy v into the 2nd row of Q
+Q =
+
+   0   0   0
+   1   2   3
+   0   0   0
+   0   0   0
+   0   0   0
+
+>> v = [1 2 3]
+v =
+
+   1   2   3
+
+>> v = [1 2 3]'
+v =
+
+   1
+   2
+   3
+
+>> whos
+Variables in the current scope:
+
+   Attr Name              Size                     Bytes  Class
+   ==== ====              ====                     =====  ===== 
+        Q                 5x3                        120  double
+        X              5000x400                 16000000  double
+        ans               1x2                         16  double
+        lambda            1x1                          8  double
+        m                 1x1                          8  double
+        n                 1x1                          8  double
+        rand_indices      1x5000                   40000  double
+        sel             100x400                   320000  double
+        v                 3x1                         24  double
+        y              5000x1                      40000  double
+
+Total is 2050023 elements using 16400184 bytes
+
+>> m
+m =  5000
+>> n
+n =  400
+>> o = size(X,3)
+o =  1
+>> o = size(X,2)
+o =  400
+>> for i = 1:10
+> print(i)
+> ;
+> end
+warning: print.m: fig2dev binary is not available.
+Some output formats are not available.
+sfopen: gs_parse_file_name failed.
+sfopen: gs_parse_file_name failed.
+  ./base/gsicc_manage.c:1084: gsicc_open_search(): Could not find default_gray.icc 
+| ./base/gsicc_manage.c:1690: gsicc_set_device_profile(): cannot find device profile
+error: strtrim: S argument must be a string or cellstring
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/strings/strtrim.m at line 71, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/util/private/__print_parse_opts__.m at line 81, column 9
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/util/print.m at line 283, column 8
+>> for i = 1:10
+> i
+> endfor
+i =  1
+i =  2
+i =  3
+i =  4
+i =  5
+i =  6
+i =  7
+i =  8
+i =  9
+i =  10
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration     3 | Cost: 3.454552e-01
+Iteration     5 | Cost: 4.214422e-02
+Iteration     4 | Cost: 1.354243e-01
+Iteration     2 | Cost: 3.710511e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |   0 /  30 | 
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: implicit conversion from matrix to sq_string
+ warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+!! Submission failed: unexpected error: operator *: nonconformant arguments (op1 is 1x16, op2 is 1x16)
+!! Please try again later.
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration     3 | Cost: 3.544951e-01
+Iteration     7 | Cost: 8.350372e-02
+Iteration     4 | Cost: 1.556718e-01
+Iteration     2 | Cost: 3.762871e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |   0 /  30 | 
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration     3 | Cost: 3.544951e-01
+Iteration     7 | Cost: 8.350372e-02
+Iteration     4 | Cost: 1.556718e-01
+Iteration     2 | Cost: 3.762871e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |   0 /  30 | 
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  30 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |   0 /  20 | 
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  30 / 100 | 
+== 
+>> X = [magic(3) ; sin(1:3); cos(1:3)];
+>> y = [1; 2; 2; 1; 3];
+>> num_labels = 3;
+>> lambda = 0.1;
+>> X
+X =
+
+   8.00000   1.00000   6.00000
+   3.00000   5.00000   7.00000
+   4.00000   9.00000   2.00000
+   0.84147   0.90930   0.14112
+   0.54030  -0.41615  -0.98999
+
+>> [all_theta] = oneVsAll(X, y, num_labels, lambda)
+Iteration    41 | Cost: 3.949491e-01
+Iteration    50 | Cost: 3.254714e-02
+Iteration    26 | Cost: 1.018509e-01
+all_theta =
+
+   0   0   0   0
+   0   0   0   0
+   0   0   0   0
+
+>> [all_theta] = oneVsAll(X, y, num_labels, lambda)
+Iteration    41 | Cost: 3.949491e-01
+Iteration    50 | Cost: 3.254714e-02
+Iteration    26 | Cost: 1.018509e-01
+all_theta =
+
+   0   0   0   0
+   0   0   0   0
+   0   0   0   0
+
+>> [all_theta] = oneVsAll(X, y, num_labels, lambda)
+all_theta =
+
+   0   0   0   0
+   0   0   0   0
+   0   0   0   0
+
+>> [all_theta] = oneVsAll(X, y, num_labels, lambda)
+Iteration    41 | Cost: 3.949491e-01
+Iteration    50 | Cost: 3.254714e-02
+Iteration    26 | Cost: 1.018509e-01
+all_theta =
+
+   0   0   0   0
+   0   0   0   0
+   0   0   0   0
+
+>> ex3()
+error: invalid use of script /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/ex3.m in index expression
+>> ex3
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training One-vs-All Logistic Regression...
+Iteration    50 | Cost: 1.388716e-02
+Iteration    50 | Cost: 5.725252e-02
+Iteration    50 | Cost: 6.342382e-02
+Iteration    50 | Cost: 3.667922e-02
+Iteration    50 | Cost: 6.183644e-02
+Iteration    50 | Cost: 2.187513e-02
+Iteration    50 | Cost: 3.550244e-02
+Iteration    50 | Cost: 8.556374e-02
+Iteration    50 | Cost: 8.008246e-02
+Iteration    50 | Cost: 1.003635e-02
+Program paused. Press enter to continue.
+
+Training Set Accuracy: 0.000000
+>> X = [magic(3) ; sin(1:3); cos(1:3)];
+>> y = [1; 2; 2; 1; 3];
+>> num_labels = 3;
+>> lambda = 0.1;
+>> [all_theta] = oneVsAll(X, y, num_labels, lambda)
+Iteration    41 | Cost: 3.949491e-01
+Iteration    50 | Cost: 3.254714e-02
+Iteration    26 | Cost: 1.018509e-01
+all_theta =
+
+  -0.559478   0.619220  -0.550361  -0.093502
+  -5.475251  -0.471439   1.261280   0.634932
+   0.068368  -0.375582  -1.652262  -1.410138
+
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |  20 /  20 | Nice work!
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> all_theta = [1 -6 3; -2 4 -3];
+>> X = [1 7; 4 5; 7 8; 1 4];
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 4x3, op2 is 2x3)
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 4x3, op2 is 2x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 4x3, op2 is 2x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   3
+   4
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1  -6   3
+  -2   4  -3
+
+>> help max
+'max' is a built-in function from the file libinterp/corefcn/max.cc
+
+ -- Built-in Function: max (X)
+ -- Built-in Function: max (X, Y)
+ -- Built-in Function: max (X, [], DIM)
+ -- Built-in Function: max (X, Y, DIM)
+ -- Built-in Function: [W, IW] = max (X)
+     For a vector argument, return the maximum value.  For a matrix
+     argument, return the maximum value from each column, as a row
+     vector, or over the dimension DIM if defined, in which case Y
+     should be set to the empty matrix (it's ignored otherwise).  For
+     two matrices (or a matrix and scalar), return the pair-wise
+     maximum.  Thus,
+
+          max (max (X))
+
+     returns the largest element of the matrix X, and
+
+          max (2:5, pi)
+              =>  3.1416  3.1416  4.0000  5.0000
+
+     compares each element of the range '2:5' with 'pi', and returns a
+     row vector of the maximum values.
+
+     For complex arguments, the magnitude of the elements are used for
+     comparison.
+
+     If called with one input and two output arguments, 'max' also
+     returns the first index of the maximum value(s).  Thus,
+
+          [x, ix] = max ([1, 3, 5, 2, 5])
+              =>  x = 5
+                  ix = 3
+
+     See also: min, cummax, cummin.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 2x3, op2 is 4x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 2x3, op2 is 4x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 4x3, op2 is 2x3)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 4x3, op2 is 2x3)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 3x4, op2 is 2x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 3x4, op2 is 2x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+ans =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   0
+   0
+   0
+   0
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1.00000
+   0.26894
+   0.88080
+   0.99909
+
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 3x2, op2 is 4x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 1
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   0
+   0
+   0
+   0
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1.0000e+00   3.3535e-04   4.1399e-08   9.9909e-01
+   5.6028e-09   2.6894e-01   8.8080e-01   4.5398e-05
+
+ans =
+
+   0
+   0
+   0
+   0
+
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 3x2, op2 is 4x3)
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1.00000
+   0.26894
+   0.88080
+   0.99909
+
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |  20 /  20 | Nice work!
+==            One-vs-All Classifier Prediction |   0 /  20 | 
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 4x3, op2 is 3x2)
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 3x2, op2 is 4x3)
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+ans =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 4x3, op2 is 3x2)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+ans =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 4x3, op2 is 3x2)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 3x4, op2 is 3x2)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: operator *: nonconformant arguments (op1 is 2x3, op2 is 4x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1.0000e+00   3.3535e-04   4.1399e-08   9.9909e-01
+   5.6028e-09   2.6894e-01   8.8080e-01   4.5398e-05
+
+ans =
+
+   1.0000e+00   3.3535e-04   4.1399e-08   9.9909e-01
+   5.6028e-09   2.6894e-01   8.8080e-01   4.5398e-05
+
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 2x3, op2 is 3x4)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+error: predictOneVsAll: product: nonconformant arguments (op1 is 2x3, op2 is 3x4)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predictOneVsAll.m at line 34, column 3
+>> predictOneVsAll(all_theta, X)
+p =
+
+   0   0   0   0
+   0   0   0   0
+
+ans =
+
+   0   0   0   0
+   0   0   0   0
+
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1   0   0   1
+   0   0   1   0
+
+ans =
+
+   1   0   0   1
+   0   0   1   0
+
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1   0
+   0   0
+   0   1
+   1   0
+
+ans =
+
+   1   0
+   0   0
+   0   1
+   1   0
+
+>> predictOneVsAll(all_theta, X)
+p =
+
+   1   0
+   0   1
+   0   1
+   1   0
+
+ans =
+
+   1   0
+   0   1
+   0   1
+   1   0
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1
+   1
+   1
+   1
+
+>> help ma
+error: help: 'ma' not found
+>> help max
+'max' is a built-in function from the file libinterp/corefcn/max.cc
+
+ -- Built-in Function: max (X)
+ -- Built-in Function: max (X, Y)
+ -- Built-in Function: max (X, [], DIM)
+ -- Built-in Function: max (X, Y, DIM)
+ -- Built-in Function: [W, IW] = max (X)
+     For a vector argument, return the maximum value.  For a matrix
+     argument, return the maximum value from each column, as a row
+     vector, or over the dimension DIM if defined, in which case Y
+     should be set to the empty matrix (it's ignored otherwise).  For
+     two matrices (or a matrix and scalar), return the pair-wise
+     maximum.  Thus,
+
+          max (max (X))
+
+     returns the largest element of the matrix X, and
+
+          max (2:5, pi)
+              =>  3.1416  3.1416  4.0000  5.0000
+
+     compares each element of the range '2:5' with 'pi', and returns a
+     row vector of the maximum values.
+
+     For complex arguments, the magnitude of the elements are used for
+     comparison.
+
+     If called with one input and two output arguments, 'max' also
+     returns the first index of the maximum value(s).  Thus,
+
+          [x, ix] = max ([1, 3, 5, 2, 5])
+              =>  x = 5
+                  ix = 3
+
+     See also: min, cummax, cummin.
+
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at http://www.octave.org and via the help@octave.org
+mailing list.
+>> predictOneVsAll(all_theta, X)
+x =
+
+   1.00000
+   0.26894
+   0.88080
+   0.99909
+
+xi =
+
+   1
+   2
+   2
+   1
+
+ans =
+
+   1.0000e+00   5.6028e-09
+   3.3535e-04   2.6894e-01
+   4.1399e-08   8.8080e-01
+   9.9909e-01   4.5398e-05
+
+>> predictOneVsAll(all_theta, X)
+ans =
+
+   1
+   2
+   2
+   1
+
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |  20 /  20 | Nice work!
+==            One-vs-All Classifier Prediction |  20 /  20 | Nice work!
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  70 / 100 | 
+== 
+>> Theta1 = reshape(sin(0 : 0.5 : 5.9), 4, 3);
+>> Theta2 = reshape(sin(0 : 0.3 : 5.9), 4, 5);
+>> X = reshape(sin(1:16), 8, 2);
+>> whos
+Variables in the current scope:
+
+   Attr Name                  Size                     Bytes  Class
+   ==== ====                  ====                     =====  ===== 
+        Theta1                4x3                         96  double
+        Theta2                4x5                        160  double
+        X                     8x2                        128  double
+        all_theta             2x3                         48  double
+        ans                   4x1                         32  double
+        input_layer_size      1x1                          8  double
+        lambda                1x1                          8  double
+        m                     1x1                          8  double
+        num_labels            1x1                          8  double
+        pred               5000x1                      40000  double
+        rand_indices          1x5000                   40000  double
+        sel                 100x400                   320000  double
+        y                     5x1                         40  double
+
+Total is 50067 elements using 400536 bytes
+
+>> Theta1
+Theta1 =
+
+   0.00000   0.90930  -0.75680
+   0.47943   0.59847  -0.97753
+   0.84147   0.14112  -0.95892
+   0.99749  -0.35078  -0.70554
+
+>> Theta2
+Theta2 =
+
+   0.00000   0.93204   0.67546  -0.44252  -0.99616
+   0.29552   0.99749   0.42738  -0.68777  -0.92581
+   0.56464   0.97385   0.14112  -0.87158  -0.77276
+   0.78333   0.86321  -0.15775  -0.97753  -0.55069
+
+>> p = predict(Theta1, Theta2, X)
+error: predict: operator *: nonconformant arguments (op1 is 8x3, op2 is 4x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predict.m at line 25, column 4
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+error: predict: operator *: nonconformant arguments (op1 is 8x3, op2 is 5x4)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predict.m at line 29, column 4
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+X =
+
+   1.00000   0.84147   0.41212
+   1.00000   0.90930  -0.54402
+   1.00000   0.14112  -0.99999
+   1.00000  -0.75680  -0.53657
+   1.00000  -0.95892   0.42017
+   1.00000  -0.27942   0.99061
+   1.00000   0.65699   0.65029
+   1.00000   0.98936  -0.28790
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+error: predict: operator *: nonconformant arguments (op1 is 8x4, op2 is 5x4)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex3/ex3/predict.m at line 29, column 4
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+a3 =
+
+   0.749035   0.957088   0.760711   0.093931   0.057368
+   0.594549   0.912572   0.788679   0.199246   0.089068
+   0.399364   0.769193   0.782535   0.431493   0.185374
+   0.365374   0.674662   0.746624   0.513457   0.260829
+   0.520788   0.795496   0.711204   0.330652   0.195866
+   0.713761   0.925015   0.712416   0.135275   0.095214
+   0.764205   0.958140   0.748942   0.087978   0.057988
+   0.652179   0.933671   0.783788   0.153014   0.073920
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+a3 =
+
+   0.749035   0.957088   0.760711   0.093931   0.057368
+   0.594549   0.912572   0.788679   0.199246   0.089068
+   0.399364   0.769193   0.782535   0.431493   0.185374
+   0.365374   0.674662   0.746624   0.513457   0.260829
+   0.520788   0.795496   0.711204   0.330652   0.195866
+   0.713761   0.925015   0.712416   0.135275   0.095214
+   0.764205   0.958140   0.748942   0.087978   0.057988
+   0.652179   0.933671   0.783788   0.153014   0.073920
+
+p =
+
+   2
+   2
+   3
+   3
+   2
+   2
+   2
+   2
+
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+z2 =
+
+   0.800712   0.729331   0.098345   0.701179
+   0.913105   0.698751   0.045114   0.845422
+   0.726837   0.879872   0.066863   0.550485
+   0.874355   0.863108   0.030103   0.740554
+   0.572533   0.329821   0.573929   0.613264
+   0.338675   0.363752   0.756678   0.404881
+   0.669143   0.153296   0.672181   0.752379
+   0.436080   0.173775   0.825595   0.565895
+   0.370040   0.784314   0.367621   0.301636
+   0.183406   0.808589   0.573029   0.156337
+   0.280060   0.908127   0.276357   0.183950
+   0.129480   0.919890   0.468555   0.088183
+   0.901587   0.267225   0.201747   0.895995
+   0.959936   0.238917   0.098672   0.952561
+   0.726837   0.879872   0.066863   0.550485
+   0.874355   0.863108   0.030103   0.740554
+
+a3 =
+
+   0.184334   0.258369   0.857430   0.630038   0.124660
+   0.096115   0.426835   0.911083   0.405557   0.098352
+   0.145428   0.123260   0.912283   0.782524   0.062127
+   0.074136   0.231080   0.946580   0.590418   0.048288
+   0.642877   0.318875   0.409261   0.703860   0.528740
+   0.792782   0.179663   0.289080   0.855758   0.594291
+   0.705065   0.537057   0.286029   0.529389   0.706926
+   0.835544   0.351789   0.190374   0.737387   0.758989
+   0.505137   0.070841   0.674462   0.913873   0.195330
+   0.684483   0.034439   0.548746   0.963617   0.240654
+   0.434599   0.029849   0.781797   0.957300   0.101456
+   0.620293   0.014189   0.677724   0.982444   0.128475
+   0.284972   0.681447   0.667887   0.276131   0.396948
+   0.157914   0.820556   0.774077   0.132564   0.335182
+   0.145428   0.123260   0.912283   0.782524   0.062127
+   0.074136   0.231080   0.946580   0.590418   0.048288
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |  20 /  20 | Nice work!
+==            One-vs-All Classifier Prediction |  20 /  20 | Nice work!
+==          Neural Network Prediction Function |   0 /  30 | 
+==                                   --------------------------------
+==                                             |  70 / 100 | 
+== 
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+X =
+
+   1.00000   1.00000   0.84147   0.41212
+   1.00000   1.00000   0.90930  -0.54402
+   1.00000   1.00000   0.14112  -0.99999
+   1.00000   1.00000  -0.75680  -0.53657
+   1.00000   1.00000  -0.95892   0.42017
+   1.00000   1.00000  -0.27942   0.99061
+   1.00000   1.00000   0.65699   0.65029
+   1.00000   1.00000   0.98936  -0.28790
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+a2 =
+
+   1.00000   0.61141   0.64111   0.63762   0.60146
+   1.00000   0.77531   0.82569   0.81630   0.74314
+   1.00000   0.70788   0.82367   0.86060   0.83937
+   1.00000   0.42994   0.63437   0.77716   0.83774
+   1.00000   0.23327   0.37632   0.57523   0.73835
+   1.00000   0.26820   0.34161   0.46310   0.59787
+   1.00000   0.52629   0.55896   0.57703   0.57645
+   1.00000   0.75353   0.79461   0.77854   0.70132
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> whos
+Variables in the current scope:
+
+   Attr Name                  Size                     Bytes  Class
+   ==== ====                  ====                     =====  ===== 
+        Theta1                4x3                         96  double
+        Theta2                4x5                        160  double
+        X                     8x2                        128  double
+        all_theta             2x3                         48  double
+        ans                   4x1                         32  double
+        input_layer_size      1x1                          8  double
+        lambda                1x1                          8  double
+        m                     1x1                          8  double
+        num_labels            1x1                          8  double
+        p                     8x1                         64  double
+        pred               5000x1                      40000  double
+        rand_indices          1x5000                   40000  double
+        sel                 100x400                   320000  double
+        y                     5x1                         40  double
+
+Total is 50075 elements using 400600 bytes
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+a3 =
+
+   0.53036   0.54588   0.55725   0.56352
+   0.54459   0.54298   0.53754   0.52875
+   0.49979   0.49616   0.49288   0.49024
+   0.41357   0.42199   0.43736   0.45844
+   0.37321   0.40368   0.44349   0.48911
+   0.42073   0.45935   0.50210   0.54464
+   0.50962   0.53216   0.55173   0.56659
+   0.54882   0.55033   0.54738   0.54021
+
+p =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> p = predict(Theta1, Theta2, X)
+z2 =
+
+   0.61141   0.64111   0.63762   0.60146
+   0.77531   0.82569   0.81630   0.74314
+   0.70788   0.82367   0.86060   0.83937
+   0.42994   0.63437   0.77716   0.83774
+   0.23327   0.37632   0.57523   0.73835
+   0.26820   0.34161   0.46310   0.59787
+   0.52629   0.55896   0.57703   0.57645
+   0.75353   0.79461   0.77854   0.70132
+
+a3 =
+
+   0.53036   0.54588   0.55725   0.56352
+   0.54459   0.54298   0.53754   0.52875
+   0.49979   0.49616   0.49288   0.49024
+   0.41357   0.42199   0.43736   0.45844
+   0.37321   0.40368   0.44349   0.48911
+   0.42073   0.45935   0.50210   0.54464
+   0.50962   0.53216   0.55173   0.56659
+   0.54882   0.55033   0.54738   0.54021
+
+p =
+
+   4
+   1
+   1
+   4
+   4
+   4
+   4
+   2
+
+>> submit()
+== Submitting solutions | Multi-class Classification and Neural Networks...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    26 | Cost: 3.391340e-01
+Iteration    29 | Cost: 6.631438e-02
+Iteration    30 | Cost: 1.002636e-01
+Iteration    22 | Cost: 3.598119e-01
+z2 =
+
+   0.800712   0.729331   0.098345   0.701179
+   0.913105   0.698751   0.045114   0.845422
+   0.726837   0.879872   0.066863   0.550485
+   0.874355   0.863108   0.030103   0.740554
+   0.572533   0.329821   0.573929   0.613264
+   0.338675   0.363752   0.756678   0.404881
+   0.669143   0.153296   0.672181   0.752379
+   0.436080   0.173775   0.825595   0.565895
+   0.370040   0.784314   0.367621   0.301636
+   0.183406   0.808589   0.573029   0.156337
+   0.280060   0.908127   0.276357   0.183950
+   0.129480   0.919890   0.468555   0.088183
+   0.901587   0.267225   0.201747   0.895995
+   0.959936   0.238917   0.098672   0.952561
+   0.726837   0.879872   0.066863   0.550485
+   0.874355   0.863108   0.030103   0.740554
+
+a3 =
+
+   0.42513   0.28338   0.74534   0.50848
+   0.38926   0.25497   0.79296   0.48865
+   0.42432   0.34664   0.69691   0.48522
+   0.38371   0.30772   0.75927   0.46376
+   0.61978   0.20049   0.65985   0.69672
+   0.70605   0.22868   0.53385   0.75081
+   0.63291   0.15294   0.70681   0.72698
+   0.71218   0.17238   0.59863   0.77489
+   0.58606   0.35597   0.53637   0.61576
+   0.67186   0.37791   0.42512   0.67909
+   0.57609   0.41633   0.49362   0.58882
+   0.65305   0.42642   0.40475   0.64965
+   0.45844   0.16932   0.81613   0.58663
+   0.42192   0.16258   0.84280   0.56011
+   0.42432   0.34664   0.69691   0.48522
+   0.38371   0.30772   0.75927   0.46376
+
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==             Regularized Logistic Regression |  30 /  30 | Nice work!
+==              One-vs-All Classifier Training |  20 /  20 | Nice work!
+==            One-vs-All Classifier Prediction |  20 /  20 | Nice work!
+==          Neural Network Prediction Function |  30 /  30 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
