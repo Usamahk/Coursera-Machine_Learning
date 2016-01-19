@@ -1,0 +1,3620 @@
+Last login: Sun Jan 17 20:46:13 on ttys000
+/usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1('>> )
+error: unterminated character string constant
+parse error:
+
+  syntax error
+
+>>> PS1('>> )
+            ^
+
+octave:1> PS1('>> ')
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5'
+>> pwd
+ans = /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5
+>> ls
+ex5.m			learningCurve.m		polyFeatures.m
+ex5data1.mat		lib			submit.m
+featureNormalize.m	linearRegCostFunction.m	trainLinearReg.m
+fmincg.m		plotFit.m		validationCurve.m
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        ans         1x79                        79  char
+
+Total is 79 elements using 79 bytes
+
+>> ans
+ans = /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Login (email address): usamah.khan@gmail.com
+Token: VfCC58mWrIyK1Ve6
+!! Submission failed: unexpected error: 'sigmoid' undefined near line 23 column 28
+!! Please try again later.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Login (email address): usamah.khan@gmail.com
+Token: VfCC58mWrIyK1Ve6
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |   0 /  25 | 
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 304.034859 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [0.000000; 0.000000] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |   0 /  25 | 
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |   0 /  25 | 
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> whos
+Variables in the current scope:
+
+   Attr Name             Size                     Bytes  Class
+   ==== ====             ====                     =====  ===== 
+        J                1x1                          8  double
+        X               12x1                         96  double
+        X_poly          12x9                        864  double
+        X_poly_test     21x9                       1512  double
+        X_poly_val      21x9                       1512  double
+        Xtest           21x1                        168  double
+        Xval            21x1                        168  double
+        error_train     10x1                         80  double
+        error_val       10x1                         80  double
+        grad             2x1                         16  double
+        i                1x1                          8  double
+        lambda           1x1                          8  double
+        lambda_vec      10x1                         80  double
+        m                1x1                          8  double
+        mu               1x8                         64  double
+        p                1x1                          8  double
+        sigma            1x8                         64  double
+        theta            9x1                         72  double
+        y               12x1                         96  double
+>> 
+>> theta
+theta =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> theta(1)
+ans = 0
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |   0 /  25 | 
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |   0 / 100 | 
+== 
+>> theta(1:2)
+ans =
+
+   0
+   0
+
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 319.796208 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [0.000000; 0.000000] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 304.034859 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [0.000000; 0.000000] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [0.000000; 0.000000] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> 
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  25 / 100 | 
+== 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+parse error near line 25 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m
+
+  syntax error
+
+>>> grad = (1/m) * sum((X*theta - y).* X;
+                                        ^
+
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: operator -: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: operator -: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-10.134256; -10.134256] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: operator -: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+error: fmincg: operator +: nonconformant arguments (op1 is 2x1, op2 is 23x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/fmincg.m at line 87, column 5
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/trainLinearReg.m at line 19, column 7
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 86, column 8
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: operator -: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: operator -: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+error: linearRegCostFunction: product: nonconformant arguments (op1 is 2x12, op2 is 12x1)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 25, column 6
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.303016; 598.167411] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.219682; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+error: fmincg: operator +: nonconformant arguments (op1 is 9x1, op2 is 72x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/fmincg.m at line 87, column 5
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/trainLinearReg.m at line 19, column 7
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 168, column 8
+>> 
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |   0 /  25 | 
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  25 / 100 | 
+== 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.219682; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+error: fmincg: operator +: nonconformant arguments (op1 is 9x1, op2 is 72x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/fmincg.m at line 87, column 5
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/trainLinearReg.m at line 19, column 7
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 168, column 8
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.219682; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+error: fmincg: operator +: nonconformant arguments (op1 is 9x1, op2 is 72x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/fmincg.m at line 87, column 5
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/trainLinearReg.m at line 19, column 7
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 168, column 8
+>> whos
+Variables in the current scope:
+
+   Attr Name             Size                     Bytes  Class
+   ==== ====             ====                     =====  ===== 
+        J                1x1                          8  double
+        X               12x1                         96  double
+        X_poly          12x9                        864  double
+        X_poly_test     21x9                       1512  double
+        X_poly_val      21x9                       1512  double
+        Xtest           21x1                        168  double
+        Xval            21x1                        168  double
+        error_train     12x1                         96  double
+        error_val       12x1                         96  double
+        grad             2x1                         16  double
+        i                1x1                          8  double
+        lambda           1x1                          8  double
+        m                1x1                          8  double
+        mu               1x8                         64  double
+        p                1x1                          8  double
+        sigma            1x8                         64  double
+        theta            2x1                         16  double
+        y               12x1                         96  double
+        ytest           21x1                        168  double
+        yval            21x1                        168  double
+
+Total is 643 elements using 5144 bytes
+
+>> grad
+grad =
+
+   -15.220
+   598.251
+
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 25, column 9
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> grad(1)
+error: 'grad' undefined near line 1 column 1
+>> grad
+error: 'grad' undefined near line 1 column 1
+>> ex5
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.219682; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: operator +: automatic broadcasting operation applied
+error: fmincg: operator +: nonconformant arguments (op1 is 9x1, op2 is 72x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/fmincg.m at line 87, column 5
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/trainLinearReg.m at line 19, column 7
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 168, column 8
+>> grad
+grad =
+
+   -15.220
+   598.251
+
+>> grad(1)
+ans = -15.220
+>> grad(2)
+ans =  598.25
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 25, column 9
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+error: linearRegCostFunction: product: nonconformant arguments (op1 is 12x1, op2 is 2x12)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 25, column 9
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 9
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m at line 51, column 3
+>> ex5
+
+
+
+
+
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+Gradient at theta = [1 ; 1]:  [-15.303016; 598.167411] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> X = [1 2 3 4];
+>> y = 5;
+>> theta = [0.1 0.2 0.3 0.4]';
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -20
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I,J,...) = X: dimensions mismatch
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 24
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 22
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 20
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -19.300
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -19.300
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -20
+    0
+    0
+    0
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 9
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -19.300
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+parse error near line 27 of file /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m
+
+  syntax error
+
+>>> grad(:end) = (1/m) * sum( (X*theta - y).*X ) + (lambda/m) .* theta;
+            ^
+
+>> 
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -19.300
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -20.000
+  -17.500
+  -16.800
+  -16.100
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -17.5000
+  -16.8000
+  -16.1000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: product: nonconformant arguments (op1 is 1x0, op2 is 1x3)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -17.5000
+  -16.8000
+  -16.1000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -2.0000
+   1.4000
+   2.1000
+   2.8000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -16.600
+  -15.900
+  -15.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -16.600
+  -15.900
+  -15.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: invalid use of end
+error: invalid limit value in colon expression
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator *: nonconformant arguments (op1 is 1x4, op2 is 3x1)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 27, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.1000
+  -17.5000
+  -16.8000
+  -16.1000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -21.000
+  -19.600
+  -18.900
+  -18.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -21.000
+  -19.600
+  -18.900
+  -18.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 29, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.1000
+  -17.5000
+  -16.8000
+  -16.1000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -19.300
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -21.000
+  -19.600
+  -18.900
+  -18.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: subscript indices must be either positive integers less than 2^31 or logicals
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 25, column 9
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -21.000
+  -19.600
+  -18.900
+  -18.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -21.000
+  -19.600
+  -18.900
+  -18.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> 
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -20.000
+  -16.600
+  -15.900
+  -15.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator *: nonconformant arguments (op1 is 4x1, op2 is 4x1)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator *: nonconformant arguments (op1 is 1x4, op2 is 1x4)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 15
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 28, column 13
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -2
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -20
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -20
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -21
+>> theta
+theta =
+
+   0.10000
+   0.20000
+   0.30000
+   0.40000
+
+>> theta
+theta =
+
+   0.10000
+   0.20000
+   0.30000
+   0.40000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -2
+   0
+   0
+   0
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+   -2.0000
+  -16.6000
+  -15.9000
+  -15.2000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -2.0000
+   1.4000
+   2.1000
+   2.8000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -2.0000
+   1.4000
+   2.1000
+   2.8000
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 29, column 13
+>> 
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 29, column 9
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+error: linearRegCostFunction: operator +: nonconformant arguments (op1 is 1x0, op2 is 3x1)
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/linearRegCostFunction.m at line 29, column 8
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -18.600
+  -17.900
+  -17.200
+
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g = -20
+>> [J g] = linearRegCostFunction(X, y, theta, 7)
+J =  3.0150
+g =
+
+  -2.0000
+  -2.6000
+  -3.9000
+  -5.2000
+
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+warning: product: automatic broadcasting operation applied
+warning: product: automatic broadcasting operation applied
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |  25 /  25 | Nice work!
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |  25 /  25 | Nice work!
+==                              Learning Curve |   0 /  20 | 
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> ex5
+
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [-15.303016; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+Iteration     5 | Cost: 2.237391e+01
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+           line 0: warning: Skipping data file with no valid points
+
+gnuplot> set terminal aqua enhanced title "Figure 2" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	0.000000
+  	2		0.000000	0.000000
+  	3		0.000000	0.000000
+  	4		0.000000	0.000000
+  	5		0.000000	0.000000
+  	6		0.000000	0.000000
+  	7		0.000000	0.000000
+  	8		0.000000	0.000000
+  	9		0.000000	0.000000
+  	10		0.000000	0.000000
+  	11		0.000000	0.000000
+  	12		0.000000	0.000000
+Program paused. Press enter to continue.
+
+gnuplot> set terminal aqua enhanced title "Figure 1" size 560 420  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> 
+>> plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> xlabel('Change in water level (x)');
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> ylabel('Water flowing out of the dam (y)');
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> setenv("GNUTERM","X11")
+>> plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> xlabel('Change in water level (x)');
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> ylabel('Water flowing out of the dam (y)');
+
+gnuplot> set terminal aqua enhanced title "Figure 1"  font "*,6" dashlength 1
+                      ^
+         line 0: unknown or ambiguous terminal type; type just 'set terminal' for a list
+
+>> brew uninstall gnuplot;
+error: 'brew' undefined near line 1 column 1
+>> brew install gnuplot --with-x11
+error: 'brew' undefined near line 1 column 1
+>> gnuplot
+error: 'gnuplot' undefined near line 1 column 1
+>> 
+Last login: Tue Jan 19 16:41:04 on ttys000
+/usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 ('>> ')
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5'
+>> ex5()
+error: invalid use of script /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/ex5.m in index expression
+>> ex5
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [-15.303016; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+Iteration     5 | Cost: 2.237391e+01
+Program paused. Press enter to continue.
+warning: division by zero.944305e-31
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration     3 | Cost: 9.860761e-32
+Iteration     8 | Cost: 3.286595e+00
+Iteration    28 | Cost: 2.842678e+00
+Iteration    22 | Cost: 1.315405e+01
+Iteration    22 | Cost: 1.944396e+01
+Iteration    22 | Cost: 2.009852e+01
+Iteration    30 | Cost: 1.817286e+01
+Iteration    10 | Cost: 2.260941e+01
+Iteration    26 | Cost: 2.326146e+01
+Iteration    21 | Cost: 2.431725e+01
+Iteration     5 | Cost: 2.237391e+01
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	205.121096
+  	2		0.000000	110.300366
+  	3		3.286595	45.010231
+  	4		2.842678	48.368911
+  	5		13.154049	35.865165
+  	6		19.443963	33.829962
+  	7		20.098522	31.970986
+  	8		18.172859	30.862446
+  	9		22.609405	31.135998
+  	10		23.261462	28.936207
+  	11		24.317250	29.551432
+  	12		22.373906	29.433818
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+  NaN  
+
+Program paused. Press enter to continue.
+
+           line 0: warning: Skipping data file with no valid points
+
+
+
+
+
+
+
+
+
+
+
+           line 0: warning: Skipping data file with no valid points
+           line 0: warning: Skipping data file with no valid points
+
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		NaN	NaN
+  	2		NaN	NaN
+  	3		NaN	NaN
+  	4		NaN	NaN
+  	5		NaN	NaN
+  	6		NaN	NaN
+  	7		NaN	NaN
+  	8		NaN	NaN
+  	9		NaN	NaN
+  	10		NaN	NaN
+  	11		NaN	NaN
+  	12		NaN	NaN
+Program paused. Press enter to continue.
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> for i = 1:length(X)
+>    for j = 1:length(X)
+>     X_poly(i,:) = X(i).^(j-1);
+>    end
+> end
+>> X_poly
+X_poly =
+
+ Columns 1 through 6:
+
+  -1.6842e+13  -1.6842e+13  -1.6842e+13  -1.6842e+13  -1.6842e+13  -1.6842e+13
+  -1.2927e+16  -1.2927e+16  -1.2927e+16  -1.2927e+16  -1.2927e+16  -1.2927e+16
+   1.3945e+17   1.3945e+17   1.3945e+17   1.3945e+17   1.3945e+17   1.3945e+17
+   2.0575e+17   2.0575e+17   2.0575e+17   2.0575e+17   2.0575e+17   2.0575e+17
+  -3.1587e+18  -3.1587e+18  -3.1587e+18  -3.1587e+18  -3.1587e+18  -3.1587e+18
+  -2.9207e+10  -2.9207e+10  -2.9207e+10  -2.9207e+10  -2.9207e+10  -2.9207e+10
+   1.0815e+13   1.0815e+13   1.0815e+13   1.0815e+13   1.0815e+13   1.0815e+13
+  -8.8001e+16  -8.8001e+16  -8.8001e+16  -8.8001e+16  -8.8001e+16  -8.8001e+16
+   3.7175e+01   3.7175e+01   3.7175e+01   3.7175e+01   3.7175e+01   3.7175e+01
+  -1.3166e+18  -1.3166e+18  -1.3166e+18  -1.3166e+18  -1.3166e+18  -1.3166e+18
+   2.0197e+09   2.0197e+09   2.0197e+09   2.0197e+09   2.0197e+09   2.0197e+09
+   8.5010e+14   8.5010e+14   8.5010e+14   8.5010e+14   8.5010e+14   8.5010e+14
+
+ Columns 7 through 9:
+
+  -1.6842e+13  -1.6842e+13  -1.6842e+13
+  -1.2927e+16  -1.2927e+16  -1.2927e+16
+   1.3945e+17   1.3945e+17   1.3945e+17
+   2.0575e+17   2.0575e+17   2.0575e+17
+  -3.1587e+18  -3.1587e+18  -3.1587e+18
+  -2.9207e+10  -2.9207e+10  -2.9207e+10
+   1.0815e+13   1.0815e+13   1.0815e+13
+  -8.8001e+16  -8.8001e+16  -8.8001e+16
+   3.7175e+01   3.7175e+01   3.7175e+01
+  -1.3166e+18  -1.3166e+18  -1.3166e+18
+   2.0197e+09   2.0197e+09   2.0197e+09
+   8.5010e+14   8.5010e+14   8.5010e+14
+
+>> polyFeatures([1:3]',4)
+ans =
+
+   1   1   1   1
+   4   4   4   4
+   9   9   9   9
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    8    8    8    8
+   27   27   27   27
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    8    8    8    8
+   27   27   27   27
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    0
+    2    4    8    0
+    3    9   27    0
+
+>> polyFeatures([1:3]',4)
+ans =
+
+   1   1   1   0
+   1   2   4   0
+   1   3   9   0
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    0
+    4    8   16    0
+    9   27   81    0
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    2    4    8   16
+    3    9   27   81
+
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |  25 /  25 | Nice work!
+==                              Learning Curve |  20 /  20 | Nice work!
+==                  Polynomial Feature Mapping |   0 /  10 | 
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  70 / 100 | 
+== 
+>> polyFeatures([1:3]',4)
+ans =
+
+    0    1    1    0
+    0    4    8    0
+    0    9   27    0
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    2    4    8   16
+    3    9   27   81
+
+>> polyFeatures([1:3]',4)
+error: polyFeatures: A(I): index out of bounds; value 4 out of bound 3
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/polyFeatures.m at line 22, column 17
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    2    4    8   16
+    3    9   27   81
+
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+!! Submission failed: unexpected error: A(I): index out of bounds; value 4 out of bound 3
+!! Please try again later.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+!! Submission failed: unexpected error: A(I): index out of bounds; value 4 out of bound 3
+!! Please try again later.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+!! Submission failed: unexpected error: A(I): index out of bounds; value 4 out of bound 3
+!! Please try again later.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+!! Submission failed: unexpected error: A(I): index out of bounds; value 4 out of bound 3
+!! Please try again later.
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+!! Submission failed: unexpected error: A(I): index out of bounds; value 4 out of bound 3
+!! Please try again later.
+>> polyFeatures([1:3]',4)
+error: polyFeatures: A(I): index out of bounds; value 4 out of bound 3
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/polyFeatures.m at line 22, column 17
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    1    2    4    8
+    1    3    9   27
+
+>> polyFeatures([1:3]',4)
+ans =
+
+    1    1    1    1
+    2    4    8   16
+    3    9   27   81
+
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |  25 /  25 | Nice work!
+==                              Learning Curve |  20 /  20 | Nice work!
+==                  Polynomial Feature Mapping |  10 /  10 | Nice work!
+==                            Validation Curve |   0 /  20 | 
+==                                   --------------------------------
+==                                             |  80 / 100 | 
+== 
+>> ex5
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+Cost at theta = [1 ; 1]: 303.993192 
+(this value should be about 303.993192)
+Program paused. Press enter to continue.
+Gradient at theta = [1 ; 1]:  [-15.303016; 598.250744] 
+(this value should be about [-15.303016; 598.250744])
+Program paused. Press enter to continue.
+Iteration     5 | Cost: 2.237391e+01
+Program paused. Press enter to continue.
+warning: division by zero.944305e-31
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration     3 | Cost: 9.860761e-32
+Iteration     8 | Cost: 3.286595e+00
+Iteration    28 | Cost: 2.842678e+00
+Iteration    22 | Cost: 1.315405e+01
+Iteration    22 | Cost: 1.944396e+01
+Iteration    22 | Cost: 2.009852e+01
+Iteration    30 | Cost: 1.817286e+01
+Iteration    10 | Cost: 2.260941e+01
+Iteration    26 | Cost: 2.326146e+01
+Iteration    21 | Cost: 2.431725e+01
+Iteration     5 | Cost: 2.237391e+01
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	205.121096
+  	2		0.000000	110.300366
+  	3		3.286595	45.010231
+  	4		2.842678	48.368911
+  	5		13.154049	35.865165
+  	6		19.443963	33.829962
+  	7		20.098522	31.970986
+  	8		18.172859	30.862446
+  	9		22.609405	31.135998
+  	10		23.261462	28.936207
+  	11		24.317250	29.551432
+  	12		22.373906	29.433818
+Program paused. Press enter to continue.
+Normalized Training Example 1:
+  1.000000  
+  -0.362141  
+  -0.755087  
+  0.182226  
+  -0.706190  
+  0.306618  
+  -0.590878  
+  0.344516  
+  -0.508481  
+
+Program paused. Press enter to continue.
+Iteration   200 | Cost: 1.565767e-01
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration    27 | Cost: 2.054325e-31
+Iteration    11 | Cost: 4.458075e-27
+Iteration   200 | Cost: 2.409507e-10
+Iteration   200 | Cost: 4.322359e-04
+Iteration   200 | Cost: 1.184859e-02
+Iteration   200 | Cost: 6.969939e-02
+Iteration   200 | Cost: 1.876699e-01
+Iteration   200 | Cost: 1.419885e-01
+Iteration   200 | Cost: 1.457352e-01
+Iteration   200 | Cost: 1.565767e-01
+Polynomial Regression (lambda = 0.000000)
+
+# Training Examples	Train Error	Cross Validation Error
+  	1		0.000000	160.721900
+  	2		0.000000	160.121510
+  	3		0.000000	61.754825
+  	4		0.000000	61.928895
+  	5		0.000000	6.598299
+  	6		0.000432	10.548537
+  	7		0.011849	15.594808
+  	8		0.069699	7.122468
+  	9		0.187670	7.967966
+  	10		0.141989	7.417046
+  	11		0.145735	9.760960
+  	12		0.156577	18.929909
+Program paused. Press enter to continue.
+lambda		Train Error	Validation Error
+ 0.000000	0.000000	0.000000
+ 0.001000	0.000000	0.000000
+ 0.003000	0.000000	0.000000
+ 0.010000	0.000000	0.000000
+ 0.030000	0.000000	0.000000
+ 0.100000	0.000000	0.000000
+ 0.300000	0.000000	0.000000
+ 1.000000	0.000000	0.000000
+ 3.000000	0.000000	0.000000
+ 10.000000	0.000000	0.000000
+Program paused. Press enter to continue.
+>> X = [1 2 ; 1 3 ; 1 4 ; 1 5]
+X =
+
+   1   2
+   1   3
+   1   4
+   1   5
+
+>> y = [7 6 5 4]'
+y =
+
+   7
+   6
+   5
+   4
+
+>> Xval = [1 7 ; 1 -2]
+Xval =
+
+   1   7
+   1  -2
+
+>> yval = [2 12]'
+yval =
+
+    2
+   12
+
+>> [lambda_vec, error_train, error_val] = validationCurve(X,y,Xval,yval )
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration    23 | Cost: 2.495010e-04
+Iteration     8 | Cost: 4.992511e-04
+Iteration    10 | Cost: 1.247505e-03
+error: validationCurve: A(I,J): row index out of bounds; value 5 out of bound 4
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex5/ex5/validationCurve.m at line 44, column 10
+>> [lambda_vec, error_train, error_val] = validationCurve(X,y,Xval,yval )
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration     7 | Cost: 1.249750e-04
+Iteration    24 | Cost: 3.747751e-04
+Iteration    10 | Cost: 1.247505e-03
+Iteration    21 | Cost: 3.727634e-03
+Iteration     7 | Cost: 1.225490e-02
+Iteration    11 | Cost: 3.537736e-02
+Iteration    10 | Cost: 1.041667e-01
+Iteration    14 | Cost: 2.343750e-01
+Iteration    12 | Cost: 4.166667e-01
+lambda_vec =
+
+    0.00000
+    0.00100
+    0.00300
+    0.01000
+    0.03000
+    0.10000
+    0.30000
+    1.00000
+    3.00000
+   10.00000
+
+error_train =
+
+   0.00000
+   0.00012
+   0.00037
+   0.00125
+   0.00373
+   0.01225
+   0.03538
+   0.10417
+   0.23437
+   0.41667
+
+error_val =
+
+   0.25000
+   0.25080
+   0.25240
+   0.25802
+   0.27419
+   0.33204
+   0.50645
+   1.17708
+   3.06836
+   7.08333
+
+>> [lambda_vec, error_train, error_val] = validationCurve(X,y,Xval,yval )
+warning: division by zero.000000e+00
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+
+Iteration     7 | Cost: 1.249750e-04
+Iteration    24 | Cost: 3.747751e-04
+Iteration    10 | Cost: 1.247505e-03
+Iteration    21 | Cost: 3.727634e-03
+Iteration     7 | Cost: 1.225490e-02
+Iteration    11 | Cost: 3.537736e-02
+Iteration    10 | Cost: 1.041667e-01
+Iteration    14 | Cost: 2.343750e-01
+Iteration    12 | Cost: 4.166667e-01
+lambda_vec =
+
+    0.00000
+    0.00100
+    0.00300
+    0.01000
+    0.03000
+    0.10000
+    0.30000
+    1.00000
+    3.00000
+   10.00000
+
+error_train =
+
+   0.00000
+   0.00000
+   0.00000
+   0.00000
+   0.00002
+   0.00024
+   0.00200
+   0.01736
+   0.08789
+   0.27778
+
+error_val =
+
+   0.25000
+   0.25055
+   0.25165
+   0.25553
+   0.26678
+   0.30801
+   0.43970
+   1.00347
+   2.77539
+   6.80556
+
+>> submit()
+== Submitting solutions | Regularized Linear Regression and Bias/Variance...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+Iteration    14 | Cost: 2.436413e-33
+Iteration    13 | Cost: 1.655087e-01
+Iteration     9 | Cost: 1.608881e-01
+Iteration    12 | Cost: 2.461099e-01
+Iteration    16 | Cost: 2.012938e-01
+Iteration     8 | Cost: 1.752179e-01
+Iteration    10 | Cost: 1.538717e-01
+Iteration     8 | Cost: 1.360020e-01
+Iteration    13 | Cost: 1.253141e-01
+Iteration    10 | Cost: 1.155151e-01
+Iteration     6 | Cost: 1.151643e-01
+Iteration     8 | Cost: 1.151647e-01
+Iteration     6 | Cost: 1.151656e-01
+Iteration    13 | Cost: 1.151685e-01
+Iteration     7 | Cost: 1.151769e-01
+Iteration    11 | Cost: 1.152058e-01
+Iteration     8 | Cost: 1.152840e-01
+Iteration    10 | Cost: 1.155151e-01
+Iteration     7 | Cost: 1.159475e-01
+Iteration    12 | Cost: 1.165421e-01
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+== Regularized Linear Regression Cost Function |  25 /  25 | Nice work!
+==      Regularized Linear Regression Gradient |  25 /  25 | Nice work!
+==                              Learning Curve |  20 /  20 | Nice work!
+==                  Polynomial Feature Mapping |  10 /  10 | Nice work!
+==                            Validation Curve |  20 /  20 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
