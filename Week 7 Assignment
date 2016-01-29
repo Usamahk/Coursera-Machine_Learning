@@ -1,0 +1,4671 @@
+Last login: Tue Jan 26 18:51:53 on console
+/usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 ('>> ')
+>> pwd
+ans = /Users/Usamahk
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6
+error: unterminated character string constant
+parse error:
+
+  syntax error
+
+>>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6
+                                                                         ^
+
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6'
+>> exg
+error: 'exg' undefined near line 1 column 1
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+........................................... Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.000000
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ........................................................... Done! 
+
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......................................................................... Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.000000
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ........^[........................................................... Done! 
+
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> exp(0)
+ans =  1
+>> exp(1:10)
+ans =
+
+ Columns 1 through 6:
+
+   2.7183e+00   7.3891e+00   2.0086e+01   5.4598e+01   1.4841e+02   4.0343e+02
+
+ Columns 7 through 10:
+
+   1.0966e+03   2.9810e+03   8.1031e+03   2.2026e+04
+
+>> exp(0:5)
+ans =
+
+     1.0000     2.7183     7.3891    20.0855    54.5982   148.4132
+
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        C           1x1                          8  double
+        X         863x2                      13808  double
+        ans         1x6                         48  double
+        model       1x1                      27608  struct
+        sigma       1x1                          8  double
+        sim         1x1                          8  double
+        x1          1x3                         24  double
+        x2          1x3                         24  double
+        y         863x1                       6904  double
+
+Total is 2605 elements using 48440 bytes
+
+>> x1
+x1 =
+
+   1   2   1
+
+>> xq=x1(:)
+xq =
+
+   1
+   2
+   1
+
+>> x1=x1(:)
+x1 =
+
+   1
+   2
+   1
+
+>> x2=x2(:)
+x2 =
+
+   0
+   4
+  -1
+
+>> sum(x2)
+ans =  3
+>> exp(sum(((x1(:)-x2(:))^2))/(2*(sigma^2)))
+error: for A^b, A must be a square matrix. Use .^ for elementwise power.
+error: evaluating argument list element number 1
+error: evaluating argument list element number 1
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        C           1x1                          8  double
+        X         863x2                      13808  double
+        ans         1x1                          8  double
+        model       1x1                      27608  struct
+        sigma       1x1                          8  double
+        sim         1x1                          8  double
+        x1          3x1                         24  double
+        x2          3x1                         24  double
+        xq          3x1                         24  double
+        y         863x1                       6904  double
+
+Total is 2603 elements using 48424 bytes
+
+>> exp(sum(((x1(:)-x2(:)).^2))/(2*(sigma^2)))
+ans =   2.7072e+195
+>> exp(sum(((x1-x2).^2))/(2*(sigma^2)))
+ans =   2.7072e+195
+>> exp(sum(x1-x2)^2 / (2*(sigma^2)))
+ans =    5.1847e+21
+>> exp(sum(x1.-x2)^2 / (2*(sigma^2)))
+ans =    5.1847e+21
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+...............................................................................
+ Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.000000
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+.. Done! 
+
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> 
+>> exp(-1*(sum(((x1-x2).^2))/(2*(sigma^2))))
+ans =   3.6939e-196
+>> x1 = x1(:); x2 = x2(:);
+>> exp(-1*(sum(((x1-x2).^2))/(2*(sigma^2))))
+ans =   3.6939e-196
+>> x1 - x2
+ans =
+
+   1
+  -2
+   2
+
+>> x1
+x1 =
+
+   1
+   2
+   1
+
+>> x2
+x2 =
+
+   0
+   4
+  -1
+
+>> x1-x2
+ans =
+
+   1
+  -2
+   2
+
+>> X = x1 - x2
+X =
+
+   1
+  -2
+   2
+
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+........................ Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.000000
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ............................................................ Done! 
+
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        C           1x1                          8  double
+        X         863x2                      13808  double
+        model       1x1                      27640  struct
+        sigma       1x1                          8  double
+        sim         1x1                          8  double
+        x1          1x3                         24  double
+        x2          1x3                         24  double
+        y         863x1                       6904  double
+
+Total is 2599 elements using 48424 bytes
+
+>> x = x1 - x2
+x =
+
+   1  -2   2
+
+>> x = x(:)
+x =
+
+   1
+  -2
+   2
+
+>> x^2
+error: for A^b, A must be a square matrix. Use .^ for elementwise power.
+>> x.^2
+ans =
+
+   1
+   4
+   4
+
+>> sum(x.^2)
+ans =  9
+>> sum(x)^2
+ans =  1
+>> sig = 2*sigma^2
+sig =  0.020000
+>> sigma^2
+ans =  0.010000
+>> sigma
+sigma =  0.10000
+>> x1 = [1 2 1]; x2 = [0 4 -1]; sigma = 2;
+>> x = x1 - x2
+x =
+
+   1  -2   2
+
+>> x = x(:)
+x =
+
+   1
+  -2
+   2
+
+>> sum(x.^2)
+ans =  9
+>> sum(x)^2
+ans =  1
+>> sigma
+sigma =  2
+>> sigma^2
+ans =  4
+>> sig = 2*sigma^2
+sig =  8
+>> exp(-1/8)
+ans =  0.88250
+>> exp(-9/8)
+ans =  0.32465
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+...............................................................................
+....................... Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.324652
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.................... Done! 
+
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> ex6
+
+
+
+
+
+
+
+
+
+
+
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+...............................................................................
+... Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.324652
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+........................................ Done! 
+
+error: get: unknown hggroup property Colour
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/ex6.m at line 109, column 1
+>> load('ex6data3.mat');
+>> 
+>> % Plot training data
+>> plotData(X, y);
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        C           1x1                          8  double
+        X         211x2                       3376  double
+        Xval      200x2                       3200  double
+        model       1x1                       7288  struct
+        sigma       1x1                          8  double
+        sim         1x1                          8  double
+        x1          1x3                         24  double
+        x2          1x3                         24  double
+        y         211x1                       1688  double
+        yval      200x1                       1600  double
+
+Total is 1243 elements using 17224 bytes
+
+>> model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+........................................... Done! 
+
+>> visualizeBoundary(X, y, model);
+error: get: unknown hggroup property Color
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/private/__contour__.m at line 201, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/plot/draw/contour.m at line 73, column 16
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/visualizeBoundary.m at line 21, column 1
+>> visualizeBoundary(X, y, model);
+>> visualizeBoundary(X, y, model);
+>> visualizeBoundary(X, y, model);
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+............................................. Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.324652
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+........................................ Done! 
+
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training ......................................................................
+......................................... Done! 
+
+Program paused. Press enter to continue.
+>> visualizeBoundary(X, y, model);
+>> visualizeBoundary(X, y, model);
+>> visualizeBoundary(X, y, model);
+>> visualizeBoundary(X, y, model);
+>>   predictions = svmPredict(model, Xval)
+predictions =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   1
+   1
+   1
+   0
+   1
+   0
+   0
+   1
+   0
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   1
+   0
+   0
+   0
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   1
+   1
+   1
+   0
+   0
+   0
+   0
+   1
+   0
+   1
+   0
+   1
+   1
+   0
+   0
+>>   predictions = svmPredict(model, Xval);
+>>  mean(double(predictions ~= yval))
+ans =  0.065000
+>> whos
+Variables in the current scope:
+
+   Attr Name             Size                     Bytes  Class
+   ==== ====             ====                     =====  ===== 
+        C                1x1                          8  double
+        X              211x2                       3376  double
+        Xval           200x2                       3200  double
+        ans              1x1                          8  double
+        model            1x1                       2584  struct
+        predictions    200x1                       1600  double
+        sigma            1x1                          8  double
+        sim              1x1                          8  double
+        x1               1x3                         24  double
+        x2               1x3                         24  double
+        y              211x1                       1688  double
+        yval           200x1                       1600  double
+
+Total is 1444 elements using 14128 bytes
+
+>> C_test = repmat(0.1*3, 10)
+C_test =
+
+ Columns 1 through 8:
+
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000   0.30000
+
+ Columns 9 and 10:
+
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+   0.30000   0.30000
+
+>> C_test = 0.1:30,3
+C_test =
+
+ Columns 1 through 6:
+
+     0.10000     1.10000     2.10000     3.10000     4.10000     5.10000
+
+ Columns 7 through 12:
+
+     6.10000     7.10000     8.10000     9.10000    10.10000    11.10000
+
+ Columns 13 through 18:
+
+    12.10000    13.10000    14.10000    15.10000    16.10000    17.10000
+
+ Columns 19 through 24:
+
+    18.10000    19.10000    20.10000    21.10000    22.10000    23.10000
+
+ Columns 25 through 30:
+
+    24.10000    25.10000    26.10000    27.10000    28.10000    29.10000
+
+ans =  3
+>> C_test = 0
+C_test = 0
+>> C_test = 0.1
+C_test =  0.10000
+>> C_test = C_test(10)
+error: A(I): index out of bounds; value 10 out of bound 1
+>> zeros(2)
+ans =
+
+   0   0
+   0   0
+
+>> vec(2)
+ans =  2
+>> C_test = C_test(1:10,1)
+error: A(I,J): row index out of bounds; value 10 out of bound 1
+>> C_test = (1:10,1)
+parse error:
+
+  syntax error
+
+>>> C_test = (1:10,1)
+                  ^
+
+>> C_test = (1:10)
+C_test =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> C_test(:) = (1:10)
+C_test =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> C_test = C_test(:)
+C_test =
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+   10
+
+>> C_test = (0.1:1)
+C_test =  0.10000
+>> C_test = (0.1,:)
+parse error:
+
+  syntax error
+
+>>> C_test = (0.1,:)
+                 ^
+
+>> ones(2)
+ans =
+
+   1   1
+   1   1
+
+>> 1:10
+ans =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> 1:10:0,5
+ans = [](1x0)
+ans =  5
+>> 1:10:0.5
+ans = [](1x0)
+>> 1:10:2
+ans =  1
+>> whos
+Variables in the current scope:
+
+   Attr Name             Size                     Bytes  Class
+   ==== ====             ====                     =====  ===== 
+        C                1x1                          8  double
+        C_test           1x1                          8  double
+        X              211x2                       3376  double
+        Xval           200x2                       3200  double
+        ans              1x1                          8  double
+        model            1x1                       2584  struct
+        predictions    200x1                       1600  double
+        sigma            1x1                          8  double
+        sim              1x1                          8  double
+        x1               1x3                         24  double
+        x2               1x3                         24  double
+        y              211x1                       1688  double
+        yval           200x1                       1600  double
+
+Total is 1445 elements using 14136 bytes
+
+>> A(:,10))
+parse error:
+
+  syntax error
+
+>>> A(:,10))
+           ^
+
+>> A(:,10)
+error: 'A' undefined near line 1 column 1
+>> A(1,10)
+error: 'A' undefined near line 1 column 1
+>> 0:0.1:0.5
+ans =
+
+    0.00000    0.10000    0.20000    0.30000    0.40000    0.50000
+
+>> 1:0.1:0.5
+ans = [](1x0)
+>> 0:0.1:3
+ans =
+
+ Columns 1 through 7:
+
+    0.00000    0.10000    0.20000    0.30000    0.40000    0.50000    0.60000
+
+ Columns 8 through 14:
+
+    0.70000    0.80000    0.90000    1.00000    1.10000    1.20000    1.30000
+
+ Columns 15 through 21:
+
+    1.40000    1.50000    1.60000    1.70000    1.80000    1.90000    2.00000
+
+ Columns 22 through 28:
+
+    2.10000    2.20000    2.30000    2.40000    2.50000    2.60000    2.70000
+
+ Columns 29 through 31:
+
+    2.80000    2.90000    3.00000
+
+>> 20:0.1:3
+ans = [](1x0)
+>> 0.1:0.5:5
+ans =
+
+ Columns 1 through 7:
+
+    0.10000    0.60000    1.10000    1.60000    2.10000    2.60000    3.10000
+
+ Columns 8 through 10:
+
+    3.60000    4.10000    4.60000
+
+>> 0.1:10:0.1
+ans =  0.10000
+>> repmat(1,10
+> repmat(1,10)
+parse error:
+
+  syntax error
+
+>>> repmat(1,10)
+         ^
+
+>> repmat(1,10)
+ans =
+
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1
+
+>> repmat(1,10,1)
+ans =
+
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+
+>> repmat(0.1,10,1)
+ans =
+
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+
+>> C_test = repmat(0.1,10,1);
+>> C_test(1,:)
+ans =  0.10000
+>> C_test(2,:)
+ans =  0.10000
+>> C_test(;,1)
+parse error:
+
+  syntax error
+
+>>> C_test(;,1)
+           ^
+
+>> C_test(:,1)
+ans =
+
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+   0.10000
+
+>> C_test(:,2)
+error: A(I,J): column index out of bounds; value 2 out of bound 1
+>> for i = 2:10
+>    C_test(i) = C_test(i-1)*3;
+> end
+>> C_test
+C_test =
+
+   1.0000e-01
+   3.0000e-01
+   9.0000e-01
+   2.7000e+00
+   8.1000e+00
+   2.4300e+01
+   7.2900e+01
+   2.1870e+02
+   6.5610e+02
+   1.9683e+03
+
+>> C_test = repmat(0.1,7,1);
+>> 
+>> 
+>> for i = 2:length(C_test)
+>    C_test(i) = C_test(i-1)*3;
+> end
+>> C_test
+C_test =
+
+    0.10000
+    0.30000
+    0.90000
+    2.70000
+    8.10000
+   24.30000
+   72.90000
+
+>> C_test = repmat(0.01,8,1);
+>> 
+>> 
+>> for i = 2:length(C_test)
+>    C_test(i) = C_test(i-1)*3;
+> end
+>> C_test
+C_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+    2.430000
+    7.290000
+   21.870000
+
+>> C_test = repmat(0.01,8,1);
+>> sigma_test = repmat(0.01,8,1);
+>> 
+>> for i = 2:length(C_test)
+>    C_test(i) = C_test(i-1)*3;
+>    sigma_test(i) = sigma_test(i-1)*3;
+> end
+>> C_test = repmat(0.01,8,1);
+>> sigma_test = repmat(0.01,8,1);
+>> 
+>> for i = 2:length(C_test)
+> C_test(i) = C_test(i-1)*3;
+> sigma_test(i) = sigma_test(i-1)*3;
+> end
+>> submit()
+== Submitting solutions | Support Vector Machines...
+Login (email address): 
+Token: 
+!! Submission Cancelled
+>> submit()
+== Submitting solutions | Support Vector Machines...
+Login (email address): usamah.khan@gmail.com
+Token: VwNbiFIlJeyhR41C
+
+==== Processed Email ====
+
+the quick brown fox jump over the lazi dog 
+
+=========================
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                             Gaussian Kernel |  25 /  25 | Nice work!
+==         Parameters (C, sigma) for Dataset 3 |   0 /  25 | 
+==                         Email Preprocessing |   0 /  25 | 
+==                    Email Feature Extraction |   0 /  25 | 
+==                                   --------------------------------
+==                                             |  25 / 100 | 
+== 
+>> ex6
+
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training Linear SVM ...
+
+Training ......................................................................
+........................... Done! 
+
+Program paused. Press enter to continue.
+
+Evaluating the Gaussian Kernel ...
+Gaussian Kernel between x1 = [1; 2; 1], x2 = [0; 4; -1], sigma = 0.5 :
+	0.324652
+(this value should be about 0.324652)
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training SVM with RBF Kernel (this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+........................... Done! 
+
+Program paused. Press enter to continue.
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Training ......................................................................
+...............................................................................
+......... Done! 
+
+Program paused. Press enter to continue.
+>> C_test = repmat(0.01,8,1);
+>> sigma_test = repmat(0.01,8,1);
+>> 
+>> for i = 2:length(C_test)
+> C_test(i) = C_test(i-1)*3;
+> sigma_test(i) = sigma_test(i-1)*3;
+> end
+>> error_1 = 1000;
+>> C
+C =  1
+>> sigma
+sigma =  0.30000
+>> for i = 1:length(C_test)
+> for j = 1:length(sigma_test)
+> 
+Display all 1704 possibilities? (y or n)
+.DS_Store                             isascii
+.nargin.                              isaxes
+C                                     isbool
+C_test                                iscell
+EDITOR                                iscellstr
+EXEC_PATH                             ischar
+F_DUPFD                               iscntrl
+F_GETFD                               iscolormap
+F_GETFL                               iscolumn
+F_SETFD                               iscomplex
+F_SETFL                               isdebugmode
+I                                     isdefinite
+IMAGE_PATH                            isdeployed
+Inf                                   isdigit
+J                                     isdir
+NA                                    isempty
+NaN                                   isequal
+OCTAVE_HOME                           isequaln
+OCTAVE_VERSION                        isequalwithequalnans
+O_APPEND                              isfield
+O_ASYNC                               isfigure
+O_CREAT                               isfinite
+O_EXCL                                isfloat
+O_NONBLOCK                            isglobal
+O_RDONLY                              isgraph
+O_RDWR                                isguirunning
+O_SYNC                                ishandle
+O_TRUNC                               ishermitian
+O_WRONLY                              ishghandle
+PAGER                                 ishold
+PAGER_FLAGS                           isieee
+PS1                                   isindex
+PS2                                   isinf
+PS4                                   isinteger
+P_tmpdir                              isjava
+SEEK_CUR                              iskeyword
+SEEK_END                              isletter
+SEEK_SET                              islogical
+SIG                                   islower
+S_ISBLK                               ismac
+S_ISCHR                               ismatrix
+S_ISDIR                               ismember
+S_ISFIFO                              ismethod
+S_ISLNK                               isna
+S_ISREG                               isnan
+S_ISSOCK                              isnull
+WCONTINUE                             isnumeric
+WCOREDUMP                             isobject
+WEXITSTATUS                           isocolors
+WIFCONTINUED                          isonormals
+WIFEXITED                             isosurface
+> (X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+parse error:
+
+  syntax error
+
+>>> (X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+      ^
+
+>> 
+Display all 1704 possibilities? (y or n)
+>> s = svmPredict(model,Xval);
+>> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+WIFSIGNALED                           ispref
+WIFSTOPPED                            isprime
+WNOHANG                               isprint
+WSTOPSIG                              isprop
+WTERMSIG                              ispunct
+WUNTRACED                             isreal
+X                                     isrow
+Xval                                  isscalar
+__accumarray_max__                    issorted
+__accumarray_min__                    isspace
+__accumarray_sum__                    issparse
+__accumdim_sum__                      issquare
+__actual_axis_position__              isstr
+__all_opts__                          isstrprop
+__builtins__                          isstruct
+__calc_dimensions__                   issymmetric
+__clabel__                            isunix
+__contourc__                          isupper
+__current_scope__                     isvarname
+__default_plot_options__              isvector
+__delaunayn__                         isxdigit
+__dispatch__                          j
+__display_tokens__                    java2mat
+__dsearchn__                          javaArray
+__dump_symtab_info__                  javaMethod
+__eigs__                              javaObject
+__error_text__                        java_convert_matrix
+__fieldnames__                        java_debug
+__finish__                            java_get
+__fltk_maxtime__                      java_invoke
+__fltk_redraw__                       java_matrix_autoconversion
+__fltk_uigetfile__                    java_new
+__ftp__                               java_set
+__ftp_ascii__                         java_unsigned_autoconversion
+__ftp_binary__                        java_unsigned_conversion
+__ftp_close__                         javaaddpath
+__ftp_cwd__                           javaclasspath
+__ftp_delete__                        javafields
+__ftp_dir__                           javamem
+__ftp_mget__                          javamethods
+__ftp_mkdir__                         javarmpath
+__ftp_mode__                          jet
+__ftp_mput__                          jit_enable
+__ftp_pwd__                           jit_startcnt
+__ftp_rename__                        jsonopt
+__ftp_rmdir__                         kbhit
+__get__                               kendall
+__getlegenddata__                     keyboard
+__glpk__                              kill
+__gnuplot_drawnow__                   kolmogorov_smirnov_cdf
+__go_axes__                           kolmogorov_smirnov_test
+>> (double(predictions ~= yval));
+error: 'predictions' undefined near line 1 column 9
+error: evaluating argument list element number 1
+>> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+WIFSIGNALED                           ispref
+WIFSTOPPED                            isprime
+WNOHANG                               isprint
+WSTOPSIG                              isprop
+WTERMSIG                              ispunct
+WUNTRACED                             isreal
+X                                     isrow
+Xval                                  isscalar
+__accumarray_max__                    issorted
+__accumarray_min__                    isspace
+__accumarray_sum__                    issparse
+__accumdim_sum__                      issquare
+__actual_axis_position__              isstr
+__all_opts__                          isstrprop
+__builtins__                          isstruct
+__calc_dimensions__                   issymmetric
+__clabel__                            isunix
+__contourc__                          isupper
+__current_scope__                     isvarname
+__default_plot_options__              isvector
+__delaunayn__                         isxdigit
+__dispatch__                          j
+__display_tokens__                    java2mat
+__dsearchn__                          javaArray
+__dump_symtab_info__                  javaMethod
+__eigs__                              javaObject
+__error_text__                        java_convert_matrix
+__fieldnames__                        java_debug
+__finish__                            java_get
+__fltk_maxtime__                      java_invoke
+__fltk_redraw__                       java_matrix_autoconversion
+__fltk_uigetfile__                    java_new
+__ftp__                               java_set
+__ftp_ascii__                         java_unsigned_autoconversion
+__ftp_binary__                        java_unsigned_conversion
+__ftp_close__                         javaaddpath
+__ftp_cwd__                           javaclasspath
+__ftp_delete__                        javafields
+__ftp_dir__                           javamem
+__ftp_mget__                          javamethods
+__ftp_mkdir__                         javarmpath
+__ftp_mode__                          jet
+__ftp_mput__                          jit_enable
+__ftp_pwd__                           jit_startcnt
+__ftp_rename__                        jsonopt
+__ftp_rmdir__                         kbhit
+__get__                               kendall
+__getlegenddata__                     keyboard
+__glpk__                              kill
+__gnuplot_drawnow__                   kolmogorov_smirnov_cdf
+__go_axes__                           kolmogorov_smirnov_test
+__go_axes_init__                      kolmogorov_smirnov_test_2
+__go_delete__                         kron
+__go_execute_callback__               kruskal_wallis_test
+__go_figure__                         krylov
+__go_figure_handles__                 kurtosis
+__go_handles__                        laplace_cdf
+__go_hggroup__                        laplace_inv
+__go_image__                          laplace_pdf
+__go_line__                           laplace_rnd
+__go_patch__                          lasterr
+__go_surface__                        lasterror
+__go_text__                           lastwarn
+__go_uicontextmenu__                  lcm
+__go_uicontrol__                      ldivide
+__go_uimenu__                         le
+__go_uipanel__                        legend
+__go_uipushtool__                     legendre
+__go_uitoggletool__                   length
+__go_uitoolbar__                      lgamma
+__gripe_missing_component__           lib/
+__gud_mode__                          license
+__have_feature__                      lin2mu
+__have_fltk__                         line
+__image_pixel_size__                  linearKernel
+__init_fltk__                         linearKernel.m
+__init_gnuplot__                      lines
+__is_handle_visible__                 link
+__isa_parent__                        linkprop
+__java_exit__                         linsolve
+__java_get__                          linspace
+__java_init__                         list_in_columns
+__java_set__                          list_primes
+__keywords__                          listdlg
+__lexer_debug_flag__                  load
+__lin_interpn__                       loadaudio
+__list_functions__                    loaded_graphics_toolkits
+__magick_finfo__                      loadjson
+__magick_formats__                    loadobj
+__magick_ping__                       loadubjson
+__magick_read__                       localtime
+__magick_write__                      log
+__makeinfo__                          log10
+__methods__                           log1p
+__next_line_color__                   log2
+__next_line_style__                   logical
+__octave_link_edit_file__             logistic_cdf
+__octave_link_enabled__               logistic_inv
+__octave_link_file_dialog__           logistic_pdf
+__octave_link_input_dialog__          logistic_regression
+__octave_link_list_dialog__           logistic_rnd
+__octave_link_message_dialog__        logit
+__octave_link_question_dialog__       loglog
+__octave_link_show_doc__              loglogerr
+__octave_link_show_preferences__      logm
+__operators__                         logncdf
+__parent_classes__                    logninv
+__parse_file__                        lognpdf
+__parser_debug_flag__                 lognrnd
+__pathorig__                          logspace
+__pchip_deriv__                       lookfor
+__plt_get_axis_arg__                  lookup
+__pltopt__                            lower
+__printf_assert__                     ls
+__profiler_data__                     ls_command
+__profiler_enable__                   lsode
+__profiler_reset__                    lsode_options
+__prog_output_assert__                lsqnonneg
+__qp__                                lstat
+__request_drawnow__                   lt
+__run_test_suite__                    lu
+__sort_rows_idx__                     luinc
+__token_count__                       luupdate
+__unimplemented__                     magic
+__varval__                            mahalanobis
+__version_info__                      makeValidFieldName
+__voronoi__                           make_absolute_filename
+__which__                             makeinfo_program
+abs                                   manova
+accumarray                            mat2cell
+accumdim                              mat2str
+acos                                  matlabroot
+acosd                                 matrix_type
+acosh                                 max
+acot                                  max_recursion_depth
+acotd                                 mcnemar_test
+acoth                                 md5sum
+acsc                                  mean
+acscd                                 meansq
+acsch                                 median
+add_input_event_hook                  menu
+addlistener                           merge
+addpath                               mergestruct
+addpref                               mesh
+addproperty                           meshc
+addtodate                             meshgrid
+airy                                  meshz
+all                                   methods
+allchild                              mex
+allow_noninteger_range_as_index       mexext
+amd                                   mfilename
+ancestor                              mgorth
+and                                   min
+angle                                 minus
+anova                                 mislocked
+ans                                   missing_component_hook
+any                                   missing_function_hook
+arch_fit                              mkdir
+arch_rnd                              mkfifo
+arch_test                             mkoctfile
+area                                  mkpp
+arg                                   mkstemp
+argnames                              mktime
+argv                                  mldivide
+arma_rnd                              mlock
+arrayfun                              mod
+asctime                               mode
+asec                                  model
+asecd                                 moment
+asech                                 more
+asin                                  mouse_wheel_zoom
+asind                                 movefile
+asinh                                 mpoles
+assert                                mpower
+assignin                              mrdivide
+atan                                  msgbox
+atan2                                 mtimes
+atan2d                                mu2lin
+atand                                 munlock
+atanh                                 namelengthmax
+atexit                                nan
+autoload                              nargchk
+autoreg_matrix                        nargin
+autumn                                narginchk
+available_graphics_toolkits           nargout
+axes                                  nargoutchk
+axis                                  native_float_format
+balance                               nbincdf
+bar                                   nbininv
+barh                                  nbinpdf
+bartlett                              nbinrnd
+bartlett_test                         nchoosek
+base2dec                              ndgrid
+base64_decode                         ndims
+base64_encode                         ne
+beep                                  newplot
+beep_on_error                         news
+bessel                                nextpow2
+besselh                               nfields
+besseli                               nnz
+besselj                               nonzeros
+besselk                               norm
+bessely                               normcdf
+beta                                  normest
+betacdf                               norminv
+betainc                               normpdf
+betaincinv                            normrnd
+betainv                               not
+betaln                                now
+betapdf                               nproc
+betarnd                               nth_element
+bicg                                  nthargout
+bicgstab                              nthroot
+bicubic                               ntsc2rgb
+bin2dec                               null
+bincoeff                              num2cell
+binocdf                               num2hex
+binoinv                               num2str
+binopdf                               numel
+binornd                               nzmax
+bitand                                ocean
+bitcmp                                octave_config_info
+bitget                                octave_core_file_limit
+bitmax                                octave_core_file_name
+bitor                                 octave_core_file_options
+bitpack                               octave_tmp_file_name
+bitset                                ols
+bitshift                              onCleanup
+bitunpack                             onenormest
+bitxor                                ones
+blackman                              optimget
+blanks                                optimize_subsasgn_calls
+blkdiag                               optimset
+blkmm                                 or
+bone                                  orderfields
+box                                   orient
+break                                 orth
+brighten                              ostrsplit
+bsxfun                                otherwise
+bug_report                            output_max_field_width
+built_in_docstrings_file              output_precision
+builtin                               pack
+bunzip2                               page_output_immediately
+bzip2                                 page_screen_output
+calendar                              paren
+canonicalize_file_name                pareto
+cart2pol                              parfor
+cart2sph                              parseparams
+case                                  pascal
+cast                                  patch
+cat                                   path
+catch                                 pathdef
+cauchy_cdf                            pathsep
+cauchy_inv                            pause
+cauchy_pdf                            pbaspect
+cauchy_rnd                            pcg
+caxis                                 pchip
+cbrt                                  pclose
+ccolamd                               pcolor
+cd                                    pcr
+ceil                                  peaks
+cell                                  periodogram
+cell2mat                              perl
+cell2struct                           perms
+celldisp                              permute
+cellfun                               persistent
+cellindexmat                          pi
+cellslices                            pie
+cellstr                               pie3
+center                                pink
+cgs                                   pinv
+char                                  pipe
+chdir                                 pkg
+chi2cdf                               planerot
+chi2inv                               playaudio
+chi2pdf                               plot
+chi2rnd                               plot3
+chisquare_test_homogeneity            plotData
+chisquare_test_independence           plotData.m
+chol                                  plotmatrix
+chol2inv                              plotyy
+choldelete                            plus
+cholinsert                            poisscdf
+cholinv                               poissinv
+cholshift                             poisspdf
+cholupdate                            poissrnd
+chop                                  pol2cart
+circshift                             polar
+citation                              poly
+cla                                   polyaffine
+clabel                                polyarea
+class                                 polyder
+clc                                   polyderiv
+clear                                 polyeig
+clf                                   polyfit
+clock                                 polygcd
+cloglog                               polyint
+close                                 polyout
+closereq                              polyreduce
+cmpermute                             polyval
+cmunique                              polyvalm
+colamd                                popen
+colloc                                popen2
+colon                                 porterStemmer
+colorbar                              porterStemmer.m
+colorcube                             postpad
+colormap                              pow2
+colperm                               power
+colstyle                              powerset
+columns                               ppder
+comet                                 ppint
+comet3                                ppjumps
+comma                                 ppplot
+command_line_path                     ppval
+common_size                           pqpnonneg
+commutation_matrix                    prctile
+compan                                prefdir
+compare_versions                      preferences
+compass                               prepad
+completion_append_char                primes
+completion_matches                    print
+complex                               print_empty_dimensions
+computer                              print_struct_array_contents
+cond                                  print_usage
+condest                               printd
+confirm_recursive_rmdir               printf
+conj                                  prism
+continue                              probit
+contour                               processEmail
+contour3                              processEmail.m
+contourc                              prod
+contourf                              profexplore
+contrast                              profile
+conv                                  profshow
+conv2                                 program_invocation_name
+convhull                              program_name
+convhulln                             prop_test_2
+convn                                 putenv
+cool                                  puts
+copper                                pwd
+copyfile                              python
+copyobj                               qp
+cor                                   qqplot
+cor_test                              qr
+corr                                  qrdelete
+corrcoef                              qrinsert
+cos                                   qrshift
+cosd                                  qrupdate
+cosh                                  quad
+cot                                   quad_options
+cotd                                  quadcc
+coth                                  quadgk
+cov                                   quadl
+cplxpair                              quadv
+cputime                               quantile
+crash_dumps_octave_core               questdlg
+cross                                 quit
+csc                                   quiver
+cscd                                  quiver3
+csch                                  qz
+cstrcat                               qzhess
+csvread                               rainbow
+csvwrite                              rand
+csymamd                               rande
+ctime                                 randg
+ctranspose                            randi
+cummax                                randn
+cummin                                randp
+cumprod                               randperm
+cumsum                                range
+cumtrapz                              rank
+curl                                  ranks
+cut                                   rat
+cylinder                              rats
+daspect                               rcond
+daspk                                 rdivide
+daspk_options                         re_read_readline_init_file
+dasrt                                 readFile
+dasrt_options                         readFile.m
+dassl                                 read_readline_init_file
+dassl_options                         readdir
+dataset3Params                        readline_re_read_init_file
+dataset3Params.m                      readline_read_init_file
+date                                  readlink
+datenum                               real
+datestr                               reallog
+datetick                              realmax
+datevec                               realmin
+dawson                                realpow
+dbclear                               realsqrt
+dbcont                                record
+dbdown                                rectangle
+dblist                                rectint
+dblquad                               recycle
+dbnext                                refresh
+dbquit                                refreshdata
+dbstack                               regexp
+dbstatus                              regexpi
+dbstep                                regexprep
+dbstop                                regexptranslate
+dbtype                                register_graphics_toolkit
+dbup                                  rehash
+dbwhere                               rem
+deal                                  remove_input_event_hook
+deblank                               rename
+debug                                 repelems
+debug_java                            repmat
+debug_jit                             reset
+debug_on_error                        reshape
+debug_on_interrupt                    residue
+debug_on_warning                      resize
+dec2base                              restoredefaultpath
+>> d
+error: 'd' undefined near line 1 column 1
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> for i = 1:length(C_test)
+> for j = 1:length(sigma_test)
+> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+> (X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+parse error:
+
+  syntax error
+
+>>> (X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+      ^
+
+>> 
+Display all 1705 possibilities? (y or n)
+>> s = svmPredict(model,Xval);
+>> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+WIFSIGNALED                           ispref
+WIFSTOPPED                            isprime
+WNOHANG                               isprint
+WSTOPSIG                              isprop
+WTERMSIG                              ispunct
+WUNTRACED                             isreal
+X                                     isrow
+Xval                                  isscalar
+__accumarray_max__                    issorted
+__accumarray_min__                    isspace
+__accumarray_sum__                    issparse
+__accumdim_sum__                      issquare
+__actual_axis_position__              isstr
+__all_opts__                          isstrprop
+__builtins__                          isstruct
+__calc_dimensions__                   issymmetric
+__clabel__                            isunix
+__contourc__                          isupper
+__current_scope__                     isvarname
+__default_plot_options__              isvector
+__delaunayn__                         isxdigit
+__dispatch__                          j
+__display_tokens__                    java2mat
+__dsearchn__                          javaArray
+__dump_symtab_info__                  javaMethod
+__eigs__                              javaObject
+__error_text__                        java_convert_matrix
+__fieldnames__                        java_debug
+__finish__                            java_get
+__fltk_maxtime__                      java_invoke
+__fltk_redraw__                       java_matrix_autoconversion
+__fltk_uigetfile__                    java_new
+__ftp__                               java_set
+__ftp_ascii__                         java_unsigned_autoconversion
+__ftp_binary__                        java_unsigned_conversion
+__ftp_close__                         javaaddpath
+__ftp_cwd__                           javaclasspath
+__ftp_delete__                        javafields
+__ftp_dir__                           javamem
+__ftp_mget__                          javamethods
+__ftp_mkdir__                         javarmpath
+__ftp_mode__                          jet
+__ftp_mput__                          jit_enable
+__ftp_pwd__                           jit_startcnt
+__ftp_rename__                        jsonopt
+__ftp_rmdir__                         kbhit
+__get__                               kendall
+__getlegenddata__                     keyboard
+__glpk__                              kill
+__gnuplot_drawnow__                   kolmogorov_smirnov_cdf
+__go_axes__                           kolmogorov_smirnov_test
+>> (double(predictions ~= yval));
+error: 'predictions' undefined near line 1 column 9
+error: evaluating argument list element number 1
+>> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+WIFSIGNALED                           ispref
+WIFSTOPPED                            isprime
+WNOHANG                               isprint
+WSTOPSIG                              isprop
+WTERMSIG                              ispunct
+WUNTRACED                             isreal
+X                                     isrow
+Xval                                  isscalar
+__accumarray_max__                    issorted
+__accumarray_min__                    isspace
+__accumarray_sum__                    issparse
+__accumdim_sum__                      issquare
+__actual_axis_position__              isstr
+__all_opts__                          isstrprop
+__builtins__                          isstruct
+__calc_dimensions__                   issymmetric
+__clabel__                            isunix
+__contourc__                          isupper
+__current_scope__                     isvarname
+__default_plot_options__              isvector
+__delaunayn__                         isxdigit
+__dispatch__                          j
+__display_tokens__                    java2mat
+__dsearchn__                          javaArray
+__dump_symtab_info__                  javaMethod
+__eigs__                              javaObject
+__error_text__                        java_convert_matrix
+__fieldnames__                        java_debug
+__finish__                            java_get
+__fltk_maxtime__                      java_invoke
+__fltk_redraw__                       java_matrix_autoconversion
+__fltk_uigetfile__                    java_new
+__ftp__                               java_set
+__ftp_ascii__                         java_unsigned_autoconversion
+__ftp_binary__                        java_unsigned_conversion
+__ftp_close__                         javaaddpath
+__ftp_cwd__                           javaclasspath
+__ftp_delete__                        javafields
+__ftp_dir__                           javamem
+__ftp_mget__                          javamethods
+__ftp_mkdir__                         javarmpath
+__ftp_mode__                          jet
+__ftp_mput__                          jit_enable
+__ftp_pwd__                           jit_startcnt
+__ftp_rename__                        jsonopt
+__ftp_rmdir__                         kbhit
+__get__                               kendall
+__getlegenddata__                     keyboard
+__glpk__                              kill
+__gnuplot_drawnow__                   kolmogorov_smirnov_cdf
+__go_axes__                           kolmogorov_smirnov_test
+__go_axes_init__                      kolmogorov_smirnov_test_2
+__go_delete__                         kron
+__go_execute_callback__               kruskal_wallis_test
+__go_figure__                         krylov
+__go_figure_handles__                 kurtosis
+__go_handles__                        laplace_cdf
+__go_hggroup__                        laplace_inv
+__go_image__                          laplace_pdf
+__go_line__                           laplace_rnd
+__go_patch__                          lasterr
+__go_surface__                        lasterror
+__go_text__                           lastwarn
+__go_uicontextmenu__                  lcm
+__go_uicontrol__                      ldivide
+__go_uimenu__                         le
+__go_uipanel__                        legend
+__go_uipushtool__                     legendre
+__go_uitoggletool__                   length
+__go_uitoolbar__                      lgamma
+__gripe_missing_component__           lib/
+__gud_mode__                          license
+__have_feature__                      lin2mu
+__have_fltk__                         line
+__image_pixel_size__                  linearKernel
+__init_fltk__                         linearKernel.m
+__init_gnuplot__                      lines
+__is_handle_visible__                 link
+__isa_parent__                        linkprop
+__java_exit__                         linsolve
+__java_get__                          linspace
+__java_init__                         list_in_columns
+__java_set__                          list_primes
+__keywords__                          listdlg
+__lexer_debug_flag__                  load
+__lin_interpn__                       loadaudio
+__list_functions__                    loaded_graphics_toolkits
+__magick_finfo__                      loadjson
+__magick_formats__                    loadobj
+__magick_ping__                       loadubjson
+__magick_read__                       localtime
+__magick_write__                      log
+__makeinfo__                          log10
+__methods__                           log1p
+__next_line_color__                   log2
+__next_line_style__                   logical
+__octave_link_edit_file__             logistic_cdf
+__octave_link_enabled__               logistic_inv
+__octave_link_file_dialog__           logistic_pdf
+__octave_link_input_dialog__          logistic_regression
+__octave_link_list_dialog__           logistic_rnd
+__octave_link_message_dialog__        logit
+__octave_link_question_dialog__       loglog
+__octave_link_show_doc__              loglogerr
+__octave_link_show_preferences__      logm
+__operators__                         logncdf
+__parent_classes__                    logninv
+__parse_file__                        lognpdf
+__parser_debug_flag__                 lognrnd
+__pathorig__                          logspace
+__pchip_deriv__                       lookfor
+__plt_get_axis_arg__                  lookup
+__pltopt__                            lower
+__printf_assert__                     ls
+__profiler_data__                     ls_command
+__profiler_enable__                   lsode
+__profiler_reset__                    lsode_options
+__prog_output_assert__                lsqnonneg
+__qp__                                lstat
+__request_drawnow__                   lt
+__run_test_suite__                    lu
+__sort_rows_idx__                     luinc
+__token_count__                       luupdate
+__unimplemented__                     magic
+__varval__                            mahalanobis
+__version_info__                      makeValidFieldName
+__voronoi__                           make_absolute_filename
+__which__                             makeinfo_program
+abs                                   manova
+accumarray                            mat2cell
+accumdim                              mat2str
+acos                                  matlabroot
+acosd                                 matrix_type
+acosh                                 max
+acot                                  max_recursion_depth
+acotd                                 mcnemar_test
+acoth                                 md5sum
+acsc                                  mean
+acscd                                 meansq
+acsch                                 median
+add_input_event_hook                  menu
+addlistener                           merge
+addpath                               mergestruct
+addpref                               mesh
+addproperty                           meshc
+addtodate                             meshgrid
+airy                                  meshz
+all                                   methods
+allchild                              mex
+allow_noninteger_range_as_index       mexext
+amd                                   mfilename
+ancestor                              mgorth
+and                                   min
+angle                                 minus
+anova                                 mislocked
+ans                                   missing_component_hook
+any                                   missing_function_hook
+arch_fit                              mkdir
+arch_rnd                              mkfifo
+arch_test                             mkoctfile
+area                                  mkpp
+arg                                   mkstemp
+argnames                              mktime
+argv                                  mldivide
+arma_rnd                              mlock
+arrayfun                              mod
+asctime                               mode
+asec                                  model
+asecd                                 moment
+asech                                 more
+asin                                  mouse_wheel_zoom
+asind                                 movefile
+asinh                                 mpoles
+assert                                mpower
+assignin                              mrdivide
+atan                                  msgbox
+atan2                                 mtimes
+atan2d                                mu2lin
+atand                                 munlock
+atanh                                 namelengthmax
+atexit                                nan
+autoload                              nargchk
+autoreg_matrix                        nargin
+autumn                                narginchk
+available_graphics_toolkits           nargout
+axes                                  nargoutchk
+axis                                  native_float_format
+balance                               nbincdf
+bar                                   nbininv
+barh                                  nbinpdf
+bartlett                              nbinrnd
+bartlett_test                         nchoosek
+base2dec                              ndgrid
+base64_decode                         ndims
+base64_encode                         ne
+beep                                  newplot
+beep_on_error                         news
+bessel                                nextpow2
+besselh                               nfields
+besseli                               nnz
+besselj                               nonzeros
+besselk                               norm
+bessely                               normcdf
+beta                                  normest
+betacdf                               norminv
+betainc                               normpdf
+betaincinv                            normrnd
+betainv                               not
+betaln                                now
+betapdf                               nproc
+betarnd                               nth_element
+bicg                                  nthargout
+bicgstab                              nthroot
+bicubic                               ntsc2rgb
+bin2dec                               null
+bincoeff                              num2cell
+binocdf                               num2hex
+binoinv                               num2str
+binopdf                               numel
+binornd                               nzmax
+bitand                                ocean
+bitcmp                                octave_config_info
+bitget                                octave_core_file_limit
+bitmax                                octave_core_file_name
+bitor                                 octave_core_file_options
+bitpack                               octave_tmp_file_name
+bitset                                ols
+bitshift                              onCleanup
+bitunpack                             onenormest
+bitxor                                ones
+blackman                              optimget
+blanks                                optimize_subsasgn_calls
+blkdiag                               optimset
+blkmm                                 or
+bone                                  orderfields
+box                                   orient
+break                                 orth
+brighten                              ostrsplit
+bsxfun                                otherwise
+bug_report                            output_max_field_width
+built_in_docstrings_file              output_precision
+builtin                               pack
+bunzip2                               page_output_immediately
+bzip2                                 page_screen_output
+calendar                              paren
+canonicalize_file_name                pareto
+cart2pol                              parfor
+cart2sph                              parseparams
+case                                  pascal
+cast                                  patch
+cat                                   path
+catch                                 pathdef
+cauchy_cdf                            pathsep
+cauchy_inv                            pause
+cauchy_pdf                            pbaspect
+cauchy_rnd                            pcg
+caxis                                 pchip
+cbrt                                  pclose
+ccolamd                               pcolor
+cd                                    pcr
+ceil                                  peaks
+cell                                  periodogram
+cell2mat                              perl
+cell2struct                           perms
+celldisp                              permute
+cellfun                               persistent
+cellindexmat                          pi
+cellslices                            pie
+cellstr                               pie3
+center                                pink
+cgs                                   pinv
+char                                  pipe
+chdir                                 pkg
+chi2cdf                               planerot
+chi2inv                               playaudio
+chi2pdf                               plot
+chi2rnd                               plot3
+chisquare_test_homogeneity            plotData
+chisquare_test_independence           plotData.m
+chol                                  plotmatrix
+chol2inv                              plotyy
+choldelete                            plus
+cholinsert                            poisscdf
+cholinv                               poissinv
+cholshift                             poisspdf
+cholupdate                            poissrnd
+chop                                  pol2cart
+circshift                             polar
+citation                              poly
+cla                                   polyaffine
+clabel                                polyarea
+class                                 polyder
+clc                                   polyderiv
+clear                                 polyeig
+clf                                   polyfit
+clock                                 polygcd
+cloglog                               polyint
+close                                 polyout
+closereq                              polyreduce
+cmpermute                             polyval
+cmunique                              polyvalm
+colamd                                popen
+colloc                                popen2
+colon                                 porterStemmer
+colorbar                              porterStemmer.m
+colorcube                             postpad
+colormap                              pow2
+colperm                               power
+colstyle                              powerset
+columns                               ppder
+comet                                 ppint
+comet3                                ppjumps
+comma                                 ppplot
+command_line_path                     ppval
+common_size                           pqpnonneg
+commutation_matrix                    prctile
+compan                                prefdir
+compare_versions                      preferences
+compass                               prepad
+completion_append_char                primes
+completion_matches                    print
+complex                               print_empty_dimensions
+computer                              print_struct_array_contents
+cond                                  print_usage
+condest                               printd
+confirm_recursive_rmdir               printf
+conj                                  prism
+continue                              probit
+contour                               processEmail
+contour3                              processEmail.m
+contourc                              prod
+contourf                              profexplore
+contrast                              profile
+conv                                  profshow
+conv2                                 program_invocation_name
+convhull                              program_name
+convhulln                             prop_test_2
+convn                                 putenv
+cool                                  puts
+copper                                pwd
+copyfile                              python
+copyobj                               qp
+cor                                   qqplot
+cor_test                              qr
+corr                                  qrdelete
+corrcoef                              qrinsert
+cos                                   qrshift
+cosd                                  qrupdate
+cosh                                  quad
+cot                                   quad_options
+cotd                                  quadcc
+coth                                  quadgk
+cov                                   quadl
+cplxpair                              quadv
+cputime                               quantile
+crash_dumps_octave_core               questdlg
+cross                                 quit
+csc                                   quiver
+cscd                                  quiver3
+csch                                  qz
+cstrcat                               qzhess
+csvread                               rainbow
+csvwrite                              rand
+csymamd                               rande
+ctime                                 randg
+ctranspose                            randi
+cummax                                randn
+cummin                                randp
+cumprod                               randperm
+cumsum                                range
+cumtrapz                              rank
+curl                                  ranks
+cut                                   rat
+cylinder                              rats
+daspect                               rcond
+daspk                                 rdivide
+daspk_options                         re_read_readline_init_file
+dasrt                                 readFile
+dasrt_options                         readFile.m
+dassl                                 read_readline_init_file
+dassl_options                         readdir
+dataset3Params                        readline_re_read_init_file
+dataset3Params.m                      readline_read_init_file
+date                                  readlink
+datenum                               real
+datestr                               reallog
+datetick                              realmax
+datevec                               realmin
+dawson                                realpow
+dbclear                               realsqrt
+dbcont                                record
+dbdown                                rectangle
+dblist                                rectint
+dblquad                               recycle
+dbnext                                refresh
+dbquit                                refreshdata
+dbstack                               regexp
+dbstatus                              regexpi
+dbstep                                regexprep
+dbstop                                regexptranslate
+dbtype                                register_graphics_toolkit
+dbup                                  rehash
+dbwhere                               rem
+deal                                  remove_input_event_hook
+deblank                               rename
+debug                                 repelems
+debug_java                            repmat
+debug_jit                             reset
+debug_on_error                        reshape
+debug_on_interrupt                    residue
+debug_on_warning                      resize
+dec2base                              restoredefaultpath
+dec2bin                               rethrow
+dec2hex                               return
+deconv                                rgb2hsv
+default_save_options                  rgb2ind
+del2                                  rgb2ntsc
+delaunay                              rgbplot
+delaunay3                             ribbon
+delaunayn                             rindex
+delete                                rmappdata
+dellistener                           rmdir
+demo                                  rmfield
+desktop                               rmpath
+det                                   rmpref
+detrend                               roots
+diag                                  rose
+diary                                 rosser
+diff                                  rot90
+diffpara                              rotdim
+diffuse                               round
+dir                                   roundb
+discrete_cdf                          rows
+discrete_inv                          rref
+discrete_pdf                          rsf2csf
+discrete_rnd                          run
+disp                                  run_count
+display                               run_history
+divergence                            run_test
+dlmread                               rundemos
+dlmwrite                              runlength
+dmperm                                runtests
+do                                    s
+do_braindead_shortcircuit_evaluation  save
+do_string_escapes                     save_default_options
+doc                                   save_header_format_string
+doc_cache_create                      save_precision
+doc_cache_file                        saveas
+dos                                   saveaudio
+dot                                   savejson
+double                                saveobj
+drawnow                               savepath
+dsearch                               saveubjson
+dsearchn                              saving_history
+dump_prefs                            scanf
+dup2                                  scatter
+duplication_matrix                    scatter3
+durbinlevinson                        schur
+e                                     sec
+echo                                  secd
+echo_executing_commands               sech
+edit                                  semicolon
+edit_history                          semilogx
+eig                                   semilogxerr
+eigs                                  semilogy
+ellipj                                semilogyerr
+ellipke                               set
+ellipsoid                             setappdata
+else                                  setaudio
+elseif                                setdiff
+emailFeatures                         setenv
+emailFeatures.m                       setfield
+emailSample1.txt                      setgrent
+emailSample2.txt                      setpref
+empirical_cdf                         setpwent
+empirical_inv                         setxor
+empirical_pdf                         shading
+empirical_rnd                         shell_cmd
+end                                   shg
+end_try_catch                         shift
+end_unwind_protect                    shiftdim
+endfor                                shrinkfaces
+endfunction                           sighup_dumps_octave_core
+endgrent                              sigma
+endif                                 sigma_test
+endparfor                             sign
+endpwent                              sign_test
+endswitch                             signbit
+endwhile                              sigterm_dumps_octave_core
+eomday                                silent_functions
+eps                                   sim
+eq                                    sin
+erf                                   sinc
+erfc                                  sind
+erfcinv                               sinetone
+erfcx                                 sinewave
+erfi                                  single
+erfinv                                sinh
+errno                                 size
+errno_list                            size_equal
+error                                 sizemax
+error_1                               sizeof
+error_ids                             skewness
+error_text                            sleep
+errorbar                              slice
+errordlg                              sombrero
+etime                                 sort
+etree                                 sortrows
+etreeplot                             source
+eval                                  spalloc
+evalin                                spamSample1.txt
+ex6                                   spamSample2.txt
+ex6.m                                 spamTest.mat
+ex6_spam                              spamTrain.mat
+ex6_spam.m                            sparse
+ex6data1.mat                          sparse_auto_mutate
+ex6data2.mat                          spaugment
+ex6data3.mat                          spconvert
+example                               spdiags
+exec                                  spearman
+exist                                 spectral_adf
+exit                                  spectral_xdf
+exp                                   specular
+expcdf                                speed
+expint                                spencer
+expinv                                speye
+expm                                  spfun
+expm1                                 sph2cart
+exppdf                                sphere
+exprnd                                spinmap
+eye                                   spline
+ezcontour                             splinefit
+ezcontourf                            split_long_rows
+ezmesh                                spones
+ezmeshc                               spparms
+ezplot                                sprand
+ezplot3                               sprandn
+ezpolar                               sprandsym
+ezsurf                                sprank
+ezsurfc                               spring
+f_test_regression                     sprintf
+fact                                  spstats
+factor                                spy
+factorial                             sqp
+fail                                  sqrt
+false                                 sqrtm
+fcdf                                  squeeze
+fclear                                sscanf
+fclose                                stairs
+fcntl                                 stat
+fdisp                                 static
+feather                               statistics
+feof                                  std
+ferror                                stderr
+feval                                 stdin
+fflush                                stdnormal_cdf
+fft                                   stdnormal_inv
+fft2                                  stdnormal_pdf
+fftconv                               stdnormal_rnd
+fftfilt                               stdout
+fftn                                  stem
+fftshift                              stem3
+fftw                                  stemleaf
+fgetl                                 stft
+fgets                                 str2double
+fieldnames                            str2func
+figure                                str2num
+file_in_loadpath                      strcat
+file_in_path                          strchr
+fileattrib                            strcmp
+filemarker                            strcmpi
+fileparts                             strfind
+fileread                              strftime
+filesep                               string_fill_char
+fill                                  strjoin
+filter                                strjust
+filter2                               strmatch
+find                                  strncmp
+find_dir_in_path                      strncmpi
+findall                               strptime
+findfigs                              strread
+findobj                               strrep
+findstr                               strsplit
+finite                                strtok
+finv                                  strtrim
+fix                                   strtrunc
+fixed_point_format                    struct
+flag                                  struct2cell
+flintmax                              struct2hdl
+flipdim                               struct_levels_to_print
+fliplr                                structfun
+flipud                                strvcat
+floor                                 studentize
+fminbnd                               sub2ind
+fminsearch                            submit
+fminunc                               submit.m
+fmod                                  submitWithConfiguration
+fnmatch                               subplot
+fopen                                 subsasgn
+for                                   subsindex
+fork                                  subspace
+format                                subsref
+formula                               substr
+fpdf                                  substruct
+fplot                                 sum
+fprintf                               summer
+fputs                                 sumsq
+fractdiff                             superiorto
+fread                                 suppress_verbose_help_message
+freport                               surf
+freqz                                 surface
+freqz_plot                            surfc
+frewind                               surfl
+frnd                                  surfnorm
+fscanf                                svd
+fseek                                 svd_driver
+fskipl                                svds
+fsolve                                svmPredict
+ftell                                 svmPredict.m
+full                                  svmTrain
+fullfile                              svmTrain.m
+func2str                              swapbytes
+function                              switch
+functions                             syl
+fwrite                                sylvester_matrix
+fzero                                 symamd
+gallery                               symbfact
+gamcdf                                symlink
+gaminv                                symrcm
+gamma                                 symvar
+gammainc                              synthesis
+gammaln                               system
+gampdf                                t_test
+gamrnd                                t_test_2
+gaussianKernel                        t_test_regression
+gaussianKernel.m                      table
+gca                                   tan
+gcbf                                  tand
+gcbo                                  tanh
+gcd                                   tar
+gcf                                   tcdf
+gco                                   tempdir
+ge                                    tempname
+gen_doc_cache                         terminal_size
+genpath                               test
+genvarname                            tetramesh
+geocdf                                texi_macros_file
+geoinv                                text
+geopdf                                textread
+geornd                                textscan
+get                                   tic
+getVocabList                          tilde_expand
+getVocabList.m                        time
+get_first_help_sentence               times
+get_help_text                         tinv
+get_help_text_from_file               title
+getappdata                            tmpfile
+getegid                               tmpnam
+getenv                                toascii
+geteuid                               toc
+getfield                              toeplitz
+getgid                                token.mat
+getgrent                              tolower
+getgrgid                              toupper
+getgrnam                              tpdf
+gethostname                           trace
+getpgrp                               transpose
+getpid                                trapz
+getppid                               treelayout
+getpref                               treeplot
+getpwent                              tril
+getpwnam                              trimesh
+getpwuid                              triplequad
+getrusage                             triplot
+getuid                                trisurf
+ginput                                triu
+givens                                trnd
+glob                                  true
+global                                try
+glpk                                  tsearch
+gls                                   tsearchn
+gmap40                                type
+gmres                                 typecast
+gmtime                                typeinfo
+gnuplot_binary                        u_test
+gplot                                 uicontextmenu
+gradient                              uicontrol
+graphics_toolkit                      uigetdir
+gray                                  uigetfile
+gray2ind                              uimenu
+grid                                  uint16
+griddata                              uint32
+griddata3                             uint64
+griddatan                             uint8
+gt                                    uipanel
+gtext                                 uipushtool
+gui_mode                              uiputfile
+guidata                               uiresume
+guihandles                            uitoggletool
+gunzip                                uitoolbar
+gzip                                  uiwait
+hadamard                              umask
+hamming                               uminus
+hankel                                uname
+hanning                               undo_string_escapes
+have_window_system                    unidcdf
+hdl2struct                            unidinv
+help                                  unidpdf
+helpdlg                               unidrnd
+hess                                  unifcdf
+hex2dec                               unifinv
+hex2num                               unifpdf
+hggroup                               unifrnd
+hidden                                union
+hilb                                  unique
+hist                                  unix
+histc                                 unlink
+history                               unmkpp
+>> d
+error: 'd' undefined near line 1 column 1
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> for i = 1:length(C_test)
+> for j = 1:length(sigma_test)
+> end
+> end
+>> for i = 1:length(C_test)
+> C_test;
+> for j = 1:length(sigma_test)
+> sigma_test;
+> end
+> end
+>> 
+>> for i = 1:length(C_test)
+> C_test
+> for j = 1:length(sigma_test)
+> sigma_test
+> end
+> end
+C_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+    2.430000
+    7.290000
+   21.870000
+
+sigma_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+    2.430000
+    7.290000
+   21.870000
+
+sigma_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+    2.430000
+    7.290000
+   21.870000
+
+sigma_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+    2.430000
+    7.290000
+   21.870000
+
+sigma_test =
+
+    0.010000
+    0.030000
+    0.090000
+    0.270000
+    0.810000
+>> for i = 1:length(C_test)
+> C_test(i)
+> for j = 1:length(sigma_test)
+> sigma_test(j)
+> end
+> end
+ans =  0.010000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.030000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.090000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.27000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.81000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  2.4300
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+>> for i = 1:length(C_test)
+>     C_test(i)
+>     for j = 1:length(sigma_test)
+>         sigma_test(j)
+>     end
+> end
+ans =  0.010000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.030000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.090000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.27000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  0.81000
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+ans =  2.4300
+ans =  7.2900
+ans =  21.870
+ans =  2.4300
+ans =  0.010000
+ans =  0.030000
+ans =  0.090000
+ans =  0.27000
+ans =  0.81000
+>> for i = 1:length(C_test)
+>    
+>     for j = 1:length(sigma_test)
+>         model= svmTrain(X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+> 
+Display all 1705 possibilities? (y or n)
+> s = svmPredict(model,Xval);
+> 
+Display all 1705 possibilities? (y or n)
+.DS_Store                             isaxes
+.nargin.                              isbool
+C                                     iscell
+C_test                                iscellstr
+EDITOR                                ischar
+EXEC_PATH                             iscntrl
+F_DUPFD                               iscolormap
+F_GETFD                               iscolumn
+F_GETFL                               iscomplex
+F_SETFD                               isdebugmode
+F_SETFL                               isdefinite
+I                                     isdeployed
+IMAGE_PATH                            isdigit
+Inf                                   isdir
+J                                     isempty
+NA                                    isequal
+NaN                                   isequaln
+OCTAVE_HOME                           isequalwithequalnans
+OCTAVE_VERSION                        isfield
+O_APPEND                              isfigure
+O_ASYNC                               isfinite
+O_CREAT                               isfloat
+O_EXCL                                isglobal
+O_NONBLOCK                            isgraph
+O_RDONLY                              isguirunning
+O_RDWR                                ishandle
+O_SYNC                                ishermitian
+O_TRUNC                               ishghandle
+O_WRONLY                              ishold
+PAGER                                 isieee
+PAGER_FLAGS                           isindex
+PS1                                   isinf
+PS2                                   isinteger
+PS4                                   isjava
+P_tmpdir                              iskeyword
+SEEK_CUR                              isletter
+SEEK_END                              islogical
+SEEK_SET                              islower
+SIG                                   ismac
+S_ISBLK                               ismatrix
+S_ISCHR                               ismember
+S_ISDIR                               ismethod
+S_ISFIFO                              isna
+S_ISLNK                               isnan
+S_ISREG                               isnull
+S_ISSOCK                              isnumeric
+WCONTINUE                             isobject
+WCOREDUMP                             isocolors
+WEXITSTATUS                           isonormals
+WIFCONTINUED                          isosurface
+WIFEXITED                             ispc
+WIFSIGNALED                           ispref
+WIFSTOPPED                            isprime
+WNOHANG                               isprint
+WSTOPSIG                              isprop
+WTERMSIG                              ispunct
+WUNTRACED                             isreal
+X                                     isrow
+Xval                                  isscalar
+__accumarray_max__                    issorted
+__accumarray_min__                    isspace
+__accumarray_sum__                    issparse
+__accumdim_sum__                      issquare
+__actual_axis_position__              isstr
+__all_opts__                          isstrprop
+__builtins__                          isstruct
+__calc_dimensions__                   issymmetric
+__clabel__                            isunix
+__contourc__                          isupper
+__current_scope__                     isvarname
+__default_plot_options__              isvector
+__delaunayn__                         isxdigit
+__dispatch__                          j
+__display_tokens__                    java2mat
+__dsearchn__                          javaArray
+__dump_symtab_info__                  javaMethod
+__eigs__                              javaObject
+__error_text__                        java_convert_matrix
+__fieldnames__                        java_debug
+__finish__                            java_get
+__fltk_maxtime__                      java_invoke
+__fltk_redraw__                       java_matrix_autoconversion
+__fltk_uigetfile__                    java_new
+__ftp__                               java_set
+__ftp_ascii__                         java_unsigned_autoconversion
+__ftp_binary__                        java_unsigned_conversion
+__ftp_close__                         javaaddpath
+__ftp_cwd__                           javaclasspath
+__ftp_delete__                        javafields
+__ftp_dir__                           javamem
+__ftp_mget__                          javamethods
+__ftp_mkdir__                         javarmpath
+__ftp_mode__                          jet
+__ftp_mput__                          jit_enable
+__ftp_pwd__                           jit_startcnt
+__ftp_rename__                        jsonopt
+__ftp_rmdir__                         kbhit
+__get__                               kendall
+__getlegenddata__                     keyboard
+__glpk__                              kill
+__gnuplot_drawnow__                   kolmogorov_smirnov_cdf
+__go_axes__                           kolmogorov_smirnov_test
+> (double(predictions ~= yval));
+>     end
+> end
+
+Training .......................... Done! 
+
+error: 'predictions' undefined near line 6 column 9
+error: evaluating argument list element number 1
+>> for i = 1:length(C_test)
+>    
+>     for j = 1:length(sigma_test)
+>         model= svmTrain(X, y, C_test(i), @(x1, x2) gaussianKernel(x1, x2, sigma_test(j)));
+>         predictions = svmPredict(model,Xval);
+>         error_2 = mean(double(predictions ~= yval));
+>     end
+> end
+
+Training ........................................... Done! 
+
+
+Training ................................................ Done! 
+
+
+Training ................................................................. Done! 
+
+
+Training ............................................... Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ................................. Done! 
+
+
+Training .......................................... Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ............................. Done! 
+
+
+Training ............................................................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ............................................ Done! 
+
+
+Training .................................. Done! 
+
+
+Training ................................. Done! 
+
+
+Training ................................ Done! 
+
+
+Training ................................................... Done! 
+
+
+Training ................................ Done! 
+
+
+Training .................................................................. Done! 
+
+
+Training ......................................................................
+....... Done! 
+
+
+Training ......................................................................
+....................... Done! 
+
+
+Training ...................................................... Done! 
+
+
+Training ......................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ............................................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ..................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+.............................. Done! 
+
+
+Training .............................................................. Done! 
+
+
+Training ......................................................................
+.. Done! 
+
+
+Training .................................................. Done! 
+
+
+Training ....................... Done! 
+
+
+Training ........................... Done! 
+
+
+Training ...................................................q.. Done! 
+
+
+Training ...........................
+...........................................
+................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+............................................................................ Done! 
+
+
+Training ......................................................................
+...................................................... Done! 
+
+
+Training .................................................. Done! 
+
+
+Training ......................................................................
+............. Done! 
+
+
+Training ................................................ Done! 
+
+
+Training ............................................. Done! 
+
+
+Training .................................... Done! 
+
+
+Training .................................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.............. Done! 
+
+
+Training ......................................................................
+....................................................................... Done! 
+
+
+Training ......................................................................
+....................... Done! 
+
+
+Training ............................................................. Done! 
+
+
+Training ................................... Done! 
+
+
+Training .................................... Done! 
+
+
+Training .................................................. Done! 
+
+
+Training ......................................................................
+................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+... Done! 
+
+
+Training ......................................................................
+...............................................................................
+....................................................................... Done! 
+
+
+Training ......................................................................
+............................................................................ Done! 
+
+
+Training .............................................................. Done! 
+
+
+Training ............................................................... Done! 
+
+
+Training ........................ Done! 
+
+
+Training .................................... Done! 
+
+
+Training ......................................................................
+...... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...................................... Done! 
+
+
+Training ..........................................................^[............
+....................^[.........................^[....^[..............................
+.........
+.........................
+.............................
+................
+................................................................e.........n......
+..d............
+..................................... Done! 
+
+
+Training ......................................................................
+......................... Done! 
+
+
+Training ...........................................q...........................
+.......................................................... Done! 
+
+
+Training ......................................................................
+... Done! 
+
+
+Training .......................... Done! 
+
+>> q
+error: 'q' undefined near line 1 column 1
+>> 
+>> 
+>> 
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> if error_2 < error_1
+>     C = C_test(i);
+>     sigma = sigma_test(j);
+>     error_1 = error_2;
+> end
+>> submit()
+== Submitting solutions | Support Vector Machines...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+
+Training ........................................ Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ......................................................................
+........... Done! 
+
+
+Training ..................................................................... Done! 
+
+
+Training ...................................... Done! 
+
+
+Training .................................. Done! 
+
+
+Training ................................... Done! 
+
+
+Training ................................................... Done! 
+
+
+Training ............................................. Done! 
+
+
+Training ......................................................................
+... Done! 
+
+
+Training ................................................................ Done! 
+
+
+Training ........................................................... Done! 
+
+
+Training .............................................. Done! 
+
+
+Training ........................................................ Done! 
+
+
+Training .............................................. Done! 
+
+
+Training .............................................. Done! 
+
+
+Training ................................. Done! 
+
+
+Training .................................................................. Done! 
+
+
+Training ......................................................................
+...................................................... Done! 
+
+
+Training ......................................................................
+............................ Done! 
+
+
+Training ................................................................... Done! 
+
+
+Training ......................................... Done! 
+
+
+Training .................................. Done! 
+
+
+Training ...................................... Done! 
+
+
+Training .......................................... Done! 
+
+
+Training ...................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+................................... Done! 
+
+
+Training ......................................................................
+............................................................ Done! 
+
+
+Training ............................................................... Done! 
+
+
+Training ...................................... Done! 
+
+
+Training ................................... Done! 
+
+
+Training ..................................... Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ......................................................................
+...................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+.............................................................................. Done! 
+
+
+Training ......................................................................
+...............................................................................
+................. Done! 
+
+
+Training ..................................... Done! 
+
+
+Training ......................................................................
+ Done! 
+
+
+Training ................................................ Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ................................................ Done! 
+
+
+Training ......................................................................
+......................................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+.............................. Done! 
+
+
+Training ......................................................................
+...............................................................................
+.................................................................. Done! 
+
+
+Training .................................................................. Done! 
+
+
+Training ......................................................................
+..... Done! 
+
+
+Training ................................. Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ................................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.................. Done! 
+
+
+Training ......................................................................
+.......... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ................................................................ Done! 
+
+
+Training ................................................... Done! 
+
+
+Training .............................................. Done! 
+
+
+Training ......................................................................
+................................................................ Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+..................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+. Done! 
+
+
+Training ..................................................................... Done! 
+
+
+Training ......................................................................
+............... Done! 
+
+
+Training .................................... Done! 
+
+
+==== Processed Email ====
+
+the quick brown fox jump over the lazi dog 
+
+=========================
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                             Gaussian Kernel |  25 /  25 | Nice work!
+==         Parameters (C, sigma) for Dataset 3 |  25 /  25 | Nice work!
+==                         Email Preprocessing |   0 /  25 | 
+==                    Email Feature Extraction |   0 /  25 | 
+==                                   --------------------------------
+==                                             |  50 / 100 | 
+== 
+>> C
+C =  21.870
+>> sigma
+sigma =  21.870
+>> ex6_spam
+
+
+Preprocessing sample email (emailSample1.txt)
+
+==== Processed Email ====
+
+anyon know how much it cost to host a web portal well it depend on how mani 
+visitor you re expect thi can be anywher from less than number buck a month 
+to a coupl of dollarnumb you should checkout httpaddr or perhap amazon ecnumb 
+if your run someth big to unsubscrib yourself from thi mail list send an 
+email to emailaddr 
+
+=========================
+Word Indices: 
+ 
+
+Program paused. Press enter to continue.
+
+Extracting features from sample email (emailSample1.txt)
+
+==== Processed Email ====
+
+anyon know how much it cost to host a web portal well it depend on how mani 
+visitor you re expect thi can be anywher from less than number buck a month 
+to a coupl of dollarnumb you should checkout httpaddr or perhap amazon ecnumb 
+if your run someth big to unsubscrib yourself from thi mail list send an 
+email to emailaddr 
+
+=========================
+Length of feature vector: 1899
+Number of non-zero entries: 0
+Program paused. Press enter to continue.
+
+
+
+Training Linear SVM (Spam Classification)
+(this may take 1 to 2 minutes) ...
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+............................. Done! 
+
+Training Accuracy: 99.850000
+
+Evaluating the trained Linear SVM on a test set ...
+Test Accuracy: 98.600000
+
+Top predictors of spam: 
+ our             (0.499529) 
+ click           (0.472896) 
+ remov           (0.414973) 
+ guarante        (0.379182) 
+ visit           (0.366919) 
+ basenumb        (0.346807) 
+ dollar          (0.325488) 
+ price           (0.269102) 
+ will            (0.266987) 
+ pleas           (0.261431) 
+ nbsp            (0.258020) 
+ most            (0.256153) 
+ lo              (0.253355) 
+ hour            (0.242198) 
+ al              (0.240761) 
+
+
+
+Program paused. Press enter to continue.
+
+==== Processed Email ====
+
+do you want to make dollarnumb or more per week if you ar a motiv and qualifi 
+individu i will person demonstr to you a system that will make you dollarnumb 
+number per week or more thi is not mlm call our number hour pre record number 
+to get the detail number number number i need peopl who want to make seriou 
+monei make the call and get the fact invest number minut in yourself now 
+number number number look forward to your call and i will introduc you to 
+peopl like yourself who ar current make dollarnumb number plu per week number 
+number number numberljgvnumb numberleannumberlrmsnumb 
+numberwxhonumberqiytnumb numberrjuvnumberhqcfnumb numbereidbnumberdmtvlnumb 
+
+=========================
+
+Processed spamSample1.txt
+
+Spam Classification: 1
+(1 indicates spam, 0 indicates not spam)
+
+>> fprintf('\nPreprocessing sample email (emailSample1.txt)\n')
+
+Preprocessing sample email (emailSample1.txt)
+>> word_indices  = processEmail('ab abov abil ab footwork ab ab')
+
+==== Processed Email ====
+
+ab abov abil ab footwork ab ab 
+
+=========================
+word_indices = [](0x0)
+>> whos
+Variables in the current scope:
+
+   Attr Name               Size                     Bytes  Class
+   ==== ====               ====                     =====  ===== 
+        C                  1x1                          8  double
+        X               4000x1899                60768000  double
+        Xtest           1000x1899                15192000  double
+        features        1899x1                      15192  double
+        file_contents      1x655                      655  char
+        filename           1x15                        15  char
+        i                  1x1                          8  double
+        idx             1899x1                       7596  double
+        model              1x1                   12500968  struct
+        p                  1x1                          8  double
+        vocabList       1899x1                       9953  cell
+        weight          1899x1                      15192  double
+        word_indices       0x0                          0  double
+        x               1899x1                      15192  double
+        y               4000x1                      32000  double
+        ytest           1000x1                       8000  double
+
+Total is 9510169 elements using 88564787 bytes
+
+>> vocablist{1}
+error: 'vocablist' undefined near line 1 column 1
+error: evaluating argument list element number 1
+>> vocabList{1}
+ans = aa
+>> vocabList{2}
+ans = ab
+>> vocabList{10:20}
+ans = accept
+ans = access
+ans = accord
+ans = account
+ans = achiev
+ans = acquir
+ans = across
+ans = act
+ans = action
+ans = activ
+ans = actual
+>> vocabList[10:20]
+parse error:
+
+  syntax error
+
+>>> vocabList[10:20]
+             ^
+
+>> strcmp(ab, vocabList)
+error: 'ab' undefined near line 1 column 8
+error: evaluating argument list element number 1
+>> strcmp('ab', vocabList)
+ans =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> strcmp('ab abov', vocabList)
+ans =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> strcmp(('ab', 'abov'), vocabList)
+parse error:
+
+  syntax error
+
+>>> strcmp(('ab', 'abov'), vocabList)
+                ^
+
+>> strcmp(('ab' 'abov'), vocabList)
+parse error:
+
+  syntax error
+
+>>> strcmp(('ab' 'abov'), vocabList)
+                    ^
+
+>> strcmp('ab' 'abov', vocabList)
+parse error:
+
+  syntax error
+
+>>> strcmp('ab' 'abov', vocabList)
+                   ^
+
+>> strcmp( vocabList, 'ab')
+ans =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> strcmp( vocabList, 'ab abov')
+ans =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> strcmp( vocabList, 'ab')
+ans =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> match = strcmp( vocabList, 'ab')
+match =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> find(match)
+ans =  2
+>> word_indices  = processEmail('ab abov abil ab footwork ab ab')
+
+==== Processed Email ====
+
+ab abov abil ab error: binary operator '==' not implemented for 'cs-list' by 'matrix' operations
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/processEmail.m at line 102, column 1
+>> word_indices  = processEmail('ab abov abil ab footwork ab ab')
+warning: suggest parenthesis around assignment used as truth value near line 102, column 19 in file '/Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/processEmail.m'
+
+==== Processed Email ====
+
+ab abov abil ab error: invalid assignment to cs-list outside multiple assignment
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex6/ex6/processEmail.m at line 102, column 1
+>> indx = 3
+indx =  3
+>> vocabList{indx}
+ans = abil
+>> indx = 0
+indx = 0
+>> vocabList{indx}
+error: subscript indices must be either positive integers less than 2^31 or logicals
+>> indx = null
+error: 'A' undefined near line 40 column 16
+error: evaluating argument list element number 1
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/linear-algebra/null.m at line -1, column -1
+>> word_indices  = processEmail('ab abov abil ab footwork ab ab')
+
+==== Processed Email ====
+
+ab abov abil ab footwork ab ab 
+
+=========================
+word_indices =
+
+   2
+   6
+   3
+   2
+   2
+   2
+
+>> submit()
+== Submitting solutions | Support Vector Machines...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+
+Training ................................ Done! 
+
+
+Training ................................................. Done! 
+
+
+Training .............................................. Done! 
+
+
+Training ............................................................... Done! 
+
+
+Training ...................................... Done! 
+
+
+Training ................................. Done! 
+
+
+Training .................................................. Done! 
+
+
+Training ........................................ Done! 
+
+
+Training ............................... Done! 
+
+
+Training ..................................................................... Done! 
+
+
+Training ......................................................................
+............... Done! 
+
+
+Training ......................................................................
+.......... Done! 
+
+
+Training ........................................ Done! 
+
+
+Training ......................................................................
+ Done! 
+
+
+Training ...................................... Done! 
+
+
+Training .................................. Done! 
+
+
+Training ................................. Done! 
+
+
+Training ......................................................................
+............. Done! 
+
+
+Training ......................................................................
+....................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+........ Done! 
+
+
+Training ........................................................ Done! 
+
+
+Training ...................................... Done! 
+
+
+Training ...................................................... Done! 
+
+
+Training .................................... Done! 
+
+
+Training ...................................................... Done! 
+
+
+Training ............................................................ Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+............ Done! 
+
+
+Training ......................................................................
+........................... Done! 
+
+
+Training ................................................. Done! 
+
+
+Training ................................................................. Done! 
+
+
+Training ................................. Done! 
+
+
+Training ................................................... Done! 
+
+
+Training .......................................... Done! 
+
+
+Training ......................................................................
+........................................................ Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+........... Done! 
+
+
+Training ......................................................................
+.......................................................................... Done! 
+
+
+Training ......................................................................
+........ Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ................................ Done! 
+
+
+Training ......................................... Done! 
+
+
+Training ......................................................................
+...... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+......................................................................... Done! 
+
+
+Training ......................................................................
+................................................. Done! 
+
+
+Training .................................................................... Done! 
+
+
+Training ................................... Done! 
+
+
+Training .................................................. Done! 
+
+
+Training ..................................... Done! 
+
+
+Training ................................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+............................................. Done! 
+
+
+Training ......................................................................
+...............................................................................
+.......................................................... Done! 
+
+
+Training ......................................................................
+...................... Done! 
+
+
+Training ......................................................................
+.. Done! 
+
+
+Training ..................................................... Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ......................................................................
+...................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+......................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+.................. Done! 
+
+
+Training ......................................................................
+...............................................................................
+......................................................................... Done! 
+
+
+Training ......................................................................
+.. Done! 
+
+
+Training ......................................................................
+..... Done! 
+
+
+Training ....................................... Done! 
+
+
+==== Processed Email ====
+
+the quick brown fox jump over the lazi dog 
+
+=========================
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                             Gaussian Kernel |  25 /  25 | Nice work!
+==         Parameters (C, sigma) for Dataset 3 |  25 /  25 | Nice work!
+==                         Email Preprocessing |  25 /  25 | Nice work!
+==                    Email Feature Extraction |   0 /  25 | 
+==                                   --------------------------------
+==                                             |  75 / 100 | 
+== 
+>> word_indices
+word_indices =
+
+   2
+   6
+   3
+   2
+   2
+   2
+
+>> length(word_indices)
+ans =  6
+>> word_indices(2)
+ans =  6
+>> n = 1899;
+>> 
+>> % You need to return the following variables correctly.
+>> x = zeros(n, 1);
+>> n = 10;
+>> x = zeros(n, 1);
+>> x
+x =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> x[word_indices[1]] = 1
+parse error:
+
+  syntax error
+
+>>> x[word_indices[1]] = 1
+     ^
+
+>> x(word_indices[1]) = 1
+parse error:
+
+  syntax error
+
+>>> x(word_indices[1]) = 1
+                  ^
+
+>> x(word_indices(1)) = 1
+x =
+
+   0
+   1
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> for i = 1:length(word_indices)
+>     x(word_indices(i) = 1;
+parse error:
+
+  syntax error
+
+>>>     x(word_indices(i) = 1;
+                             ^
+
+>> end
+parse error:
+
+  syntax error
+
+>>> end
+      ^
+
+>> for i = 1:length(word_indices)
+>     x(word_indices(i)) = 1;
+> end
+>> x
+x =
+
+   0
+   1
+   1
+   0
+   0
+   1
+   0
+   0
+   0
+   0
+
+>> submit()
+== Submitting solutions | Support Vector Machines...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+
+Training ..................................... Done! 
+
+
+Training .................................... Done! 
+
+
+Training .......................................................... Done! 
+
+
+Training ............................................ Done! 
+
+
+Training ....................................................... Done! 
+
+
+Training .......................................... Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ............................................... Done! 
+
+
+Training ................................... Done! 
+
+
+Training ............................................... Done! 
+
+
+Training ......................................................................
+.... Done! 
+
+
+Training ......................................................... Done! 
+
+
+Training ........................................... Done! 
+
+
+Training ............................................. Done! 
+
+
+Training .................................... Done! 
+
+
+Training .................................................. Done! 
+
+
+Training .................................. Done! 
+
+
+Training ..................................................... Done! 
+
+
+Training ......................................................................
+....................................................................... Done! 
+
+
+Training ......................................................................
+... Done! 
+
+
+Training ............................................................ Done! 
+
+
+Training ....................................................... Done! 
+
+
+Training ....................................................... Done! 
+
+
+Training ............................... Done! 
+
+
+Training .................................. Done! 
+
+
+Training ......................................................................
+... Done! 
+
+
+Training ......................................................................
+...............................................................................
+............................................. Done! 
+
+
+Training ......................................................................
+............................................................................. Done! 
+
+
+Training ......................................................................
+.............. Done! 
+
+
+Training ............................... Done! 
+
+
+Training ......................................... Done! 
+
+
+Training ............................ Done! 
+
+
+Training ............................................. Done! 
+
+
+Training ......................................................................
+........... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+.............................. Done! 
+
+
+Training ......................................................................
+.................................................................. Done! 
+
+
+Training ............................................. Done! 
+
+
+Training ........................................................... Done! 
+
+
+Training .................................... Done! 
+
+
+Training ........................................ Done! 
+
+
+Training ......................................... Done! 
+
+
+Training ......................................................................
+.. Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+........................................................................ Done! 
+
+
+Training ......................................................................
+...............................................................................
+....................................... Done! 
+
+
+Training ......................................................................
+.......................... Done! 
+
+
+Training ......................................................................
+................................... Done! 
+
+
+Training ....................................... Done! 
+
+
+Training ................................ Done! 
+
+
+Training ....................................................... Done! 
+
+
+Training .................................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+.......................................... Done! 
+
+
+Training ......................................................................
+.................................................................... Done! 
+
+
+Training ......................................................................
+ Done! 
+
+
+Training .......................................... Done! 
+
+
+Training ................................................ Done! 
+
+
+Training ........................................ Done! 
+
+
+Training ............................................................... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...............................................................................
+...... Done! 
+
+
+Training ......................................................................
+...............................................................................
+...............................................................................
+.............................................................................. Done! 
+
+
+Training ......................................................................
+...............................................................................
+................... Done! 
+
+
+Training ................................................................... Done! 
+
+
+Training .............................................................. Done! 
+
+
+Training ...................................... Done! 
+
+
+==== Processed Email ====
+
+the quick brown fox jump over the lazi dog 
+
+=========================
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==                             Gaussian Kernel |  25 /  25 | Nice work!
+==         Parameters (C, sigma) for Dataset 3 |  25 /  25 | Nice work!
+==                         Email Preprocessing |  25 /  25 | Nice work!
+==                    Email Feature Extraction |  25 /  25 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
