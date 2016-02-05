@@ -1,0 +1,1558 @@
+Last login: Wed Feb  3 18:12:50 on ttys000
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 ('>> ')
+>> pwd
+ans = /Users/Usamahk
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7'
+>> ls
+bird_small.mat		ex7data1.mat		pca.m
+bird_small.png		ex7data2.mat		plotDataPoints.m
+computeCentroids.m	ex7faces.mat		plotProgresskMeans.m
+displayData.m		featureNormalize.m	projectData.m
+drawLine.m		findClosestCentroids.m	recoverData.m
+ex7.m			kMeansInitCentroids.m	runkMeans.m
+ex7_pca.m		lib			submit.m
+>> ex7
+
+Finding closest centroids.
+
+Closest centroids for the first 3 examples: 
+ 0 0 0
+(the closest centroids should be 1, 3, 2 respectively)
+Program paused. Press enter to continue.
+
+Computing centroids means.
+
+Centroids computed after initial finding of closest centroids: 
+ 0.000000 0.000000 
+ 0.000000 0.000000 
+ 0.000000 0.000000 
+
+(the centroids should be
+   [ 2.428301 3.157924 ]
+   [ 5.813503 2.633656 ]
+   [ 7.119387 3.616684 ]
+
+Program paused. Press enter to continue.
+
+Running K-Means clustering on example dataset.
+
+K-Means iteration 1/10...
+error: plotDataPoints: subscript indices must be either positive integers less than 2^31 or logicals
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/plotDataPoints.m at line 9, column 8
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/plotProgresskMeans.m at line 11, column 1
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/runkMeans.m at line 48, column 9
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7.m at line 92, column 16
+>> whos
+Variables in the current scope:
+
+   Attr Name                   Size                     Bytes  Class
+   ==== ====                   ====                     =====  ===== 
+        K                      1x1                          8  double
+        X                    300x2                       4800  double
+        centroids              3x2                         48  double
+        idx                  300x1                       2400  double
+        initial_centroids      3x2                         48  double
+        max_iters              1x1                          8  double
+
+Total is 914 elements using 7312 bytes
+
+>> X(1,1)
+ans =  1.8421
+>> X(1,)
+parse error:
+
+  syntax error
+
+>>> X(1,)
+        ^
+
+>> X(1,:)
+ans =
+
+   1.8421   4.6076
+
+>> X(1:10,:)
+ans =
+
+   1.8421   4.6076
+   5.6586   4.8000
+   6.3526   3.2909
+   2.9040   4.6122
+   3.2320   4.9399
+   1.2479   4.9327
+   1.9762   4.4349
+   2.2345   5.0555
+   2.9834   4.8405
+   2.9797   4.8067
+
+>> K
+K =  3
+>> centroids
+centroids =
+
+   0   0
+   0   0
+   0   0
+
+>> initial_centroids
+initial_centroids =
+
+   3   3
+   6   2
+   8   5
+
+>> length(X)
+ans =  300
+>> 
+>> for i = 1:10
+> X(i,:)
+> end
+ans =
+
+   1.8421   4.6076
+
+ans =
+
+   5.6586   4.8000
+
+ans =
+
+   6.3526   3.2909
+
+ans =
+
+   2.9040   4.6122
+
+ans =
+
+   3.2320   4.9399
+
+ans =
+
+   1.2479   4.9327
+>> X(2,:)
+ans =
+
+   5.6586   4.8000
+
+>> X(2,)
+parse error:
+
+  syntax error
+
+>>> X(2,)
+        ^
+
+>> X(2,:)
+ans =
+
+   5.6586   4.8000
+
+>> X(2,:)-initial_centrodis(1,:)
+error: 'initial_centrodis' undefined near line 1 column 8
+>> initial_centrodis(1,:)
+error: 'initial_centrodis' undefined near line 1 column 1
+>> X(2,:)-initial_centroids(1,:)
+ans =
+
+   2.6586   1.8000
+
+>> idx = zeros(size(X,1), 1)
+idx =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+>> K = size(initial_centroids, 1)
+K =  3
+>> [val idx] = min(X, [],2);
+>> val
+val =
+
+   1.84208
+   4.79996
+   3.29085
+   2.90402
+   3.23198
+   1.24792
+   1.97620
+   2.23454
+   2.98341
+   2.97970
+   2.11496
+   2.12170
+   1.51435
+   2.16979
+   0.41852
+   2.47054
+   4.06069
+   3.00709
+   0.66632
+   3.16219
+   0.51155
+>> idx
+idx =
+
+   1
+   2
+   2
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+   1
+>> [val idx] = min(X, [],);
+parse error:
+
+  syntax error
+
+>>> [val idx] = min(X, [],);
+                        ^
+
+>> [val idx] = min(X, [],1);
+>> val
+val =
+
+  -0.24513   0.20581
+
+>> idx
+idx =
+
+    68   146
+
+>> c = [1;2;3;4]
+c =
+
+   1
+   2
+   3
+   4
+
+>> [val idx] = min(c, [],1);
+>> val
+val =  1
+>> idx
+idx =  1
+>> c = [5;32;6;43]
+c =
+
+    5
+   32
+    6
+   43
+
+>> [val idx] = min(c, [],1);
+>> val
+val =  5
+>> idx
+idx =  1
+>> c = zeros(K,1);
+>> c
+c =
+
+   0
+   0
+   0
+
+>> ex7
+
+Finding closest centroids.
+
+error: findClosestCentroids: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/findClosestCentroids.m at line 28, column 14
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7.m at line 40, column 5
+>> c = [5 10;32 3;6 56;43 2]
+c =
+
+    5   10
+   32    3
+    6   56
+   43    2
+
+>> [val idx] = min(c, [],1);
+>> val
+val =
+
+   5   2
+
+>> [val idx] = min(c, [],2);
+>> val
+val =
+
+   5
+   3
+   6
+   2
+
+>> [val idx] = min(c, [],3);
+>> val
+val =
+
+    5   10
+   32    3
+    6   56
+   43    2
+
+>> [val idx] = min(c, []);
+error: min: nonconformant arguments (op1 is 4x2, op2 is 0x0)
+>> [val idx] = min(c, [],0);
+error: min: DIM must be a valid dimension
+>> [val idx] = min(c, [],1);
+>> c = zeros(K,2)
+c =
+
+   0   0
+   0   0
+   0   0
+
+>> ex7
+
+Finding closest centroids.
+
+error: findClosestCentroids: A(I) = X: X must have the same size as I
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/findClosestCentroids.m at line 28, column 14
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7.m at line 40, column 5
+>> ex7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Finding closest centroids.
+
+error: findClosestCentroids: operator -: nonconformant arguments (op1 is 300x2, op2 is 3x2)
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/findClosestCentroids.m at line 29, column 14
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7.m at line 40, column 5
+>> ex7
+
+
+
+
+
+
+
+
+
+
+
+
+
+Finding closest centroids.
+
+warning: operator -: automatic broadcasting operation applied
+error: for A^b, A must be a square matrix. Use .^ for elementwise power.
+error: evaluating argument list element number 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/findClosestCentroids.m at line 29, column 14
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7.m at line 40, column 5
+>> sum((X(i,:) .- centroids)^2)
+error: attempted to use a complex scalar as an index
+       (forgot to initialize i or j?)
+error: evaluating argument list element number 1
+>> X
+X =
+
+   1.84208   4.60757
+   5.65858   4.79996
+   6.35258   3.29085
+   2.90402   4.61220
+   3.23198   4.93989
+   1.24792   4.93268
+   1.97620   4.43490
+   2.23454   5.05547
+   2.98341   4.84046
+   2.97970   4.80671
+   2.11496   5.37374
+   2.12170   5.20854
+   1.51435   4.77003
+   2.16979   5.27435
+   0.41852   4.88313
+   2.47054   4.80419
+   4.06069   4.99504
+   3.00709   4.67898
+   0.66632   4.87188
+   3.16219   4.83658
+   0.51155   4.91053
+>> centroids
+error: 'centroids' undefined near line 1 column 1
+>> c
+error: 'c' undefined near line 1 column 1
+>> centroids = [3 3; 6 2; 8 5]
+centroids =
+
+   3   3
+   6   2
+   8   5
+
+>> c = zeros(K,1);
+>> c
+c =
+
+   0
+   0
+   0
+
+>>    for j = 1:K
+>         c(j) = sum((X(1,:) .- centroids(j,:))^2); 
+>     end   
+error: for A^b, A must be a square matrix. Use .^ for elementwise power.
+error: evaluating argument list element number 1
+>> test = ((X(1,:) .- centroids(j,:)
+> )
+> )
+test =
+
+  -1.1579   1.6076
+
+>> sum(test)
+ans =  0.44965
+>>  for j = 1:K
+>         c(j) = sum((X(1,:) .- centroids(j,:)))^2; 
+>     end   
+>> c
+c =
+
+    0.20219
+    2.40358
+   42.90707
+
+>> ex7
+
+Finding closest centroids.
+
+Closest centroids for the first 3 examples: 
+ 1 2 2
+(the closest centroids should be 1, 3, 2 respectively)
+Program paused. Press enter to continue.
+
+Computing centroids means.
+
+Centroids computed after initial finding of closest centroids: 
+ 0.000000 0.000000 
+ 0.000000 0.000000 
+ 0.000000 0.000000 
+
+(the centroids should be
+   [ 2.428301 3.157924 ]
+   [ 5.813503 2.633656 ]
+   [ 7.119387 3.616684 ]
+
+Program paused. Press enter to continue.
+
+Running K-Means clustering on example dataset.
+
+K-Means iteration 1/10...
+
+Press enter to continue.
+K-Means iteration 2/10...
+
+
+
+
+
+
+
+^[Press enter to continue.
+K-Means iteration 3/10...
+Press enter to continue.
+K-Means iteration 4/10...
+Press enter to continue.
+K-Means iteration 5/10...
+Press enter to continue.
+K-Means iteration 6/10...
+Press enter to continue.
+K-Means iteration 7/10...
+Press enter to continue.
+K-Means iteration 8/10...
+Press enter to continue.
+K-Means iteration 9/10...
+Press enter to continue.
+K-Means iteration 10/10...
+Press enter to continue.
+
+K-Means Done.
+
+Program paused. Press enter to continue.
+
+Running K-Means clustering on pixels from an image.
+
+K-Means iteration 1/10...
+
+K-Means iteration 2/10...
+K-Means iteration 3/10...
+K-Means iteration 4/10...
+K-Means iteration 5/10...
+K-Means iteration 6/10...
+K-Means iteration 7/10...
+K-Means iteration 8/10...
+K-Means iteration 9/10...
+K-Means iteration 10/10...
+Program paused. Press enter to continue.
+
+
+
+Applying K-Means to compress an image.
+
+Program paused. Press enter to continue.
+>> X = magic(8);
+>> X = X(:, 2:4);
+>> centroids = magic(4);
+>> centroids = centroids(:,2:4);
+>> findClosestCentroids(X, centroids)
+ans =
+
+   4
+   4
+   4
+   4
+   4
+   4
+   4
+   4
+
+>> findClosestCentroids(X, centroids)
+ans =
+
+   4
+   4
+   4
+   4
+   4
+   4
+   4
+   4
+
+>> findClosestCentroids(X, centroids)
+ans =
+
+   1
+   4
+   4
+   2
+   4
+   3
+   3
+   4
+
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Login (email address): usamah.khan@gmail.com
+Token: m0qv5IWNZztpZHFD
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |   0 /  30 | 
+==                                         PCA |   0 /  20 | 
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  30 / 100 | 
+== 
+>> computeCentroids([0 1; 5 5; -1 8], [2 1 2]', 2)
+warning: suggest parenthesis around assignment used as truth value near line 32, column 15 in file '/Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/computeCentroids.m'
+ans =
+
+   0.22222   3.25926
+   0.22222   3.25926
+
+>> computeCentroids([0 1; 5 5; -1 8], [2 1 2]', 2)
+warning: suggest parenthesis around assignment used as truth value near line 32, column 15 in file '/Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/computeCentroids.m'
+ans =
+
+   1.3333   4.6667
+   1.3333   4.6667
+
+>> computeCentroids([0 1; 5 5; -1 8], [2 1 2]', 2)
+warning: suggest parenthesis around assignment used as truth value near line 32, column 15 in file '/Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/computeCentroids.m'
+ans =
+
+   1.3333   4.6667
+   1.3333   4.6667
+
+>> computeCentroids([0 1; 5 5; -1 8], [2 1 2]', 2)
+warning: suggest parenthesis around assignment used as truth value near line 32, column 16 in file '/Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/computeCentroids.m'
+ans =
+
+   1.3333   4.6667
+   1.3333   4.6667
+
+>> computeCentroids([0 1; 5 5; -1 8], [2 1 2]', 2)
+ans =
+
+   5.00000   5.00000
+  -0.50000   4.50000
+
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |   0 /  20 | 
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  60 / 100 | 
+== 
+>> ex7
+
+Finding closest centroids.
+
+Closest centroids for the first 3 examples: 
+ 1 3 2
+(the closest centroids should be 1, 3, 2 respectively)
+Program paused. Press enter to continue.
+
+Computing centroids means.
+
+Centroids computed after initial finding of closest centroids: 
+ 2.428301 3.157924 
+ 5.813503 2.633656 
+ 7.119387 3.616684 
+
+(the centroids should be
+   [ 2.428301 3.157924 ]
+   [ 5.813503 2.633656 ]
+   [ 7.119387 3.616684 ]
+
+Program paused. Press enter to continue.
+
+Running K-Means clustering on example dataset.
+
+K-Means iteration 1/10...
+Press enter to continue.
+K-Means iteration 2/10...
+Press enter to continue.
+K-Means iteration 3/10...
+Press enter to continue.
+K-Means iteration 4/10...
+Press enter to continue.
+K-Means iteration 5/10...
+Press enter to continue.
+K-Means iteration 6/10...
+Press enter to continue.
+K-Means iteration 7/10...
+Press enter to continue.
+K-Means iteration 8/10...
+Press enter to continue.
+K-Means iteration 9/10...
+Press enter to continue.
+K-Means iteration 10/10...
+Press enter to continue.
+
+K-Means Done.
+
+Program paused. Press enter to continue.
+
+Running K-Means clustering on pixels from an image.
+
+K-Means iteration 1/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 2/10...
+
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 3/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 4/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 5/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 6/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 7/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 8/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 9/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 10/10...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+Program paused. Press enter to continue.
+
+
+Applying K-Means to compress an image.
+
+Program paused. Press enter to continue.
+>> A = imread('bird small.png');
+error: imread: cannot find bird small.png
+error: called from:
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/image/private/__imread__.m at line 56, column 5
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/image/private/imageIO.m at line 66, column 26
+error:   /usr/local/octave/3.8.0/share/octave/3.8.0/m/image/imread.m at line 107, column 30
+>> load('bird small.mat');
+error: load: unable to find file bird small.mat
+>> A = load('bird small.mat');
+error: load: unable to find file bird small.mat
+>> ls
+bird_small.mat		ex7data2.mat		plotProgresskMeans.m
+bird_small.png		ex7faces.mat		projectData.m
+computeCentroids.m	featureNormalize.m	recoverData.m
+displayData.m		findClosestCentroids.m	runkMeans.m
+drawLine.m		kMeansInitCentroids.m	submit.m
+ex7.m			lib			token.mat
+ex7_pca.m		pca.m
+ex7data1.mat		plotDataPoints.m
+>> A = imread('bird_small.png');
+>> A
+A =
+
+ans(:,:,1) =
+
+ Columns 1 through 16:
+
+  219  230  226  223  225  228  228  228  225  218  221  226  222  224  231  228
+  230  224  226  221  229  231  228  226  224  216  215  225  227  221  225  235
+  228  228  220  221  222  226  228  226  220  219  217  215  220  223  226  230
+  218  220  219  217  221  224  221  219  220  219  217  215  213  217  221  222
+  211  217  221  220  222  222  217  222  218  216  217  213  212  210  214  217
+  220  219  218  216  219  214  216  215  211  212  214  212  207  205  210  209
+  214  223  218  220  215  213  214  206  207  206  207  207  205  204  204  204
+  215  227  222  222  213  209  204  204  204  205  206  202  204  203  199  202
+  234  234  226  228  220  216  211  208  206  207  205  202  202  201  198  203
+  233  227  226  225  221  218  217  212  203  201  203  205  205  201  197  201
+  229  223  221  216  217  215  214  213  209  203  205  205  203  202  199  196
+  220  222  219  215  216  214  214  210  211  206  207  209  207  206  203  194
+  221  225  226  224  221  218  218  215  212  209  209  212  211  211  214  211
+  227  227  228  228  224  221  223  220  220  219  219  220  218  219  217  217
+  224  221  221  220  222  222  222  218  221  224  224  223  222  226  222  227
+  231  227  227  225  225  223  219  217  222  221  222  225  222  220  220  222
+  226  226  227  228  225  225  223  220  220  214  220  222  221  221  222  221
+warning: broken pipe
+>> A(50,33,3)
+ans = 48
+>> A(50,33,:)
+ans =
+
+ans(:,:,1) =
+
+  183
+
+ans(:,:,2) =
+
+  121
+
+ans(:,:,3) =
+
+   48
+
+>> fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
+
+Running K-Means clustering on pixels from an image.
+
+>> 
+>> %  Load an image of a bird
+>> A = double(imread('bird_small.png'));
+>> 
+>> % If imread does not work for you, you can try instead
+>> %   load ('bird_small.mat');
+>> 
+>> A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
+>> 
+>> % Size of the image
+>> img_size = size(A);
+>> 
+>> % Reshape the image into an Nx3 matrix where N = number of pixels.
+>> % Each row will contain the Red, Green and Blue pixel values
+>> % This gives us our dataset matrix X that we will use K-Means on.
+>> X = reshape(A, img_size(1) * img_size(2), 3);
+>> 
+>> % Run your K-Means algorithm on this data
+>> % You should try different values of K and max_iters here
+>> K = 16; 
+>> max_iters = 10;
+>> % Display the original image 
+>> subplot(1, 2, 1);
+>> imagesc(A); 
+>> title('Original');
+>> 
+>> % Display compressed image side by side
+>> subplot(1, 2, 2);
+>> imagesc(X_recovered)
+>> title(sprintf('Compressed, with %d colors.', K));
+>> % Find closest cluster members
+>> idx = findClosestCentroids(X, centroids);
+
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+
+% Display the original image 
+subplot(1, 2, 1);
+imagesc(A); 
+title('Original');
+
+% Display compressed image side by side
+subplot(1, 2, 2);
+imagesc(X_recovered)
+title(sprintf('Compressed, with %d colors.', K));
+
+% Find closest cluster members
+idx = findClosestCentroids(X, centroids);
+
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(>> 
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+
+% Display the original image 
+subplot(1, 2, 1);
+imagesc(A); 
+title('Original');
+
+% Display compressed image side by side
+subplot(1, 2, 2);
+imagesc(X_recovered)
+title(sprintf('Compressed, with %d colors.', K));
+
+% Find closest cluster members
+idx = findClosestCentroids(X, centroids);
+
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(X_>> % Essentially, now we have represented the image X as in terms of the
+>> % indices in idx. 
+>> 
+>> % We can now recover the image from the indices (idx) by mapping each pixel
+>> % (specified by it's index in idx) to the centroid value
+>> X_recovered = centroids(idx,:);
+>> 
+>> % Reshape the recovered image into proper dimensions
+>> X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+>> 
+>> % Display the original image 
+>> subplot(1, 2, 1);
+>> imagesc(A); 
+>> title('Original');
+
+% Display compressed image side by side
+subplot(1, 2, 2);
+imagesc(X_recovered)
+title(sprintf('Compressed, with %d colors.', K));
+
+% Find closest cluster members
+idx = findClosestCentroids(X, centroids);
+
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+
+% Display the original image 
+subplot(1, 2, 1);
+imagesc(A); 
+title('Original');
+
+% Display compressed image side by side
+subplot(1, 2, 2);
+imagesc(X_recovered)
+title(sprintf('Compressed, with %d colors.', K));
+
+
+>> 
+>> % Display compressed image side by side
+>> subplot(1, 2, 2);
+>> imagesc(X_recovered)
+>> title(sprintf('Compressed, with %d colors.', K));
+>> 
+>> % Find closest cluster members
+>> idx = findClosestCentroids(X, centroids);
+>> 
+>> % Essentially, now we have represented the image X as in terms of the
+>> % indices in idx. 
+>> 
+>> % We can now recover the image from the indices (idx) by mapping each pixel
+>> % (specified by it's index in idx) to the centroid value
+>> X_recovered = centroids(idx,:);
+>> 
+>> % Reshape the recovered image into proper dimensions
+>> X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+>> 
+>> % Display the original image 
+>> subplot(1, 2, 1);
+>> imagesc(A); 
+>> title('Original');
+>> 
+>> % Display compressed image side by side
+>> subplot(1, 2, 2);
+>> imagesc(X_recovered)
+>> title(sprintf('Compressed, with %d colors.', K));
+>> 
+>> 
+>> %  Load an image of a bird
+>> A = double(imread('bird_small.png'));
+>> 
+>> % If imread does not work for you, you can try instead
+>> %   load ('bird_small.mat');
+>> 
+>> A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
+>> 
+>> % Size of the image
+>> img_size = size(A);
+>> 
+>> % Reshape the image into an Nx3 matrix where N = number of pixels.
+>> % Each row will contain the Red, Green and Blue pixel values
+>> % This gives us our dataset matrix X that we will use K-Means on.
+>> X = reshape(A, img_size(1) * img_size(2), 3);
+>> 
+>> % Run your K-Means algorithm on this data
+>> % You should try different values of K and max_iters here
+>> K = 16; 
+>> max_iters = 100;
+>> 
+>> % When using K-Means, it is important the initialize the centroids
+>> % randomly. 
+>> % You should complete the code in kMeansInitCentroids.m before proceeding
+>> initial_centroids = kMeansInitCentroids(X, K);
+>> 
+>> % Run K-Means
+>> [centroids, idx] = runkMeans(X, initial_centroids, max_iters);
+K-Means iteration 1/100...
+
+fprintf('Program paused. Press enter to continue.\n');
+pause;
+
+
+%% ================= Part 5: Image Compression ======================
+%  In this part of the exercise, you will use the clusters of K-Means to
+%  compress an image. To do this, we first find the closest clusters for
+%  each example. After that, we 
+
+fprintf('\nApplying K-Means to compress an image.\n\n');
+
+% Find closest cluster members
+idx = findClosestCentroids(X, centroids);
+
+% Essentially, now we have represented the image X as in terms of the
+% indices in idx. 
+
+% We can now recover the image from the indices (idx) by mapping each pixel
+% (specified by it's index in idx) to the centroid value
+X_recovered = centroids(idx,:);
+
+% Reshape the recovered image into proper dimensions
+X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
+
+% Display the original image 
+subplot(1, 2, 1);
+imagesc(A); 
+title('Original');
+
+% Display compressed image side by side
+subplot(1, 2, 2);
+imagesc(X_recovered)
+title(sprwarning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 2/100...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 3/100...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 4/100...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 5/100...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 6/100...
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+warning: division by zero
+K-Means iteration 7/100...
+
+Last login: Thu Feb  4 22:26:49 on ttys000
+Usamahs-MacBook-Pro:~ Usamahk$ /usr/local/octave/3.8.0/bin/octave-3.8.0 ; exit;
+GNU Octave, version 3.8.0
+Copyright (C) 2013 John W. Eaton and others.
+This is free software; see the source code for copying conditions.
+There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  For details, type 'warranty'.
+
+Octave was configured for "x86_64-apple-darwin13.0.0".
+
+Additional information about Octave is available at http://www.octave.org.
+
+Please contribute if you find this software useful.
+For more information, visit http://www.octave.org/get-involved.html
+
+Read http://www.octave.org/bugs.html to learn how to submit bug reports.
+For information about changes from previous versions, type 'news'.
+
+octave:1> PS1 (">>> ')
+error: unterminated character string constant
+parse error:
+
+  syntax error
+
+>>> PS1 (">>> ')
+               ^
+
+octave:1> PS1 ('>>> ')
+>>> PS1 ('> ')
+> PS1 ('>> ')
+>> cd '~/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7'
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |   0 /  20 | 
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  60 / 100 | 
+== 
+>> X
+error: 'X' undefined near line 1 column 1
+>> ex7_pca
+
+Visualizing example dataset for PCA.
+
+Program paused. Press enter to continue.
+
+Running PCA on example dataset.
+
+error: ex7_pca: A(I,J): row index out of bounds; value 2 out of bound 1
+error: called from:
+error:   /Users/Usamahk/Documents/Courses and Books/Coursera/Machine Learning/ml-ex7/ex7/ex7_pca.m at line 60, column 1
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        S           1x50                         8  double
+        U           1x1                          8  double
+        X          50x2                        800  double
+        X_norm     50x2                        800  double
+        mu          1x2                         16  double
+        sigma       1x2                         16  double
+
+Total is 255 elements using 1648 bytes
+
+>> sigma = (1/m)* sum(X*X');
+error: 'm' undefined near line 1 column 12
+>> [m, n] = size(X);
+>> sigma = (1/m)* sum(X*X');
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        S           1x50                         8  double
+        U           1x1                          8  double
+        X          50x2                        800  double
+        X_norm     50x2                        800  double
+        m           1x1                          8  double
+        mu          1x2                         16  double
+        n           1x1                          8  double
+        sigma       1x50                       400  double
+
+Total is 305 elements using 2048 bytes
+
+>> sigma = (1/m)*(X*X');
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        S           1x50                         8  double
+        U           1x1                          8  double
+        X          50x2                        800  double
+        X_norm     50x2                        800  double
+        m           1x1                          8  double
+        mu          1x2                         16  double
+        n           1x1                          8  double
+        sigma      50x50                     20000  double
+
+Total is 2755 elements using 21648 bytes
+
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |   0 /  20 | 
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  60 / 100 | 
+== 
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: Invalid call to svd.  Correct usage is:
+
+ -- Built-in Function: S = svd (A)
+ -- Built-in Function: [U, S, V] = svd (A)
+ -- Built-in Function: [U, S, V] = svd (A, ECON)
+ 
+!! Please try again later.
+>> sigma = (1/m)*(X*X');
+>> 
+>> [U,S,V] = svd(sigma);
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        S          50x50                       400  double
+        U          50x50                     20000  double
+        V          50x50                     20000  double
+        X          50x2                        800  double
+        X_norm     50x2                        800  double
+        m           1x1                          8  double
+        mu          1x2                         16  double
+        n           1x1                          8  double
+        sigma      50x50                     20000  double
+
+Total is 10204 elements using 62032 bytes
+
+>> S
+S =
+
+Diagonal Matrix
+
+ Columns 1 through 6:
+
+   4.2940e+01            0            0            0            0            0
+            0   3.7681e-01            0            0            0            0
+            0            0   4.7262e-15            0            0            0
+            0            0            0   1.1864e-15            0            0
+            0            0            0            0   1.0886e-15            0
+            0            0            0            0            0   9.8789e-16
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+            0            0            0            0            0            0
+>> sigma = (X*X')./m;
+>> 
+>> [U,S,V] = svd(sigma);
+>> 
+>> whos
+Variables in the current scope:
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  ===== 
+        S          50x50                       400  double
+        U          50x50                     20000  double
+        V          50x50                     20000  double
+        X          50x2                        800  double
+        X_norm     50x2                        800  double
+        m           1x1                          8  double
+        mu          1x2                         16  double
+        n           1x1                          8  double
+        sigma      50x50                     20000  double
+
+Total is 10204 elements using 62032 bytes
+
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |   0 /  20 | 
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  60 / 100 | 
+== 
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |  20 /  20 | Nice work!
+==                          Project Data (PCA) |   0 /  10 | 
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  80 / 100 | 
+== 
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: attempted to use a complex scalar as an index
+       (forgot to initialize i or j?)
+!! Please try again later.
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: 'k' undefined near line 21 column 11
+!! Please try again later.
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: A(I,J,...) = X: dimensions mismatch
+!! Please try again later.
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: operator *: nonconformant arguments (op1 is 5x11, op2 is 15x11)
+!! Please try again later.
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |  20 /  20 | Nice work!
+==                          Project Data (PCA) |  10 /  10 | Nice work!
+==                          Recover Data (PCA) |   0 /  10 | 
+==                                   --------------------------------
+==                                             |  90 / 100 | 
+== 
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+!! Submission failed: unexpected error: operator *: nonconformant arguments (op1 is 15x5, op2 is 11x5)
+!! Please try again later.
+>> submit()
+== Submitting solutions | K-Means Clustering and PCA...
+Use token from last successful submission (usamah.khan@gmail.com)? (Y/n): y
+== 
+==                                   Part Name |     Score | Feedback
+==                                   --------- |     ----- | --------
+==            Find Closest Centroids (k-Means) |  30 /  30 | Nice work!
+==            Compute Centroid Means (k-Means) |  30 /  30 | Nice work!
+==                                         PCA |  20 /  20 | Nice work!
+==                          Project Data (PCA) |  10 /  10 | Nice work!
+==                          Recover Data (PCA) |  10 /  10 | Nice work!
+==                                   --------------------------------
+==                                             | 100 / 100 | 
+== 
+>> 
+
