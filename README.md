@@ -22,7 +22,8 @@ All material belongs to Prof. Andrew Ng and the Coursera organization. I am exci
 &nbsp;&nbsp;&nbsp;[X] - Assignment 6  
 [X] - Week 8  
 &nbsp;&nbsp;&nbsp;[X] - Assignment 7  
-[ ] - Week 9  
+[I] - Week 9  
+&nbsp;&nbsp;&nbsp;[I] - Assignment 8 
 [ ] - Week 10  
 [ ] - Week 11  
 
